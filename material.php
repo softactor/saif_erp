@@ -128,7 +128,12 @@
                                             foreach ($item_details as $item) {
                                                 ?>
                                                 <tr>
-                                                    <td><?php echo (isset(getDataRowByTableAndId('inv_materialcategorysub', $item['material_id'])) ? getDataRowByTableAndId('inv_materialcategorysub', $item['material_id'])->category_description : ''); ?></td>
+                                                    <td>
+                                                        <?php 
+                                                        $dataresult =   getDataRowByTableAndId('inv_materialcategorysub', $item['material_id']);
+                                                        echo (isset($dataresult) && !empty($dataresult) ? $dataresult->category_description : '');
+                                                        ?>
+                                                    </td>
                                                     <td><?php echo getDataRowByTableAndId('inv_materialcategory', $item['material_sub_id'])->material_sub_description; ?></td>
                                                     <td><?php echo $item['material_id_code']; ?></td>
                                                     <td><?php echo $item['material_description']; ?></td>

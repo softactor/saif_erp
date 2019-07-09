@@ -42,8 +42,15 @@
                                                 </tr>
                                                 <?php
                                             }
-                                        }
-                                        ?>
+                                        }else{ ?>
+                                              <tr>
+                                                  <td colspan="3">
+                                                        <div class="alert alert-info" role="alert">
+                                                            This is a info alert—check it out!
+                                                        </div>
+                                                    </td>
+                                                </tr>  
+                                        <?php ?>
                                     </tbody>
                                 </table>
                             </div><!--table-responsive-->
@@ -81,8 +88,15 @@
                                                 </tr>
                                                 <?php
                                             }
-                                        }
-                                        ?>
+                                        }else{ ?>
+                                              <tr>
+                                                  <td colspan="4">
+                                                        <div class="alert alert-info" role="alert">
+                                                            This is a info alert—check it out!
+                                                        </div>
+                                                    </td>
+                                                </tr>  
+                                        <?php ?>
                                     </tbody>
                                 </table>
                             </div><!--table-responsive-->
@@ -126,8 +140,15 @@
                                                 </tr>
                                                 <?php
                                             }
-                                        }
-                                        ?>
+                                        }else{ ?>
+                                              <tr>
+                                                  <td colspan="7">
+                                                        <div class="alert alert-info" role="alert">
+                                                            This is a info alert—check it out!
+                                                        </div>
+                                                    </td>
+                                                </tr>  
+                                        <?php ?>
                                     </tbody>
                                 </table>
                             </div><!--table-responsive-->

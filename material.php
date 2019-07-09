@@ -79,7 +79,12 @@
                                             foreach ($childInfo as $sub) {
                                                 ?>
                                                 <tr>
-                                                    <td><?php echo getDataRowByTableAndId('inv_materialcategorysub', $sub['category_id'])->category_description; ?></td>
+                                                    <td>
+                                                        <?php 
+                                                        $dataresult =   getDataRowByTableAndId('inv_materialcategorysub', $sub['category_id']);
+                                                        echo (isset($dataresult) && !empty($dataresult) ? $dataresult->category_description : '');
+                                                        ?>
+                                                    </td>
                                                     <td><?php echo $sub['material_sub_id']; ?></td>
                                                     <td><?php echo $sub['material_sub_description']; ?></td>
                                                     <td>
@@ -134,7 +139,12 @@
                                                         echo (isset($dataresult) && !empty($dataresult) ? $dataresult->category_description : '');
                                                         ?>
                                                     </td>
-                                                    <td><?php echo getDataRowByTableAndId('inv_materialcategory', $item['material_sub_id'])->material_sub_description; ?></td>
+                                                    <td>
+                                                        <?php
+                                                        $dataresult =   getDataRowByTableAndId('inv_materialcategory', $item['material_sub_id']);
+                                                        echo (isset($dataresult) && !empty($dataresult) ? $dataresult->material_sub_description : '');
+                                                        ?>
+                                                    </td>
                                                     <td><?php echo $item['material_id_code']; ?></td>
                                                     <td><?php echo $item['material_description']; ?></td>
                                                     <td><?php echo $item['material_min_stock']; ?></td>

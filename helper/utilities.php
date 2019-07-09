@@ -67,6 +67,8 @@ function getDataRowByTableAndId($table, $id){
     $name   =   '';
     if ($result->num_rows > 0) {
         return $result->fetch_object();
+    }else{
+        return false;
     }
 }
 function getDefaultCategoryCode($table, $fieldName, $modifier, $defaultCode, $prefix){

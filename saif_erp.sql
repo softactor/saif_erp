@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 04, 2019 at 12:20 PM
--- Server version: 10.1.26-MariaDB
--- PHP Version: 7.1.8
+-- Generation Time: Jul 07, 2019 at 07:13 AM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.1.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -307,63 +307,63 @@ CREATE TABLE `history` (
 --
 
 INSERT INTO `history` (`id`, `type_id`, `user_id`, `entity_id`, `icon`, `class`, `text`, `assets`, `created_at`, `updated_at`) VALUES
-(1, 3, 1, 49, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>create-plant-equipment</strong>', NULL, '2019-01-21 16:42:35', '2019-01-21 16:42:35'),
-(2, 3, 1, 49, 'save', 'bg-aqua', 'trans(\"history.backend.permissions.updated\") <strong>create-plant-equipment</strong>', NULL, '2019-01-21 16:43:48', '2019-01-21 16:43:48'),
-(3, 2, 1, 2, 'save', 'bg-aqua', 'trans(\"history.backend.roles.updated\") <strong>Executive</strong>', NULL, '2019-01-21 16:46:25', '2019-01-21 16:46:25'),
-(4, 1, 1, 4, 'plus', 'bg-green', 'trans(\"history.backend.users.created\") <strong>{user}</strong>', '{\"user_link\":[\"admin.access.user.show\",\"Rashed Al Banna\",4]}', '2019-02-03 14:18:51', '2019-02-03 14:18:51'),
-(5, 1, 1, 4, 'save', 'bg-aqua', 'trans(\"history.backend.users.updated\") <strong>{user}</strong>', '{\"user_link\":[\"admin.access.user.show\",\"Rashed Al Banna\",4]}', '2019-02-03 14:21:04', '2019-02-03 14:21:04'),
-(6, 3, 1, 50, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>edit-plant-equipment</strong>', NULL, '2019-02-09 09:20:08', '2019-02-09 09:20:08'),
-(7, 3, 1, 51, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>view-plant-equipment</strong>', NULL, '2019-02-09 09:21:08', '2019-02-09 09:21:08'),
-(8, 3, 1, 52, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>delete-plant-equipment</strong>', NULL, '2019-02-09 09:22:25', '2019-02-09 09:22:25'),
-(9, 3, 1, 53, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>view-reports</strong>', NULL, '2019-02-09 09:48:43', '2019-02-09 09:48:43'),
-(10, 3, 1, 54, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>create-projects</strong>', NULL, '2019-02-09 13:33:20', '2019-02-09 13:33:20'),
-(11, 3, 1, 55, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>edit-projects</strong>', NULL, '2019-02-09 13:46:59', '2019-02-09 13:46:59'),
-(12, 3, 1, 56, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>view-projects</strong>', NULL, '2019-02-09 14:12:35', '2019-02-09 14:12:35'),
-(13, 3, 1, 57, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>delete-projects</strong>', NULL, '2019-02-09 14:13:20', '2019-02-09 14:13:20'),
-(14, 1, 1, 4, 'save', 'bg-aqua', 'trans(\"history.backend.users.updated\") <strong>{user}</strong>', '{\"user_link\":[\"admin.access.user.show\",\"Rashed Al Banna\",4]}', '2019-02-11 11:42:08', '2019-02-11 11:42:08'),
-(15, 3, 1, 58, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>create-items</strong>', NULL, '2019-02-22 23:14:05', '2019-02-22 23:14:05'),
-(16, 3, 1, 59, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>edit-items</strong>', NULL, '2019-02-22 23:15:10', '2019-02-22 23:15:10'),
-(17, 3, 1, 60, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>view-items</strong>', NULL, '2019-02-22 23:15:38', '2019-02-22 23:15:38'),
-(18, 3, 1, 61, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>delete-items</strong>', NULL, '2019-02-22 23:16:35', '2019-02-22 23:16:35'),
-(19, 3, 1, 62, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>view-products</strong>', NULL, '2019-02-23 00:09:38', '2019-02-23 00:09:38'),
-(20, 3, 1, 63, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>create-products</strong>', NULL, '2019-02-23 00:10:22', '2019-02-23 00:10:22'),
-(21, 3, 1, 64, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>edit-Products</strong>', NULL, '2019-02-23 00:10:55', '2019-02-23 00:10:55'),
-(22, 3, 1, 65, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>delete-products</strong>', NULL, '2019-02-23 00:11:18', '2019-02-23 00:11:18'),
-(23, 3, 1, 65, 'save', 'bg-aqua', 'trans(\"history.backend.permissions.updated\") <strong>delete-products</strong>', NULL, '2019-02-23 00:11:35', '2019-02-23 00:11:35'),
-(24, 3, 1, 64, 'save', 'bg-aqua', 'trans(\"history.backend.permissions.updated\") <strong>edit-products</strong>', NULL, '2019-02-23 00:11:59', '2019-02-23 00:11:59'),
-(25, 3, 1, 66, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>create-product-receive</strong>', NULL, '2019-02-23 01:51:48', '2019-02-23 01:51:48'),
-(26, 3, 1, 67, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>edit-product-receive</strong>', NULL, '2019-02-23 01:52:36', '2019-02-23 01:52:36'),
-(27, 3, 1, 68, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>view-product-receive</strong>', NULL, '2019-02-23 01:53:22', '2019-02-23 01:53:22'),
-(28, 3, 1, 69, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>delete-product-receive</strong>', NULL, '2019-02-23 01:54:06', '2019-02-23 01:54:06'),
-(29, 3, 1, 70, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>create-project-challan</strong>', NULL, '2019-02-23 03:14:49', '2019-02-23 03:14:49'),
-(30, 3, 1, 71, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>edit-project-challan</strong>', NULL, '2019-02-23 03:15:22', '2019-02-23 03:15:22'),
-(31, 3, 1, 72, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>view-project-challan</strong>', NULL, '2019-02-23 03:15:58', '2019-02-23 03:15:58'),
-(32, 3, 1, 73, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>delete-project-challan</strong>', NULL, '2019-02-23 03:16:33', '2019-02-23 03:16:33'),
-(33, 3, 1, 33, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>view-blog-category</strong>', NULL, '2019-02-24 10:34:13', '2019-02-24 10:34:13'),
-(34, 3, 1, 34, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>create-blog-category</strong>', NULL, '2019-02-24 10:34:24', '2019-02-24 10:34:24'),
-(35, 3, 1, 35, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>edit-blog-category</strong>', NULL, '2019-02-24 10:34:36', '2019-02-24 10:34:36'),
-(36, 3, 1, 36, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>delete-blog-category</strong>', NULL, '2019-02-24 10:34:47', '2019-02-24 10:34:47'),
-(37, 3, 1, 37, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>view-blog-tag</strong>', NULL, '2019-02-24 10:34:57', '2019-02-24 10:34:57'),
-(38, 3, 1, 38, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>create-blog-tag</strong>', NULL, '2019-02-24 10:35:08', '2019-02-24 10:35:08'),
-(39, 3, 1, 39, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>edit-blog-tag</strong>', NULL, '2019-02-24 10:35:19', '2019-02-24 10:35:19'),
-(40, 3, 1, 40, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>delete-blog-tag</strong>', NULL, '2019-02-24 10:35:29', '2019-02-24 10:35:29'),
-(41, 3, 1, 41, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>view-blog</strong>', NULL, '2019-02-24 10:35:52', '2019-02-24 10:35:52'),
-(42, 3, 1, 43, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>edit-blog</strong>', NULL, '2019-02-24 10:36:03', '2019-02-24 10:36:03'),
-(43, 3, 1, 42, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>create-blog</strong>', NULL, '2019-02-24 10:36:14', '2019-02-24 10:36:14'),
-(44, 3, 1, 44, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>delete-blog</strong>', NULL, '2019-02-24 10:37:55', '2019-02-24 10:37:55'),
-(45, 3, 1, 45, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>view-faq</strong>', NULL, '2019-02-24 10:38:04', '2019-02-24 10:38:04'),
-(46, 3, 1, 46, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>create-faq</strong>', NULL, '2019-02-24 10:38:12', '2019-02-24 10:38:12'),
-(47, 3, 1, 47, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>edit-faq</strong>', NULL, '2019-02-24 10:38:21', '2019-02-24 10:38:21'),
-(48, 3, 1, 48, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>delete-faq</strong>', NULL, '2019-02-24 10:38:54', '2019-02-24 10:38:54'),
-(49, 3, 1, 74, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>view-suppliers</strong>', NULL, '2019-02-24 10:40:07', '2019-02-24 10:40:07'),
-(50, 3, 1, 75, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>edit-suppliers</strong>', NULL, '2019-02-24 10:40:39', '2019-02-24 10:40:39'),
-(51, 3, 1, 76, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>create-suppliers</strong>', NULL, '2019-02-24 10:41:08', '2019-02-24 10:41:08'),
-(52, 3, 1, 77, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>delete-suppliers</strong>', NULL, '2019-02-24 10:41:39', '2019-02-24 10:41:39'),
-(53, 1, 1, 5, 'plus', 'bg-green', 'trans(\"history.backend.users.created\") <strong>{user}</strong>', '{\"user_link\":[\"admin.access.user.show\",\"Jalil Nayan\",5]}', '2019-05-11 01:24:40', '2019-05-11 01:24:40'),
-(54, 1, 1, 5, 'save', 'bg-aqua', 'trans(\"history.backend.users.updated\") <strong>{user}</strong>', '{\"user_link\":[\"admin.access.user.show\",\"Jalil Nayan\",5]}', '2019-05-11 23:07:42', '2019-05-11 23:07:42'),
-(55, 3, 1, 78, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>issue-management</strong>', NULL, '2019-05-12 22:32:51', '2019-05-12 22:32:51'),
-(56, 1, 1, 5, 'save', 'bg-aqua', 'trans(\"history.backend.users.updated\") <strong>{user}</strong>', '{\"user_link\":[\"admin.access.user.show\",\"Jalil Nayan\",5]}', '2019-05-12 22:35:26', '2019-05-12 22:35:26'),
-(57, 1, 1, 5, 'save', 'bg-aqua', 'trans(\"history.backend.users.updated\") <strong>{user}</strong>', '{\"user_link\":[\"admin.access.user.show\",\"Jalil Nayan\",5]}', '2019-05-12 22:36:57', '2019-05-12 22:36:57');
+(1, 3, 1, 49, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>create-plant-equipment</strong>', NULL, '2019-01-21 10:42:35', '2019-01-21 10:42:35'),
+(2, 3, 1, 49, 'save', 'bg-aqua', 'trans(\"history.backend.permissions.updated\") <strong>create-plant-equipment</strong>', NULL, '2019-01-21 10:43:48', '2019-01-21 10:43:48'),
+(3, 2, 1, 2, 'save', 'bg-aqua', 'trans(\"history.backend.roles.updated\") <strong>Executive</strong>', NULL, '2019-01-21 10:46:25', '2019-01-21 10:46:25'),
+(4, 1, 1, 4, 'plus', 'bg-green', 'trans(\"history.backend.users.created\") <strong>{user}</strong>', '{\"user_link\":[\"admin.access.user.show\",\"Rashed Al Banna\",4]}', '2019-02-03 08:18:51', '2019-02-03 08:18:51'),
+(5, 1, 1, 4, 'save', 'bg-aqua', 'trans(\"history.backend.users.updated\") <strong>{user}</strong>', '{\"user_link\":[\"admin.access.user.show\",\"Rashed Al Banna\",4]}', '2019-02-03 08:21:04', '2019-02-03 08:21:04'),
+(6, 3, 1, 50, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>edit-plant-equipment</strong>', NULL, '2019-02-09 03:20:08', '2019-02-09 03:20:08'),
+(7, 3, 1, 51, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>view-plant-equipment</strong>', NULL, '2019-02-09 03:21:08', '2019-02-09 03:21:08'),
+(8, 3, 1, 52, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>delete-plant-equipment</strong>', NULL, '2019-02-09 03:22:25', '2019-02-09 03:22:25'),
+(9, 3, 1, 53, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>view-reports</strong>', NULL, '2019-02-09 03:48:43', '2019-02-09 03:48:43'),
+(10, 3, 1, 54, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>create-projects</strong>', NULL, '2019-02-09 07:33:20', '2019-02-09 07:33:20'),
+(11, 3, 1, 55, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>edit-projects</strong>', NULL, '2019-02-09 07:46:59', '2019-02-09 07:46:59'),
+(12, 3, 1, 56, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>view-projects</strong>', NULL, '2019-02-09 08:12:35', '2019-02-09 08:12:35'),
+(13, 3, 1, 57, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>delete-projects</strong>', NULL, '2019-02-09 08:13:20', '2019-02-09 08:13:20'),
+(14, 1, 1, 4, 'save', 'bg-aqua', 'trans(\"history.backend.users.updated\") <strong>{user}</strong>', '{\"user_link\":[\"admin.access.user.show\",\"Rashed Al Banna\",4]}', '2019-02-11 05:42:08', '2019-02-11 05:42:08'),
+(15, 3, 1, 58, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>create-items</strong>', NULL, '2019-02-22 17:14:05', '2019-02-22 17:14:05'),
+(16, 3, 1, 59, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>edit-items</strong>', NULL, '2019-02-22 17:15:10', '2019-02-22 17:15:10'),
+(17, 3, 1, 60, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>view-items</strong>', NULL, '2019-02-22 17:15:38', '2019-02-22 17:15:38'),
+(18, 3, 1, 61, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>delete-items</strong>', NULL, '2019-02-22 17:16:35', '2019-02-22 17:16:35'),
+(19, 3, 1, 62, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>view-products</strong>', NULL, '2019-02-22 18:09:38', '2019-02-22 18:09:38'),
+(20, 3, 1, 63, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>create-products</strong>', NULL, '2019-02-22 18:10:22', '2019-02-22 18:10:22'),
+(21, 3, 1, 64, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>edit-Products</strong>', NULL, '2019-02-22 18:10:55', '2019-02-22 18:10:55'),
+(22, 3, 1, 65, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>delete-products</strong>', NULL, '2019-02-22 18:11:18', '2019-02-22 18:11:18'),
+(23, 3, 1, 65, 'save', 'bg-aqua', 'trans(\"history.backend.permissions.updated\") <strong>delete-products</strong>', NULL, '2019-02-22 18:11:35', '2019-02-22 18:11:35'),
+(24, 3, 1, 64, 'save', 'bg-aqua', 'trans(\"history.backend.permissions.updated\") <strong>edit-products</strong>', NULL, '2019-02-22 18:11:59', '2019-02-22 18:11:59'),
+(25, 3, 1, 66, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>create-product-receive</strong>', NULL, '2019-02-22 19:51:48', '2019-02-22 19:51:48'),
+(26, 3, 1, 67, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>edit-product-receive</strong>', NULL, '2019-02-22 19:52:36', '2019-02-22 19:52:36'),
+(27, 3, 1, 68, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>view-product-receive</strong>', NULL, '2019-02-22 19:53:22', '2019-02-22 19:53:22'),
+(28, 3, 1, 69, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>delete-product-receive</strong>', NULL, '2019-02-22 19:54:06', '2019-02-22 19:54:06'),
+(29, 3, 1, 70, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>create-project-challan</strong>', NULL, '2019-02-22 21:14:49', '2019-02-22 21:14:49'),
+(30, 3, 1, 71, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>edit-project-challan</strong>', NULL, '2019-02-22 21:15:22', '2019-02-22 21:15:22'),
+(31, 3, 1, 72, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>view-project-challan</strong>', NULL, '2019-02-22 21:15:58', '2019-02-22 21:15:58'),
+(32, 3, 1, 73, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>delete-project-challan</strong>', NULL, '2019-02-22 21:16:33', '2019-02-22 21:16:33'),
+(33, 3, 1, 33, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>view-blog-category</strong>', NULL, '2019-02-24 04:34:13', '2019-02-24 04:34:13'),
+(34, 3, 1, 34, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>create-blog-category</strong>', NULL, '2019-02-24 04:34:24', '2019-02-24 04:34:24'),
+(35, 3, 1, 35, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>edit-blog-category</strong>', NULL, '2019-02-24 04:34:36', '2019-02-24 04:34:36'),
+(36, 3, 1, 36, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>delete-blog-category</strong>', NULL, '2019-02-24 04:34:47', '2019-02-24 04:34:47'),
+(37, 3, 1, 37, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>view-blog-tag</strong>', NULL, '2019-02-24 04:34:57', '2019-02-24 04:34:57'),
+(38, 3, 1, 38, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>create-blog-tag</strong>', NULL, '2019-02-24 04:35:08', '2019-02-24 04:35:08'),
+(39, 3, 1, 39, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>edit-blog-tag</strong>', NULL, '2019-02-24 04:35:19', '2019-02-24 04:35:19'),
+(40, 3, 1, 40, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>delete-blog-tag</strong>', NULL, '2019-02-24 04:35:29', '2019-02-24 04:35:29'),
+(41, 3, 1, 41, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>view-blog</strong>', NULL, '2019-02-24 04:35:52', '2019-02-24 04:35:52'),
+(42, 3, 1, 43, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>edit-blog</strong>', NULL, '2019-02-24 04:36:03', '2019-02-24 04:36:03'),
+(43, 3, 1, 42, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>create-blog</strong>', NULL, '2019-02-24 04:36:14', '2019-02-24 04:36:14'),
+(44, 3, 1, 44, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>delete-blog</strong>', NULL, '2019-02-24 04:37:55', '2019-02-24 04:37:55'),
+(45, 3, 1, 45, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>view-faq</strong>', NULL, '2019-02-24 04:38:04', '2019-02-24 04:38:04'),
+(46, 3, 1, 46, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>create-faq</strong>', NULL, '2019-02-24 04:38:12', '2019-02-24 04:38:12'),
+(47, 3, 1, 47, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>edit-faq</strong>', NULL, '2019-02-24 04:38:21', '2019-02-24 04:38:21'),
+(48, 3, 1, 48, 'trash', 'bg-maroon', 'trans(\"history.backend.permissions.deleted\") <strong>delete-faq</strong>', NULL, '2019-02-24 04:38:54', '2019-02-24 04:38:54'),
+(49, 3, 1, 74, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>view-suppliers</strong>', NULL, '2019-02-24 04:40:07', '2019-02-24 04:40:07'),
+(50, 3, 1, 75, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>edit-suppliers</strong>', NULL, '2019-02-24 04:40:39', '2019-02-24 04:40:39'),
+(51, 3, 1, 76, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>create-suppliers</strong>', NULL, '2019-02-24 04:41:08', '2019-02-24 04:41:08'),
+(52, 3, 1, 77, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>delete-suppliers</strong>', NULL, '2019-02-24 04:41:39', '2019-02-24 04:41:39'),
+(53, 1, 1, 5, 'plus', 'bg-green', 'trans(\"history.backend.users.created\") <strong>{user}</strong>', '{\"user_link\":[\"admin.access.user.show\",\"Jalil Nayan\",5]}', '2019-05-10 19:24:40', '2019-05-10 19:24:40'),
+(54, 1, 1, 5, 'save', 'bg-aqua', 'trans(\"history.backend.users.updated\") <strong>{user}</strong>', '{\"user_link\":[\"admin.access.user.show\",\"Jalil Nayan\",5]}', '2019-05-11 17:07:42', '2019-05-11 17:07:42'),
+(55, 3, 1, 78, 'plus', 'bg-green', 'trans(\"history.backend.permissions.created\") <strong>issue-management</strong>', NULL, '2019-05-12 16:32:51', '2019-05-12 16:32:51'),
+(56, 1, 1, 5, 'save', 'bg-aqua', 'trans(\"history.backend.users.updated\") <strong>{user}</strong>', '{\"user_link\":[\"admin.access.user.show\",\"Jalil Nayan\",5]}', '2019-05-12 16:35:26', '2019-05-12 16:35:26'),
+(57, 1, 1, 5, 'save', 'bg-aqua', 'trans(\"history.backend.users.updated\") <strong>{user}</strong>', '{\"user_link\":[\"admin.access.user.show\",\"Jalil Nayan\",5]}', '2019-05-12 16:36:57', '2019-05-12 16:36:57');
 
 -- --------------------------------------------------------
 
@@ -383,13 +383,13 @@ CREATE TABLE `history_types` (
 --
 
 INSERT INTO `history_types` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(1, 'User', '2019-01-14 12:17:13', '2019-01-14 12:17:13'),
-(2, 'Role', '2019-01-14 12:17:13', '2019-01-14 12:17:13'),
-(3, 'Permission', '2019-01-14 12:17:13', '2019-01-14 12:17:13'),
-(4, 'Page', '2019-01-14 12:17:13', '2019-01-14 12:17:13'),
-(5, 'BlogTag', '2019-01-14 12:17:13', '2019-01-14 12:17:13'),
-(6, 'BlogCategory', '2019-01-14 12:17:13', '2019-01-14 12:17:13'),
-(7, 'Blog', '2019-01-14 12:17:13', '2019-01-14 12:17:13');
+(1, 'User', '2019-01-14 06:17:13', '2019-01-14 06:17:13'),
+(2, 'Role', '2019-01-14 06:17:13', '2019-01-14 06:17:13'),
+(3, 'Permission', '2019-01-14 06:17:13', '2019-01-14 06:17:13'),
+(4, 'Page', '2019-01-14 06:17:13', '2019-01-14 06:17:13'),
+(5, 'BlogTag', '2019-01-14 06:17:13', '2019-01-14 06:17:13'),
+(6, 'BlogCategory', '2019-01-14 06:17:13', '2019-01-14 06:17:13'),
+(7, 'Blog', '2019-01-14 06:17:13', '2019-01-14 06:17:13');
 
 -- --------------------------------------------------------
 
@@ -634,11 +634,7 @@ CREATE TABLE `inv_receive` (
 --
 
 INSERT INTO `inv_receive` (`id`, `mrr_no`, `mrr_date`, `purchase_id`, `receive_acct_id`, `supplier_id`, `posted_tog`, `remarks`, `receive_type`, `receive_ware_hosue_id`, `receive_unit_id`, `chk_year_end`, `receive_total`, `no_of_material`, `jv_no`, `part_no`) VALUES
-(14, '001', '2019-04-13 09:02:42', '001', '5-11', '1', 1, 'test', 'Receive', 1, '1', 1, 510, 110, '001', '123456'),
-(15, '002', '2019-04-21 05:31:12', '002', '5-11', '1', 1, 'test', 'Receive', 3, '3', 1, 997, 10, '002', '1235567'),
-(16, '003', '2019-05-07 05:44:09', '003', '5-11', '1', 1, 'test', 'Receive', 3, '3', 1, 108000, 12, '003', '212134'),
-(17, '004', '2019-05-09 04:57:01', '004', '5-11', '2', 1, 'test', 'Receive', 3, '3', 1, 200, 2, '004', '9090911'),
-(18, '005', '2019-06-12 03:45:28', '005', '5-11', '1', 1, 'test', 'Receive', 1, '1', 1, 500, 50, '005', '123456');
+(19, 'RCV001', '2019-07-07 00:00:00', '', '', '', 0, '', '', 0, '', 0, 0, 0, '', NULL);
 
 -- --------------------------------------------------------
 
@@ -663,12 +659,8 @@ CREATE TABLE `inv_receivedetail` (
 --
 
 INSERT INTO `inv_receivedetail` (`id`, `mrr_no`, `material_id`, `receive_qty`, `unit_price`, `sl_no`, `total_receive`, `rd_serial_id`, `part_no`) VALUES
-(29, '001', '5', 50, 3, 1, 150, '1', '123456'),
-(30, '001', '4', 60, 6, 1, 360, '1', '123456'),
-(31, '002', '4', 10, 99.7, 1, 997, '1', '1235567'),
-(32, '003', '6', 12, 9000, 1, 108000, '1', '212134'),
-(33, '004', '7', 2, 100, 1, 200, '1', '9090911'),
-(34, '005', '7', 50, 10, 1, 500, '1', '123456');
+(42, 'RCV001', '343', 2, 0, 0, 0, '', NULL),
+(43, 'RCV001', '234434', 1, 0, 0, 0, '', NULL);
 
 -- --------------------------------------------------------
 
@@ -793,10 +785,10 @@ CREATE TABLE `items` (
 --
 
 INSERT INTO `items` (`id`, `name`, `code`, `created_by`, `updated_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(19, 'Raw Materials', '01', 1, NULL, 2019, '2019-03-29 17:59:40', NULL),
-(20, 'Equipment', '02', 1, NULL, 2019, '2019-03-29 17:59:59', NULL),
-(21, 'Port Device', '03', 1, NULL, 2019, '2019-04-01 15:26:49', NULL),
-(22, 'Wheel', '04', 1, NULL, 2019, '2019-05-08 14:47:36', NULL);
+(19, 'Raw Materials', '01', 1, NULL, 2019, '2019-03-29 11:59:40', NULL),
+(20, 'Equipment', '02', 1, NULL, 2019, '2019-03-29 11:59:59', NULL),
+(21, 'Port Device', '03', 1, NULL, 2019, '2019-04-01 09:26:49', NULL),
+(22, 'Wheel', '04', 1, NULL, 2019, '2019-05-08 08:47:36', NULL);
 
 -- --------------------------------------------------------
 
@@ -846,7 +838,7 @@ CREATE TABLE `menus` (
 --
 
 INSERT INTO `menus` (`id`, `type`, `name`, `items`, `created_by`, `updated_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'backend', 'Backend Sidebar Menu', '[{\"view_permission_id\":\"view-access-management\",\"icon\":\"fa-users\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"\",\"name\":\"Access Management\",\"id\":11,\"content\":\"Access Management\",\"children\":[{\"view_permission_id\":\"view-user-management\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.access.user.index\",\"name\":\"User Management\",\"id\":12,\"content\":\"User Management\"},{\"view_permission_id\":\"view-role-management\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.access.role.index\",\"name\":\"Role Management\",\"id\":13,\"content\":\"Role Management\"},{\"view_permission_id\":\"view-permission-management\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.access.permission.index\",\"name\":\"Permission Management\",\"id\":14,\"content\":\"Permission Management\"}]},{\"view_permission_id\":\"view-module\",\"icon\":\"fa-wrench\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.modules.index\",\"name\":\"Module\",\"id\":1,\"content\":\"Module\"},{\"view_permission_id\":\"view-menu\",\"icon\":\"fa-bars\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.menus.index\",\"name\":\"Menus\",\"id\":3,\"content\":\"Menus\"},{\"view_permission_id\":\"edit-settings\",\"icon\":\"fa-gear\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.settings.edit?id=1\",\"name\":\"Settings\",\"id\":9,\"content\":\"Settings\"},{\"view_permission_id\":\"view-projects\",\"icon\":\"fa fa-tasks\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.projects.index\",\"name\":\"Projects\",\"id\":17,\"content\":\"Projects\"},{\"id\":18,\"name\":\"Items\",\"url\":\"admin.items.index\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa fa-get-pocket\",\"view_permission_id\":\"view-items\",\"content\":\"Items\"},{\"view_permission_id\":\"view-suppliers\",\"icon\":\"fa fa-user-circle\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.suppliers.index\",\"name\":\"Suppliers\",\"id\":22,\"content\":\"Suppliers\"},{\"id\":30,\"name\":\"Product Requisition\",\"url\":\"\",\"url_type\":\"static\",\"open_in_new_tab\":0,\"icon\":\"fa fa-coffee\",\"view_permission_id\":\"view-reports\",\"content\":\"Product Requisition\",\"children\":[{\"view_permission_id\":\"view-reports\",\"icon\":\"fa fa-truck\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.product_requisition.index\",\"name\":\"Requisition Form\",\"id\":31,\"content\":\"Requisition Form\"}]},{\"id\":19,\"name\":\"Products Receive\",\"url\":\"admin.products.index\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa fa-fighter-jet\",\"view_permission_id\":\"view-products\",\"content\":\"Products Receive\",\"children\":[{\"id\":20,\"name\":\"Receive Form\",\"url\":\"admin.product_receive.create\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa fa-cube\",\"view_permission_id\":\"create-product-receive\",\"content\":\"Receive Form\"},{\"view_permission_id\":\"view-reports\",\"icon\":\"fa fa-truck\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.product_receive.product_receive_list\",\"name\":\"Receive List\",\"id\":23,\"content\":\"Receive List\"}]},{\"view_permission_id\":\"issue-management\",\"icon\":\"fa fa-suitcase\",\"open_in_new_tab\":0,\"url_type\":\"static\",\"url\":\"\",\"name\":\"Product Issue\",\"id\":25,\"content\":\"Product Issue\",\"children\":[{\"view_permission_id\":\"issue-management\",\"icon\":\"fa fa-truck\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.product_challan.create\",\"name\":\"Issue Form\",\"id\":21,\"content\":\"Issue Form\"},{\"view_permission_id\":\"issue-management\",\"icon\":\"fa fa-truck\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.product_challan.product_issue_list\",\"name\":\"Issue List\",\"id\":26,\"content\":\"Issue List\"}]},{\"view_permission_id\":\"view-reports\",\"icon\":\"fa fa-truck\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.product_return.index\",\"name\":\"Product Return\",\"id\":32,\"content\":\"Product Return\"},{\"view_permission_id\":\"view-reports\",\"icon\":\"fa fa-exchange\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.product_movement.index\",\"name\":\"P2P Transfer\",\"id\":33,\"content\":\"P2P Transfer\"},{\"id\":15,\"name\":\"Plant Equipment\",\"url\":\"admin.plantEquipment.index\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa fa-trello\",\"view_permission_id\":\"view-plant-equipment\",\"content\":\"Plant Equipment\"},{\"view_permission_id\":\"view-reports\",\"icon\":\"fa fa-bar-chart\",\"open_in_new_tab\":0,\"url_type\":\"static\",\"url\":\"\",\"name\":\"Reports\",\"id\":16,\"content\":\"Reports\",\"children\":[{\"id\":29,\"name\":\"Plant Equipment\",\"url\":\"admin.reports.get_plant_equipment_reports\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa fa-truck\",\"view_permission_id\":\"view-reports\",\"content\":\"Plant Equipment\"},{\"id\":27,\"name\":\"Products\",\"url\":\"admin.reports.index\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa fa-bar-chart\",\"view_permission_id\":\"view-reports\",\"content\":\"Products\"},{\"id\":28,\"name\":\"Stock Management\",\"url\":\"admin.reports.stock-management\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa fa-bar-chart\",\"view_permission_id\":\"view-reports\",\"content\":\"Stock Management\"}]}]', 1, NULL, '2019-01-14 12:17:14', '2019-06-22 07:10:15', NULL);
+(1, 'backend', 'Backend Sidebar Menu', '[{\"view_permission_id\":\"view-access-management\",\"icon\":\"fa-users\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"\",\"name\":\"Access Management\",\"id\":11,\"content\":\"Access Management\",\"children\":[{\"view_permission_id\":\"view-user-management\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.access.user.index\",\"name\":\"User Management\",\"id\":12,\"content\":\"User Management\"},{\"view_permission_id\":\"view-role-management\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.access.role.index\",\"name\":\"Role Management\",\"id\":13,\"content\":\"Role Management\"},{\"view_permission_id\":\"view-permission-management\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.access.permission.index\",\"name\":\"Permission Management\",\"id\":14,\"content\":\"Permission Management\"}]},{\"view_permission_id\":\"view-module\",\"icon\":\"fa-wrench\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.modules.index\",\"name\":\"Module\",\"id\":1,\"content\":\"Module\"},{\"view_permission_id\":\"view-menu\",\"icon\":\"fa-bars\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.menus.index\",\"name\":\"Menus\",\"id\":3,\"content\":\"Menus\"},{\"view_permission_id\":\"edit-settings\",\"icon\":\"fa-gear\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.settings.edit?id=1\",\"name\":\"Settings\",\"id\":9,\"content\":\"Settings\"},{\"view_permission_id\":\"view-projects\",\"icon\":\"fa fa-tasks\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.projects.index\",\"name\":\"Projects\",\"id\":17,\"content\":\"Projects\"},{\"id\":18,\"name\":\"Items\",\"url\":\"admin.items.index\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa fa-get-pocket\",\"view_permission_id\":\"view-items\",\"content\":\"Items\"},{\"view_permission_id\":\"view-suppliers\",\"icon\":\"fa fa-user-circle\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.suppliers.index\",\"name\":\"Suppliers\",\"id\":22,\"content\":\"Suppliers\"},{\"id\":30,\"name\":\"Product Requisition\",\"url\":\"\",\"url_type\":\"static\",\"open_in_new_tab\":0,\"icon\":\"fa fa-coffee\",\"view_permission_id\":\"view-reports\",\"content\":\"Product Requisition\",\"children\":[{\"view_permission_id\":\"view-reports\",\"icon\":\"fa fa-truck\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.product_requisition.index\",\"name\":\"Requisition Form\",\"id\":31,\"content\":\"Requisition Form\"}]},{\"id\":19,\"name\":\"Products Receive\",\"url\":\"admin.products.index\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa fa-fighter-jet\",\"view_permission_id\":\"view-products\",\"content\":\"Products Receive\",\"children\":[{\"id\":20,\"name\":\"Receive Form\",\"url\":\"admin.product_receive.create\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa fa-cube\",\"view_permission_id\":\"create-product-receive\",\"content\":\"Receive Form\"},{\"view_permission_id\":\"view-reports\",\"icon\":\"fa fa-truck\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.product_receive.product_receive_list\",\"name\":\"Receive List\",\"id\":23,\"content\":\"Receive List\"}]},{\"view_permission_id\":\"issue-management\",\"icon\":\"fa fa-suitcase\",\"open_in_new_tab\":0,\"url_type\":\"static\",\"url\":\"\",\"name\":\"Product Issue\",\"id\":25,\"content\":\"Product Issue\",\"children\":[{\"view_permission_id\":\"issue-management\",\"icon\":\"fa fa-truck\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.product_challan.create\",\"name\":\"Issue Form\",\"id\":21,\"content\":\"Issue Form\"},{\"view_permission_id\":\"issue-management\",\"icon\":\"fa fa-truck\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.product_challan.product_issue_list\",\"name\":\"Issue List\",\"id\":26,\"content\":\"Issue List\"}]},{\"view_permission_id\":\"view-reports\",\"icon\":\"fa fa-truck\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.product_return.index\",\"name\":\"Product Return\",\"id\":32,\"content\":\"Product Return\"},{\"view_permission_id\":\"view-reports\",\"icon\":\"fa fa-exchange\",\"open_in_new_tab\":0,\"url_type\":\"route\",\"url\":\"admin.product_movement.index\",\"name\":\"P2P Transfer\",\"id\":33,\"content\":\"P2P Transfer\"},{\"id\":15,\"name\":\"Plant Equipment\",\"url\":\"admin.plantEquipment.index\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa fa-trello\",\"view_permission_id\":\"view-plant-equipment\",\"content\":\"Plant Equipment\"},{\"view_permission_id\":\"view-reports\",\"icon\":\"fa fa-bar-chart\",\"open_in_new_tab\":0,\"url_type\":\"static\",\"url\":\"\",\"name\":\"Reports\",\"id\":16,\"content\":\"Reports\",\"children\":[{\"id\":29,\"name\":\"Plant Equipment\",\"url\":\"admin.reports.get_plant_equipment_reports\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa fa-truck\",\"view_permission_id\":\"view-reports\",\"content\":\"Plant Equipment\"},{\"id\":27,\"name\":\"Products\",\"url\":\"admin.reports.index\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa fa-bar-chart\",\"view_permission_id\":\"view-reports\",\"content\":\"Products\"},{\"id\":28,\"name\":\"Stock Management\",\"url\":\"admin.reports.stock-management\",\"url_type\":\"route\",\"open_in_new_tab\":0,\"icon\":\"fa fa-bar-chart\",\"view_permission_id\":\"view-reports\",\"content\":\"Stock Management\"}]}]', 1, NULL, '2019-01-14 06:17:14', '2019-06-22 01:10:15', NULL);
 
 -- --------------------------------------------------------
 
@@ -919,14 +911,14 @@ CREATE TABLE `modules` (
 --
 
 INSERT INTO `modules` (`id`, `view_permission_id`, `name`, `url`, `created_by`, `updated_by`, `created_at`, `updated_at`) VALUES
-(1, 'view-access-management', 'Access Management', NULL, 1, NULL, '2019-01-14 12:17:14', NULL),
-(2, 'view-user-management', 'User Management', 'admin.access.user.index', 1, NULL, '2019-01-14 12:17:14', NULL),
-(3, 'view-role-management', 'Role Management', 'admin.access.role.index', 1, NULL, '2019-01-14 12:17:14', NULL),
-(4, 'view-permission-management', 'Permission Management', 'admin.access.permission.index', 1, NULL, '2019-01-14 12:17:14', NULL),
-(5, 'view-menu', 'Menus', 'admin.menus.index', 1, NULL, '2019-01-14 12:17:14', NULL),
-(6, 'view-module', 'Module', 'admin.modules.index', 1, NULL, '2019-01-14 12:17:14', NULL),
-(7, 'view-page', 'Pages', 'admin.pages.index', 1, NULL, '2019-01-14 12:17:14', NULL),
-(8, 'edit-settings', 'Settings', 'admin.settings.edit', 1, NULL, '2019-01-14 12:17:14', NULL);
+(1, 'view-access-management', 'Access Management', NULL, 1, NULL, '2019-01-14 06:17:14', NULL),
+(2, 'view-user-management', 'User Management', 'admin.access.user.index', 1, NULL, '2019-01-14 06:17:14', NULL),
+(3, 'view-role-management', 'Role Management', 'admin.access.role.index', 1, NULL, '2019-01-14 06:17:14', NULL),
+(4, 'view-permission-management', 'Permission Management', 'admin.access.permission.index', 1, NULL, '2019-01-14 06:17:14', NULL),
+(5, 'view-menu', 'Menus', 'admin.menus.index', 1, NULL, '2019-01-14 06:17:14', NULL),
+(6, 'view-module', 'Module', 'admin.modules.index', 1, NULL, '2019-01-14 06:17:14', NULL),
+(7, 'view-page', 'Pages', 'admin.pages.index', 1, NULL, '2019-01-14 06:17:14', NULL),
+(8, 'edit-settings', 'Settings', 'admin.settings.edit', 1, NULL, '2019-01-14 06:17:14', NULL);
 
 -- --------------------------------------------------------
 
@@ -949,318 +941,318 @@ CREATE TABLE `notifications` (
 --
 
 INSERT INTO `notifications` (`id`, `message`, `user_id`, `type`, `is_read`, `created_at`, `updated_at`) VALUES
-(1, 'User Logged In: Viral', 1, 1, 1, '2019-01-15 09:50:38', '2019-01-21 16:49:53'),
-(2, 'User Logged In: Viral', 1, 1, 1, '2019-01-15 09:53:34', '2019-01-21 16:49:51'),
-(3, 'User Logged In: Viral', 1, 1, 1, '2019-01-15 10:05:32', '2019-01-21 16:49:51'),
-(4, 'User Logged In: Viral', 1, 1, 1, '2019-01-15 11:28:46', '2019-01-21 16:49:51'),
-(5, 'User Logged In: Viral', 1, 1, 1, '2019-01-15 11:28:54', '2019-01-21 16:49:51'),
-(6, 'User Logged In: Viral', 1, 1, 1, '2019-01-15 12:03:57', '2019-01-21 16:49:51'),
-(7, 'User Logged In: Viral', 1, 1, 1, '2019-01-15 12:24:51', '2019-01-21 16:49:47'),
-(8, 'User Logged In: Viral', 1, 1, 1, '2019-01-15 12:30:11', '2019-01-21 16:49:47'),
-(9, 'User Logged In: Viral', 1, 1, 1, '2019-01-15 14:01:53', '2019-01-21 16:49:47'),
-(10, 'User Logged In: Viral', 1, 1, 1, '2019-01-15 14:28:19', '2019-01-21 16:49:47'),
-(11, 'User Logged In: Viral', 1, 1, 1, '2019-01-15 14:57:31', '2019-01-21 16:49:47'),
-(12, 'User Logged In: Viral', 1, 1, 1, '2019-01-15 16:34:56', '2019-01-21 16:49:41'),
-(13, 'User Logged In: Viral', 1, 1, 1, '2019-01-17 07:26:27', '2019-01-21 16:49:41'),
-(14, 'User Logged In: Viral', 1, 1, 1, '2019-01-17 07:49:14', '2019-01-21 16:49:41'),
-(15, 'User Logged In: Viral', 1, 1, 1, '2019-01-19 10:35:26', '2019-01-21 16:49:41'),
-(16, 'User Logged In: Viral', 1, 1, 1, '2019-01-21 08:34:52', '2019-01-21 16:49:41'),
-(17, 'User Logged In: Admin', 1, 1, 1, '2019-01-21 08:54:14', '2019-01-21 16:49:29'),
-(18, 'User Logged In: Admin', 1, 1, 1, '2019-01-21 10:42:13', '2019-01-21 16:49:29'),
-(19, 'User Logged In: Admin', 1, 1, 1, '2019-01-21 10:54:34', '2019-01-21 16:49:29'),
-(20, 'User Logged In: Admin', 1, 1, 1, '2019-01-21 12:08:42', '2019-01-21 16:49:29'),
-(21, 'User Logged In: Admin', 1, 1, 1, '2019-01-21 12:21:36', '2019-01-21 16:49:29'),
-(22, 'User Logged In: Admin', 1, 1, 1, '2019-01-21 15:11:22', '2019-01-21 16:49:56'),
-(23, 'User Logged In: Admin', 1, 1, 1, '2019-01-21 16:01:33', '2019-01-21 16:49:56'),
-(24, 'User Logged In: Admin', 1, 1, 1, '2019-01-21 16:12:42', '2019-01-21 16:49:56'),
-(25, 'User Logged In: Admin', 1, 1, 1, '2019-01-21 16:31:13', '2019-01-21 16:49:56'),
-(26, 'User Logged In: Admin', 1, 1, 1, '2019-01-21 16:44:46', '2019-01-21 16:49:56'),
-(27, 'User Logged In: Admin', 1, 1, 1, '2019-01-22 07:55:00', '2019-02-01 08:50:54'),
-(28, 'User Logged In: Admin', 1, 1, 1, '2019-01-22 08:42:42', '2019-02-01 08:50:54'),
-(29, 'User Logged In: Admin', 1, 1, 1, '2019-01-22 09:02:34', '2019-02-01 08:50:54'),
-(30, 'User Logged In: Admin', 1, 1, 1, '2019-01-22 09:48:50', '2019-02-01 08:50:54'),
-(31, 'User Logged In: Admin', 1, 1, 1, '2019-01-22 12:05:46', '2019-02-01 08:50:52'),
-(32, 'User Logged In: Admin', 1, 1, 1, '2019-01-22 13:29:09', '2019-02-01 08:50:52'),
-(33, 'User Logged In: Admin', 1, 1, 1, '2019-01-22 13:56:33', '2019-02-01 08:50:52'),
-(34, 'User Logged In: Admin', 1, 1, 1, '2019-01-22 15:15:00', '2019-02-01 08:50:52'),
-(35, 'User Logged In: Admin', 1, 1, 1, '2019-01-22 15:40:39', '2019-02-01 08:50:52'),
-(36, 'User Logged In: Admin', 1, 1, 1, '2019-01-23 08:15:31', '2019-02-01 08:50:50'),
-(37, 'User Logged In: Admin', 1, 1, 1, '2019-01-23 08:56:35', '2019-02-01 08:50:50'),
-(38, 'User Logged In: Admin', 1, 1, 1, '2019-01-23 09:21:32', '2019-02-01 08:50:50'),
-(39, 'User Logged In: Admin', 1, 1, 1, '2019-01-23 09:51:10', '2019-02-01 08:50:50'),
-(40, 'User Logged In: Admin', 1, 1, 1, '2019-02-01 08:50:13', '2019-02-01 08:50:54'),
-(41, 'User Logged In: Admin', 1, 1, 0, '2019-02-03 08:06:56', NULL),
-(42, 'User Logged In: Admin', 1, 1, 0, '2019-02-03 08:27:37', NULL),
-(43, 'User Logged In: Admin', 1, 1, 0, '2019-02-03 08:41:48', NULL),
-(44, 'User Logged In: Admin', 1, 1, 0, '2019-02-03 09:51:42', NULL),
-(45, 'User Logged In: Admin', 1, 1, 1, '2019-02-03 10:26:55', '2019-02-09 08:33:04'),
-(46, 'User Logged In: Admin', 1, 1, 1, '2019-02-03 10:31:30', '2019-02-09 08:33:04'),
-(47, 'User Logged In: Admin', 1, 1, 1, '2019-02-03 10:56:12', '2019-02-09 08:33:04'),
-(48, 'User Logged In: Admin', 1, 1, 1, '2019-02-03 11:32:44', '2019-02-09 08:33:04'),
-(49, 'User Logged In: Admin', 1, 1, 1, '2019-02-03 11:43:13', '2019-02-09 08:33:04'),
-(50, 'User Logged In: Admin', 1, 1, 1, '2019-02-03 12:03:36', '2019-02-09 08:33:01'),
-(51, 'User Logged In: Admin', 1, 1, 1, '2019-02-03 14:13:37', '2019-02-09 08:33:01'),
-(52, 'User Logged In: Rashed', 1, 1, 1, '2019-02-03 14:19:32', '2019-02-09 08:33:01'),
-(53, 'User Logged In: Admin', 1, 1, 1, '2019-02-03 14:20:42', '2019-02-04 14:14:34'),
-(54, 'User Logged In: Rashed', 1, 1, 1, '2019-02-03 14:21:20', '2019-02-04 14:14:34'),
-(55, 'User Logged In: Admin', 1, 1, 1, '2019-02-03 14:37:59', '2019-02-04 14:14:34'),
-(56, 'User Logged In: Admin', 1, 1, 1, '2019-02-04 13:28:16', '2019-02-04 14:14:34'),
-(57, 'User Logged In: Admin', 1, 1, 1, '2019-02-04 14:14:19', '2019-02-04 14:14:34'),
-(58, 'User Logged In: Admin', 1, 1, 1, '2019-02-04 14:27:24', '2019-02-09 08:33:01'),
-(59, 'User Logged In: Admin', 1, 1, 1, '2019-02-09 08:09:56', '2019-02-09 08:33:01'),
-(60, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 09:15:22', NULL),
-(61, 'User Logged In: Rashed', 1, 1, 0, '2019-02-09 09:26:39', NULL),
-(62, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 09:29:08', NULL),
-(63, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 10:14:20', NULL),
-(64, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 11:15:05', NULL),
-(65, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 11:34:48', NULL),
-(66, 'User Logged In: Admin', 1, 1, 1, '2019-02-09 11:49:15', '2019-02-09 16:05:06'),
-(67, 'User Logged In: Admin', 1, 1, 1, '2019-02-09 12:10:08', '2019-02-09 16:05:06'),
-(68, 'User Logged In: Admin', 1, 1, 1, '2019-02-09 12:32:07', '2019-02-09 16:05:06'),
-(69, 'User Logged In: Admin', 1, 1, 1, '2019-02-09 13:31:57', '2019-02-09 16:05:06'),
-(70, 'User Logged In: Admin', 1, 1, 1, '2019-02-09 13:44:02', '2019-02-09 16:05:06'),
-(71, 'User Logged In: Admin', 1, 1, 1, '2019-02-09 14:05:42', '2019-02-09 16:04:52'),
-(72, 'User Logged In: Admin', 1, 1, 1, '2019-02-09 14:29:10', '2019-02-09 16:04:52'),
-(73, 'User Logged In: Admin', 1, 1, 1, '2019-02-09 14:43:15', '2019-02-09 16:04:52'),
-(74, 'User Logged In: Admin', 1, 1, 1, '2019-02-09 15:22:52', '2019-02-09 16:04:52'),
-(75, 'User Logged In: Admin', 1, 1, 1, '2019-02-09 15:52:17', '2019-02-09 16:04:52'),
-(76, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 16:37:31', NULL),
-(77, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 16:50:24', NULL),
-(78, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 19:54:02', NULL),
-(79, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 20:25:38', NULL),
-(80, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 20:57:31', NULL),
-(81, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 21:27:53', NULL),
-(82, 'User Logged In: Admin', 1, 1, 0, '2019-02-10 01:58:58', NULL),
-(83, 'User Logged In: Admin', 1, 1, 0, '2019-02-10 01:59:05', NULL),
-(84, 'User Logged In: Admin', 1, 1, 0, '2019-02-10 02:28:03', NULL),
-(85, 'User Logged In: Admin', 1, 1, 0, '2019-02-10 03:17:01', NULL),
-(86, 'User Logged In: Admin', 1, 1, 0, '2019-02-10 03:55:44', NULL),
-(87, 'User Logged In: Admin', 1, 1, 0, '2019-02-10 04:33:59', NULL),
-(88, 'User Logged In: Admin', 1, 1, 0, '2019-02-10 04:54:21', NULL),
-(89, 'User Logged In: Admin', 1, 1, 0, '2019-02-10 05:11:04', NULL),
-(90, 'User Logged In: Admin', 1, 1, 0, '2019-02-10 05:19:54', NULL),
-(91, 'User Logged In: Admin', 1, 1, 0, '2019-02-10 05:23:07', NULL),
-(92, 'User Logged In: Admin', 1, 1, 0, '2019-02-10 05:23:29', NULL),
-(93, 'User Logged In: Admin', 1, 1, 0, '2019-02-10 08:37:49', NULL),
-(94, 'User Logged In: Admin', 1, 1, 0, '2019-02-10 08:38:01', NULL),
-(95, 'User Logged In: Admin', 1, 1, 0, '2019-02-10 09:06:30', NULL),
-(96, 'User Logged In: Admin', 1, 1, 0, '2019-02-11 11:35:53', NULL),
-(97, 'User Logged In: Admin', 1, 1, 0, '2019-02-11 11:36:29', NULL),
-(98, 'User Logged In: Rashed', 1, 1, 0, '2019-02-11 11:40:08', NULL),
-(99, 'User Logged In: Admin', 1, 1, 0, '2019-02-11 11:40:35', NULL),
-(100, 'User Logged In: Rashed', 1, 1, 0, '2019-02-11 11:42:29', NULL),
-(101, 'User Logged In: Rashed', 1, 1, 0, '2019-02-22 14:19:36', NULL),
-(102, 'User Logged In: Admin', 1, 1, 0, '2019-02-22 14:29:38', NULL),
-(103, 'User Logged In: Admin', 1, 1, 0, '2019-02-22 14:54:49', NULL),
-(104, 'User Logged In: Admin', 1, 1, 0, '2019-02-22 22:47:39', NULL),
-(105, 'User Logged In: Admin', 1, 1, 0, '2019-02-22 23:08:30', NULL),
-(106, 'User Logged In: Admin', 1, 1, 0, '2019-02-23 00:08:39', NULL),
-(107, 'User Logged In: Admin', 1, 1, 0, '2019-02-23 01:50:52', NULL),
-(108, 'User Logged In: Admin', 1, 1, 0, '2019-02-23 02:17:13', NULL),
-(109, 'User Logged In: Admin', 1, 1, 0, '2019-02-23 02:31:27', NULL),
-(110, 'User Logged In: Admin', 1, 1, 0, '2019-02-23 10:54:42', NULL),
-(111, 'User Logged In: Admin', 1, 1, 0, '2019-02-23 11:21:20', NULL),
-(112, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 10:02:34', NULL),
-(113, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 10:10:57', NULL),
-(114, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 10:16:09', NULL),
-(115, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 10:19:27', NULL),
-(116, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 10:19:42', NULL),
-(117, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 10:22:52', NULL),
-(118, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 11:17:26', NULL),
-(119, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 11:44:58', NULL),
-(120, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 12:16:34', NULL),
-(121, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 12:36:08', NULL),
-(122, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 13:38:19', NULL),
-(123, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 14:18:22', NULL),
-(124, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 15:51:32', NULL),
-(125, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 16:33:07', NULL),
-(126, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 19:59:45', NULL),
-(127, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 20:14:57', NULL),
-(128, 'User Logged In: Admin', 1, 1, 0, '2019-02-25 06:45:32', NULL),
-(129, 'User Logged In: Admin', 1, 1, 0, '2019-02-25 09:38:58', NULL),
-(130, 'User Logged In: Admin', 1, 1, 0, '2019-02-25 10:13:14', NULL),
-(131, 'User Logged In: Admin', 1, 1, 0, '2019-02-25 10:36:39', NULL),
-(132, 'User Logged In: Admin', 1, 1, 0, '2019-02-25 11:03:46', NULL),
-(133, 'User Logged In: Admin', 1, 1, 0, '2019-02-25 11:27:30', NULL),
-(134, 'User Logged In: Admin', 1, 1, 0, '2019-02-25 11:50:56', NULL),
-(135, 'User Logged In: Admin', 1, 1, 0, '2019-02-25 13:53:22', NULL),
-(136, 'User Logged In: Admin', 1, 1, 0, '2019-02-25 15:28:29', NULL),
-(137, 'User Logged In: Admin', 1, 1, 0, '2019-02-25 16:19:55', NULL),
-(138, 'User Logged In: Admin', 1, 1, 0, '2019-02-25 16:35:35', NULL),
-(139, 'User Logged In: Admin', 1, 1, 0, '2019-02-26 12:11:21', NULL),
-(140, 'User Logged In: Admin', 1, 1, 0, '2019-02-26 13:54:46', NULL),
-(141, 'User Logged In: Admin', 1, 1, 0, '2019-02-26 13:54:51', NULL),
-(142, 'User Logged In: Admin', 1, 1, 0, '2019-03-03 19:55:08', NULL),
-(143, 'User Logged In: Admin', 1, 1, 0, '2019-03-03 20:26:35', NULL),
-(144, 'User Logged In: Admin', 1, 1, 0, '2019-03-03 23:37:06', NULL),
-(145, 'User Logged In: Admin', 1, 1, 0, '2019-03-06 15:34:28', NULL),
-(146, 'User Logged In: Admin', 1, 1, 0, '2019-03-08 19:36:57', NULL),
-(147, 'User Logged In: Admin', 1, 1, 0, '2019-03-11 13:46:32', NULL),
-(148, 'User Logged In: Admin', 1, 1, 0, '2019-03-17 18:07:40', NULL),
-(149, 'User Logged In: Admin', 1, 1, 0, '2019-03-17 18:55:31', NULL),
-(150, 'User Logged In: Admin', 1, 1, 0, '2019-03-18 13:34:29', NULL),
-(151, 'User Logged In: Admin', 1, 1, 0, '2019-03-18 19:44:58', NULL),
-(152, 'User Logged In: Admin', 1, 1, 0, '2019-03-19 12:48:25', NULL),
-(153, 'User Logged In: Admin', 1, 1, 0, '2019-03-20 14:19:52', NULL),
-(154, 'User Logged In: Admin', 1, 1, 0, '2019-03-22 16:12:27', NULL),
-(155, 'User Logged In: Admin', 1, 1, 0, '2019-03-24 14:23:42', NULL),
-(156, 'User Logged In: Admin', 1, 1, 0, '2019-03-26 15:28:44', NULL),
-(157, 'User Logged In: Admin', 1, 1, 0, '2019-03-27 12:36:15', NULL),
-(158, 'User Logged In: Admin', 1, 1, 0, '2019-03-27 17:42:10', NULL),
-(159, 'User Logged In: Admin', 1, 1, 0, '2019-03-29 14:47:27', NULL),
-(160, 'User Logged In: Admin', 1, 1, 0, '2019-03-31 13:18:42', NULL),
-(161, 'User Logged In: Admin', 1, 1, 0, '2019-03-31 19:14:19', NULL),
-(162, 'User Logged In: Admin', 1, 1, 0, '2019-04-01 14:59:31', NULL),
-(163, 'User Logged In: Admin', 1, 1, 0, '2019-04-01 19:16:40', NULL),
-(164, 'User Logged In: Admin', 1, 1, 0, '2019-04-02 13:52:00', NULL),
-(165, 'User Logged In: Admin', 1, 1, 0, '2019-04-02 19:28:03', NULL),
-(166, 'User Logged In: Admin', 1, 1, 0, '2019-04-03 01:35:50', NULL),
-(167, 'User Logged In: Admin', 1, 1, 0, '2019-04-03 13:48:55', NULL),
-(168, 'User Logged In: Admin', 1, 1, 0, '2019-04-04 13:19:25', NULL),
-(169, 'User Logged In: Admin', 1, 1, 0, '2019-04-04 15:32:12', NULL),
-(170, 'User Logged In: Admin', 1, 1, 0, '2019-04-04 17:36:28', NULL),
-(171, 'User Logged In: Admin', 1, 1, 0, '2019-04-05 14:16:13', NULL),
-(172, 'User Logged In: Admin', 1, 1, 0, '2019-04-06 13:43:12', NULL),
-(173, 'User Logged In: Admin', 1, 1, 0, '2019-04-07 12:46:00', NULL),
-(174, 'User Logged In: Admin', 1, 1, 0, '2019-04-07 19:44:37', NULL),
-(175, 'User Logged In: Admin', 1, 1, 0, '2019-04-07 20:07:09', NULL),
-(176, 'User Logged In: Admin', 1, 1, 0, '2019-04-08 15:15:59', NULL),
-(177, 'User Logged In: Admin', 1, 1, 0, '2019-04-08 18:09:51', NULL),
-(178, 'User Logged In: Admin', 1, 1, 0, '2019-04-09 14:37:47', NULL),
-(179, 'User Logged In: Admin', 1, 1, 0, '2019-04-09 20:54:52', NULL),
-(180, 'User Logged In: Admin', 1, 1, 0, '2019-04-12 16:19:24', NULL),
-(181, 'User Logged In: Admin', 1, 1, 0, '2019-04-15 13:44:52', NULL),
-(182, 'User Logged In: Admin', 1, 1, 0, '2019-04-15 18:23:59', NULL),
-(183, 'User Logged In: Admin', 1, 1, 0, '2019-04-15 21:12:55', NULL),
-(184, 'User Logged In: Admin', 1, 1, 0, '2019-04-20 14:13:16', NULL),
-(185, 'User Logged In: Admin', 1, 1, 0, '2019-04-22 19:53:48', NULL),
-(186, 'User Logged In: Admin', 1, 1, 0, '2019-04-23 15:22:26', NULL),
-(187, 'User Logged In: Admin', 1, 1, 0, '2019-04-23 21:24:06', NULL),
-(188, 'User Logged In: Admin', 1, 1, 0, '2019-04-24 17:36:08', NULL),
-(189, 'User Logged In: Admin', 1, 1, 0, '2019-04-24 21:30:54', NULL),
-(190, 'User Logged In: Admin', 1, 1, 0, '2019-04-26 11:06:07', NULL),
-(191, 'User Logged In: Admin', 1, 1, 0, '2019-04-26 16:28:53', NULL),
-(192, 'User Logged In: Admin', 1, 1, 0, '2019-04-26 18:21:19', NULL),
-(193, 'User Logged In: Admin', 1, 1, 0, '2019-04-27 13:49:04', NULL),
-(194, 'User Logged In: Admin', 1, 1, 0, '2019-04-27 16:42:50', NULL),
-(195, 'User Logged In: Admin', 1, 1, 0, '2019-04-27 18:05:11', NULL),
-(196, 'User Logged In: Admin', 1, 1, 0, '2019-05-05 14:03:49', NULL),
-(197, 'User Logged In: Admin', 1, 1, 0, '2019-05-05 18:45:29', NULL),
-(198, 'User Logged In: Admin', 1, 1, 0, '2019-05-06 14:09:31', NULL),
-(199, 'User Logged In: Admin', 1, 1, 0, '2019-05-06 18:26:46', NULL),
-(200, 'User Logged In: Admin', 1, 1, 0, '2019-05-07 14:02:50', NULL),
-(201, 'User Logged In: Admin', 1, 1, 0, '2019-05-08 14:18:28', NULL),
-(202, 'User Logged In: Admin', 1, 1, 0, '2019-05-08 14:40:26', NULL),
-(203, 'User Logged In: Admin', 1, 1, 0, '2019-05-08 17:42:40', NULL),
-(204, 'User Logged In: Admin', 1, 1, 0, '2019-05-10 15:26:52', NULL),
-(205, 'User Logged In: Admin', 1, 1, 0, '2019-05-11 01:14:56', NULL),
-(206, 'User Logged In: Jalil', 1, 1, 0, '2019-05-11 01:25:56', NULL),
-(207, 'User Logged In: Admin', 1, 1, 0, '2019-05-11 01:26:45', NULL),
-(208, 'User Logged In: Jalil', 1, 1, 0, '2019-05-11 01:28:03', NULL),
-(209, 'User Logged In: Admin', 1, 1, 0, '2019-05-11 21:07:24', NULL),
-(210, 'User Logged In: Admin', 1, 1, 0, '2019-05-11 23:03:49', NULL),
-(211, 'User Logged In: Admin', 1, 1, 0, '2019-05-11 23:07:19', NULL),
-(212, 'User Logged In: Jalil', 1, 1, 0, '2019-05-11 23:09:09', NULL),
-(213, 'User Logged In: Admin', 1, 1, 0, '2019-05-12 00:00:37', NULL),
-(214, 'User Logged In: Jalil', 1, 1, 0, '2019-05-12 01:02:13', NULL),
-(215, 'User Logged In: Jalil', 1, 1, 0, '2019-05-12 01:07:37', NULL),
-(216, 'User Logged In: Admin', 1, 1, 0, '2019-05-12 01:27:23', NULL),
-(217, 'User Logged In: Admin', 1, 1, 0, '2019-05-12 20:27:45', NULL),
-(218, 'User Logged In: Admin', 1, 1, 0, '2019-05-12 22:26:34', NULL),
-(219, 'User Logged In: Jalil', 1, 1, 0, '2019-05-12 22:37:23', NULL),
-(220, 'User Logged In: Jalil', 1, 1, 0, '2019-05-12 22:53:37', NULL),
-(221, 'User Logged In: Jalil', 1, 1, 0, '2019-05-13 19:07:51', NULL),
-(222, 'User Logged In: Jalil', 1, 1, 0, '2019-05-13 19:28:43', NULL),
-(223, 'User Logged In: Jalil', 1, 1, 0, '2019-05-13 19:52:21', NULL),
-(224, 'User Logged In: Jalil', 1, 1, 0, '2019-05-13 23:16:28', NULL),
-(225, 'User Logged In: Admin', 1, 1, 0, '2019-05-13 23:26:22', NULL),
-(226, 'User Logged In: Admin', 1, 1, 0, '2019-05-13 23:56:05', NULL),
-(227, 'User Logged In: Jalil', 1, 1, 0, '2019-05-13 23:58:41', NULL),
-(228, 'User Logged In: Jalil', 1, 1, 0, '2019-05-14 00:00:19', NULL),
-(229, 'User Logged In: Jalil', 1, 1, 0, '2019-05-14 00:03:02', NULL),
-(230, 'User Logged In: Admin', 1, 1, 0, '2019-05-14 00:15:40', NULL),
-(231, 'User Logged In: Jalil', 1, 1, 0, '2019-05-14 06:34:21', NULL),
-(232, 'User Logged In: Admin', 1, 1, 0, '2019-05-14 06:35:13', NULL),
-(233, 'User Logged In: Jalil', 1, 1, 0, '2019-05-14 06:38:54', NULL),
-(234, 'User Logged In: Admin', 1, 1, 0, '2019-05-14 07:02:11', NULL),
-(235, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-14 07:30:54', NULL),
-(236, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-16 05:14:18', NULL),
-(237, 'User Logged In: Admin', 1, 1, 0, '2019-05-19 03:03:06', NULL),
-(238, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-19 05:16:15', NULL),
-(239, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-19 05:35:11', NULL),
-(240, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-20 06:21:13', NULL),
-(241, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-21 01:44:28', NULL),
-(242, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-21 02:57:04', NULL),
-(243, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-21 03:40:30', NULL),
-(244, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-21 04:40:16', NULL),
-(245, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-21 05:24:39', NULL),
-(246, 'User Logged In: Rashed', 1, 1, 0, '2019-05-21 05:34:38', NULL),
-(247, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-21 05:36:55', NULL),
-(248, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-21 05:41:51', NULL),
-(249, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-21 05:46:49', NULL),
-(250, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-21 05:48:57', NULL),
-(251, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-21 06:40:30', NULL),
-(252, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-22 03:36:15', NULL),
-(253, 'User Logged In: Admin', 1, 1, 0, '2019-05-22 06:16:05', NULL),
-(254, 'User Logged In: Admin', 1, 1, 0, '2019-05-22 09:33:18', NULL),
-(255, 'User Logged In: Admin', 1, 1, 0, '2019-05-23 02:43:51', NULL),
-(256, 'User Logged In: Admin', 1, 1, 0, '2019-05-23 03:05:30', NULL),
-(257, 'User Logged In: Admin', 1, 1, 0, '2019-05-23 03:16:03', NULL),
-(258, 'User Logged In: Admin', 1, 1, 0, '2019-05-25 02:38:16', NULL),
-(259, 'User Logged In: Admin', 1, 1, 0, '2019-05-25 03:09:51', NULL),
-(260, 'User Logged In: Admin', 1, 1, 0, '2019-05-25 04:29:24', NULL),
-(261, 'User Logged In: Admin', 1, 1, 0, '2019-05-25 05:20:12', NULL),
-(262, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-25 05:31:30', NULL),
-(263, 'User Logged In: Admin', 1, 1, 0, '2019-05-26 02:21:19', NULL),
-(264, 'User Logged In: Admin', 1, 1, 0, '2019-05-26 03:05:41', NULL),
-(265, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-26 04:33:43', NULL),
-(266, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-27 04:57:36', NULL),
-(267, 'User Logged In: Admin', 1, 1, 0, '2019-05-28 03:57:41', NULL),
-(268, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-28 06:15:56', NULL),
-(269, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-28 07:16:30', NULL),
-(270, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-29 02:13:04', NULL),
-(271, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-30 03:53:11', NULL),
-(272, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-30 03:56:23', NULL),
-(273, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-30 03:57:56', NULL),
-(274, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-30 04:06:47', NULL),
-(275, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-30 04:34:44', NULL),
-(276, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-30 04:48:27', NULL),
-(277, 'User Logged In: Admin', 1, 1, 0, '2019-05-30 04:54:40', NULL),
-(278, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-06-12 07:35:46', NULL),
-(279, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-06-15 03:38:04', NULL),
-(280, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-06-15 04:09:45', NULL),
-(281, 'User Logged In: Admin', 1, 1, 0, '2019-06-16 08:40:57', NULL),
-(282, 'User Logged In: Admin', 1, 1, 0, '2019-06-16 13:51:16', NULL),
-(283, 'User Logged In: Admin', 1, 1, 0, '2019-06-16 16:32:25', NULL),
-(284, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-06-17 01:52:59', NULL),
-(285, 'User Logged In: Admin', 1, 1, 0, '2019-06-17 02:07:50', NULL),
-(286, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-06-17 02:29:19', NULL),
-(287, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-06-17 04:57:48', NULL),
-(288, 'User Logged In: Admin', 1, 1, 0, '2019-06-19 06:53:38', NULL),
-(289, 'User Logged In: Admin', 1, 1, 0, '2019-06-19 07:14:06', NULL),
-(290, 'User Logged In: Admin', 1, 1, 0, '2019-06-19 08:15:57', NULL),
-(291, 'User Logged In: Admin', 1, 1, 0, '2019-06-19 08:21:33', NULL),
-(292, 'User Logged In: Admin', 1, 1, 0, '2019-06-19 08:44:56', NULL),
-(293, 'User Logged In: Admin', 1, 1, 0, '2019-06-20 05:31:20', NULL),
-(294, 'User Logged In: Admin', 1, 1, 0, '2019-06-20 05:57:24', NULL),
-(295, 'User Logged In: Admin', 1, 1, 0, '2019-06-20 06:09:53', NULL),
-(296, 'User Logged In: Admin', 1, 1, 0, '2019-06-21 23:14:36', NULL),
-(297, 'User Logged In: Admin', 1, 1, 0, '2019-06-22 05:02:59', NULL),
-(298, 'User Logged In: Admin', 1, 1, 0, '2019-06-22 07:08:34', NULL),
-(299, 'User Logged In: Admin', 1, 1, 0, '2019-06-24 01:32:31', NULL),
-(300, 'User Logged In: Admin', 1, 1, 0, '2019-06-24 01:59:39', NULL),
-(301, 'User Logged In: Admin', 1, 1, 0, '2019-06-24 02:00:09', NULL),
-(302, 'User Logged In: Admin', 1, 1, 0, '2019-06-24 04:00:12', NULL),
-(303, 'User Logged In: Admin', 1, 1, 0, '2019-06-25 01:31:11', NULL),
-(304, 'User Logged In: Admin', 1, 1, 0, '2019-06-25 06:45:59', NULL),
-(305, 'User Logged In: Admin', 1, 1, 0, '2019-06-25 22:11:00', NULL),
-(306, 'User Logged In: Admin', 1, 1, 0, '2019-06-25 23:17:08', NULL),
-(307, 'User Logged In: Admin', 1, 1, 0, '2019-06-25 17:33:11', NULL),
-(308, 'User Logged In: Admin', 1, 1, 0, '2019-06-26 03:08:01', NULL),
-(309, 'User Logged In: Admin', 1, 1, 0, '2019-06-28 23:00:01', NULL),
-(310, 'User Logged In: Admin', 1, 1, 0, '2019-06-29 21:58:03', NULL),
-(311, 'User Logged In: Admin', 1, 1, 0, '2019-07-01 02:40:58', NULL),
-(312, 'User Logged In: Admin', 1, 1, 0, '2019-07-03 01:26:29', NULL);
+(1, 'User Logged In: Viral', 1, 1, 1, '2019-01-15 03:50:38', '2019-01-21 10:49:53'),
+(2, 'User Logged In: Viral', 1, 1, 1, '2019-01-15 03:53:34', '2019-01-21 10:49:51'),
+(3, 'User Logged In: Viral', 1, 1, 1, '2019-01-15 04:05:32', '2019-01-21 10:49:51'),
+(4, 'User Logged In: Viral', 1, 1, 1, '2019-01-15 05:28:46', '2019-01-21 10:49:51'),
+(5, 'User Logged In: Viral', 1, 1, 1, '2019-01-15 05:28:54', '2019-01-21 10:49:51'),
+(6, 'User Logged In: Viral', 1, 1, 1, '2019-01-15 06:03:57', '2019-01-21 10:49:51'),
+(7, 'User Logged In: Viral', 1, 1, 1, '2019-01-15 06:24:51', '2019-01-21 10:49:47'),
+(8, 'User Logged In: Viral', 1, 1, 1, '2019-01-15 06:30:11', '2019-01-21 10:49:47'),
+(9, 'User Logged In: Viral', 1, 1, 1, '2019-01-15 08:01:53', '2019-01-21 10:49:47'),
+(10, 'User Logged In: Viral', 1, 1, 1, '2019-01-15 08:28:19', '2019-01-21 10:49:47'),
+(11, 'User Logged In: Viral', 1, 1, 1, '2019-01-15 08:57:31', '2019-01-21 10:49:47'),
+(12, 'User Logged In: Viral', 1, 1, 1, '2019-01-15 10:34:56', '2019-01-21 10:49:41'),
+(13, 'User Logged In: Viral', 1, 1, 1, '2019-01-17 01:26:27', '2019-01-21 10:49:41'),
+(14, 'User Logged In: Viral', 1, 1, 1, '2019-01-17 01:49:14', '2019-01-21 10:49:41'),
+(15, 'User Logged In: Viral', 1, 1, 1, '2019-01-19 04:35:26', '2019-01-21 10:49:41'),
+(16, 'User Logged In: Viral', 1, 1, 1, '2019-01-21 02:34:52', '2019-01-21 10:49:41'),
+(17, 'User Logged In: Admin', 1, 1, 1, '2019-01-21 02:54:14', '2019-01-21 10:49:29'),
+(18, 'User Logged In: Admin', 1, 1, 1, '2019-01-21 04:42:13', '2019-01-21 10:49:29'),
+(19, 'User Logged In: Admin', 1, 1, 1, '2019-01-21 04:54:34', '2019-01-21 10:49:29'),
+(20, 'User Logged In: Admin', 1, 1, 1, '2019-01-21 06:08:42', '2019-01-21 10:49:29'),
+(21, 'User Logged In: Admin', 1, 1, 1, '2019-01-21 06:21:36', '2019-01-21 10:49:29'),
+(22, 'User Logged In: Admin', 1, 1, 1, '2019-01-21 09:11:22', '2019-01-21 10:49:56'),
+(23, 'User Logged In: Admin', 1, 1, 1, '2019-01-21 10:01:33', '2019-01-21 10:49:56'),
+(24, 'User Logged In: Admin', 1, 1, 1, '2019-01-21 10:12:42', '2019-01-21 10:49:56'),
+(25, 'User Logged In: Admin', 1, 1, 1, '2019-01-21 10:31:13', '2019-01-21 10:49:56'),
+(26, 'User Logged In: Admin', 1, 1, 1, '2019-01-21 10:44:46', '2019-01-21 10:49:56'),
+(27, 'User Logged In: Admin', 1, 1, 1, '2019-01-22 01:55:00', '2019-02-01 02:50:54'),
+(28, 'User Logged In: Admin', 1, 1, 1, '2019-01-22 02:42:42', '2019-02-01 02:50:54'),
+(29, 'User Logged In: Admin', 1, 1, 1, '2019-01-22 03:02:34', '2019-02-01 02:50:54'),
+(30, 'User Logged In: Admin', 1, 1, 1, '2019-01-22 03:48:50', '2019-02-01 02:50:54'),
+(31, 'User Logged In: Admin', 1, 1, 1, '2019-01-22 06:05:46', '2019-02-01 02:50:52'),
+(32, 'User Logged In: Admin', 1, 1, 1, '2019-01-22 07:29:09', '2019-02-01 02:50:52'),
+(33, 'User Logged In: Admin', 1, 1, 1, '2019-01-22 07:56:33', '2019-02-01 02:50:52'),
+(34, 'User Logged In: Admin', 1, 1, 1, '2019-01-22 09:15:00', '2019-02-01 02:50:52'),
+(35, 'User Logged In: Admin', 1, 1, 1, '2019-01-22 09:40:39', '2019-02-01 02:50:52'),
+(36, 'User Logged In: Admin', 1, 1, 1, '2019-01-23 02:15:31', '2019-02-01 02:50:50'),
+(37, 'User Logged In: Admin', 1, 1, 1, '2019-01-23 02:56:35', '2019-02-01 02:50:50'),
+(38, 'User Logged In: Admin', 1, 1, 1, '2019-01-23 03:21:32', '2019-02-01 02:50:50'),
+(39, 'User Logged In: Admin', 1, 1, 1, '2019-01-23 03:51:10', '2019-02-01 02:50:50'),
+(40, 'User Logged In: Admin', 1, 1, 1, '2019-02-01 02:50:13', '2019-02-01 02:50:54'),
+(41, 'User Logged In: Admin', 1, 1, 0, '2019-02-03 02:06:56', NULL),
+(42, 'User Logged In: Admin', 1, 1, 0, '2019-02-03 02:27:37', NULL),
+(43, 'User Logged In: Admin', 1, 1, 0, '2019-02-03 02:41:48', NULL),
+(44, 'User Logged In: Admin', 1, 1, 0, '2019-02-03 03:51:42', NULL),
+(45, 'User Logged In: Admin', 1, 1, 1, '2019-02-03 04:26:55', '2019-02-09 02:33:04'),
+(46, 'User Logged In: Admin', 1, 1, 1, '2019-02-03 04:31:30', '2019-02-09 02:33:04'),
+(47, 'User Logged In: Admin', 1, 1, 1, '2019-02-03 04:56:12', '2019-02-09 02:33:04'),
+(48, 'User Logged In: Admin', 1, 1, 1, '2019-02-03 05:32:44', '2019-02-09 02:33:04'),
+(49, 'User Logged In: Admin', 1, 1, 1, '2019-02-03 05:43:13', '2019-02-09 02:33:04'),
+(50, 'User Logged In: Admin', 1, 1, 1, '2019-02-03 06:03:36', '2019-02-09 02:33:01'),
+(51, 'User Logged In: Admin', 1, 1, 1, '2019-02-03 08:13:37', '2019-02-09 02:33:01'),
+(52, 'User Logged In: Rashed', 1, 1, 1, '2019-02-03 08:19:32', '2019-02-09 02:33:01'),
+(53, 'User Logged In: Admin', 1, 1, 1, '2019-02-03 08:20:42', '2019-02-04 08:14:34'),
+(54, 'User Logged In: Rashed', 1, 1, 1, '2019-02-03 08:21:20', '2019-02-04 08:14:34'),
+(55, 'User Logged In: Admin', 1, 1, 1, '2019-02-03 08:37:59', '2019-02-04 08:14:34'),
+(56, 'User Logged In: Admin', 1, 1, 1, '2019-02-04 07:28:16', '2019-02-04 08:14:34'),
+(57, 'User Logged In: Admin', 1, 1, 1, '2019-02-04 08:14:19', '2019-02-04 08:14:34'),
+(58, 'User Logged In: Admin', 1, 1, 1, '2019-02-04 08:27:24', '2019-02-09 02:33:01'),
+(59, 'User Logged In: Admin', 1, 1, 1, '2019-02-09 02:09:56', '2019-02-09 02:33:01'),
+(60, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 03:15:22', NULL),
+(61, 'User Logged In: Rashed', 1, 1, 0, '2019-02-09 03:26:39', NULL),
+(62, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 03:29:08', NULL),
+(63, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 04:14:20', NULL),
+(64, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 05:15:05', NULL),
+(65, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 05:34:48', NULL),
+(66, 'User Logged In: Admin', 1, 1, 1, '2019-02-09 05:49:15', '2019-02-09 10:05:06'),
+(67, 'User Logged In: Admin', 1, 1, 1, '2019-02-09 06:10:08', '2019-02-09 10:05:06'),
+(68, 'User Logged In: Admin', 1, 1, 1, '2019-02-09 06:32:07', '2019-02-09 10:05:06'),
+(69, 'User Logged In: Admin', 1, 1, 1, '2019-02-09 07:31:57', '2019-02-09 10:05:06'),
+(70, 'User Logged In: Admin', 1, 1, 1, '2019-02-09 07:44:02', '2019-02-09 10:05:06'),
+(71, 'User Logged In: Admin', 1, 1, 1, '2019-02-09 08:05:42', '2019-02-09 10:04:52'),
+(72, 'User Logged In: Admin', 1, 1, 1, '2019-02-09 08:29:10', '2019-02-09 10:04:52'),
+(73, 'User Logged In: Admin', 1, 1, 1, '2019-02-09 08:43:15', '2019-02-09 10:04:52'),
+(74, 'User Logged In: Admin', 1, 1, 1, '2019-02-09 09:22:52', '2019-02-09 10:04:52'),
+(75, 'User Logged In: Admin', 1, 1, 1, '2019-02-09 09:52:17', '2019-02-09 10:04:52'),
+(76, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 10:37:31', NULL),
+(77, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 10:50:24', NULL),
+(78, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 13:54:02', NULL),
+(79, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 14:25:38', NULL),
+(80, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 14:57:31', NULL),
+(81, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 15:27:53', NULL),
+(82, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 19:58:58', NULL),
+(83, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 19:59:05', NULL),
+(84, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 20:28:03', NULL),
+(85, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 21:17:01', NULL),
+(86, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 21:55:44', NULL),
+(87, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 22:33:59', NULL),
+(88, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 22:54:21', NULL),
+(89, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 23:11:04', NULL),
+(90, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 23:19:54', NULL),
+(91, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 23:23:07', NULL),
+(92, 'User Logged In: Admin', 1, 1, 0, '2019-02-09 23:23:29', NULL),
+(93, 'User Logged In: Admin', 1, 1, 0, '2019-02-10 02:37:49', NULL),
+(94, 'User Logged In: Admin', 1, 1, 0, '2019-02-10 02:38:01', NULL),
+(95, 'User Logged In: Admin', 1, 1, 0, '2019-02-10 03:06:30', NULL),
+(96, 'User Logged In: Admin', 1, 1, 0, '2019-02-11 05:35:53', NULL),
+(97, 'User Logged In: Admin', 1, 1, 0, '2019-02-11 05:36:29', NULL),
+(98, 'User Logged In: Rashed', 1, 1, 0, '2019-02-11 05:40:08', NULL),
+(99, 'User Logged In: Admin', 1, 1, 0, '2019-02-11 05:40:35', NULL),
+(100, 'User Logged In: Rashed', 1, 1, 0, '2019-02-11 05:42:29', NULL),
+(101, 'User Logged In: Rashed', 1, 1, 0, '2019-02-22 08:19:36', NULL),
+(102, 'User Logged In: Admin', 1, 1, 0, '2019-02-22 08:29:38', NULL),
+(103, 'User Logged In: Admin', 1, 1, 0, '2019-02-22 08:54:49', NULL),
+(104, 'User Logged In: Admin', 1, 1, 0, '2019-02-22 16:47:39', NULL),
+(105, 'User Logged In: Admin', 1, 1, 0, '2019-02-22 17:08:30', NULL),
+(106, 'User Logged In: Admin', 1, 1, 0, '2019-02-22 18:08:39', NULL),
+(107, 'User Logged In: Admin', 1, 1, 0, '2019-02-22 19:50:52', NULL),
+(108, 'User Logged In: Admin', 1, 1, 0, '2019-02-22 20:17:13', NULL),
+(109, 'User Logged In: Admin', 1, 1, 0, '2019-02-22 20:31:27', NULL),
+(110, 'User Logged In: Admin', 1, 1, 0, '2019-02-23 04:54:42', NULL),
+(111, 'User Logged In: Admin', 1, 1, 0, '2019-02-23 05:21:20', NULL),
+(112, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 04:02:34', NULL),
+(113, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 04:10:57', NULL),
+(114, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 04:16:09', NULL),
+(115, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 04:19:27', NULL),
+(116, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 04:19:42', NULL),
+(117, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 04:22:52', NULL),
+(118, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 05:17:26', NULL),
+(119, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 05:44:58', NULL),
+(120, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 06:16:34', NULL),
+(121, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 06:36:08', NULL),
+(122, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 07:38:19', NULL),
+(123, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 08:18:22', NULL),
+(124, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 09:51:32', NULL),
+(125, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 10:33:07', NULL),
+(126, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 13:59:45', NULL),
+(127, 'User Logged In: Admin', 1, 1, 0, '2019-02-24 14:14:57', NULL),
+(128, 'User Logged In: Admin', 1, 1, 0, '2019-02-25 00:45:32', NULL),
+(129, 'User Logged In: Admin', 1, 1, 0, '2019-02-25 03:38:58', NULL),
+(130, 'User Logged In: Admin', 1, 1, 0, '2019-02-25 04:13:14', NULL),
+(131, 'User Logged In: Admin', 1, 1, 0, '2019-02-25 04:36:39', NULL),
+(132, 'User Logged In: Admin', 1, 1, 0, '2019-02-25 05:03:46', NULL),
+(133, 'User Logged In: Admin', 1, 1, 0, '2019-02-25 05:27:30', NULL),
+(134, 'User Logged In: Admin', 1, 1, 0, '2019-02-25 05:50:56', NULL),
+(135, 'User Logged In: Admin', 1, 1, 0, '2019-02-25 07:53:22', NULL),
+(136, 'User Logged In: Admin', 1, 1, 0, '2019-02-25 09:28:29', NULL),
+(137, 'User Logged In: Admin', 1, 1, 0, '2019-02-25 10:19:55', NULL),
+(138, 'User Logged In: Admin', 1, 1, 0, '2019-02-25 10:35:35', NULL),
+(139, 'User Logged In: Admin', 1, 1, 0, '2019-02-26 06:11:21', NULL),
+(140, 'User Logged In: Admin', 1, 1, 0, '2019-02-26 07:54:46', NULL),
+(141, 'User Logged In: Admin', 1, 1, 0, '2019-02-26 07:54:51', NULL),
+(142, 'User Logged In: Admin', 1, 1, 0, '2019-03-03 13:55:08', NULL),
+(143, 'User Logged In: Admin', 1, 1, 0, '2019-03-03 14:26:35', NULL),
+(144, 'User Logged In: Admin', 1, 1, 0, '2019-03-03 17:37:06', NULL),
+(145, 'User Logged In: Admin', 1, 1, 0, '2019-03-06 09:34:28', NULL),
+(146, 'User Logged In: Admin', 1, 1, 0, '2019-03-08 13:36:57', NULL),
+(147, 'User Logged In: Admin', 1, 1, 0, '2019-03-11 07:46:32', NULL),
+(148, 'User Logged In: Admin', 1, 1, 0, '2019-03-17 12:07:40', NULL),
+(149, 'User Logged In: Admin', 1, 1, 0, '2019-03-17 12:55:31', NULL),
+(150, 'User Logged In: Admin', 1, 1, 0, '2019-03-18 07:34:29', NULL),
+(151, 'User Logged In: Admin', 1, 1, 0, '2019-03-18 13:44:58', NULL),
+(152, 'User Logged In: Admin', 1, 1, 0, '2019-03-19 06:48:25', NULL),
+(153, 'User Logged In: Admin', 1, 1, 0, '2019-03-20 08:19:52', NULL),
+(154, 'User Logged In: Admin', 1, 1, 0, '2019-03-22 10:12:27', NULL),
+(155, 'User Logged In: Admin', 1, 1, 0, '2019-03-24 08:23:42', NULL),
+(156, 'User Logged In: Admin', 1, 1, 0, '2019-03-26 09:28:44', NULL),
+(157, 'User Logged In: Admin', 1, 1, 0, '2019-03-27 06:36:15', NULL),
+(158, 'User Logged In: Admin', 1, 1, 0, '2019-03-27 11:42:10', NULL),
+(159, 'User Logged In: Admin', 1, 1, 0, '2019-03-29 08:47:27', NULL),
+(160, 'User Logged In: Admin', 1, 1, 0, '2019-03-31 07:18:42', NULL),
+(161, 'User Logged In: Admin', 1, 1, 0, '2019-03-31 13:14:19', NULL),
+(162, 'User Logged In: Admin', 1, 1, 0, '2019-04-01 08:59:31', NULL),
+(163, 'User Logged In: Admin', 1, 1, 0, '2019-04-01 13:16:40', NULL),
+(164, 'User Logged In: Admin', 1, 1, 0, '2019-04-02 07:52:00', NULL),
+(165, 'User Logged In: Admin', 1, 1, 0, '2019-04-02 13:28:03', NULL),
+(166, 'User Logged In: Admin', 1, 1, 0, '2019-04-02 19:35:50', NULL),
+(167, 'User Logged In: Admin', 1, 1, 0, '2019-04-03 07:48:55', NULL),
+(168, 'User Logged In: Admin', 1, 1, 0, '2019-04-04 07:19:25', NULL),
+(169, 'User Logged In: Admin', 1, 1, 0, '2019-04-04 09:32:12', NULL),
+(170, 'User Logged In: Admin', 1, 1, 0, '2019-04-04 11:36:28', NULL),
+(171, 'User Logged In: Admin', 1, 1, 0, '2019-04-05 08:16:13', NULL),
+(172, 'User Logged In: Admin', 1, 1, 0, '2019-04-06 07:43:12', NULL),
+(173, 'User Logged In: Admin', 1, 1, 0, '2019-04-07 06:46:00', NULL),
+(174, 'User Logged In: Admin', 1, 1, 0, '2019-04-07 13:44:37', NULL),
+(175, 'User Logged In: Admin', 1, 1, 0, '2019-04-07 14:07:09', NULL),
+(176, 'User Logged In: Admin', 1, 1, 0, '2019-04-08 09:15:59', NULL),
+(177, 'User Logged In: Admin', 1, 1, 0, '2019-04-08 12:09:51', NULL),
+(178, 'User Logged In: Admin', 1, 1, 0, '2019-04-09 08:37:47', NULL),
+(179, 'User Logged In: Admin', 1, 1, 0, '2019-04-09 14:54:52', NULL),
+(180, 'User Logged In: Admin', 1, 1, 0, '2019-04-12 10:19:24', NULL),
+(181, 'User Logged In: Admin', 1, 1, 0, '2019-04-15 07:44:52', NULL),
+(182, 'User Logged In: Admin', 1, 1, 0, '2019-04-15 12:23:59', NULL),
+(183, 'User Logged In: Admin', 1, 1, 0, '2019-04-15 15:12:55', NULL),
+(184, 'User Logged In: Admin', 1, 1, 0, '2019-04-20 08:13:16', NULL),
+(185, 'User Logged In: Admin', 1, 1, 0, '2019-04-22 13:53:48', NULL),
+(186, 'User Logged In: Admin', 1, 1, 0, '2019-04-23 09:22:26', NULL),
+(187, 'User Logged In: Admin', 1, 1, 0, '2019-04-23 15:24:06', NULL),
+(188, 'User Logged In: Admin', 1, 1, 0, '2019-04-24 11:36:08', NULL),
+(189, 'User Logged In: Admin', 1, 1, 0, '2019-04-24 15:30:54', NULL),
+(190, 'User Logged In: Admin', 1, 1, 0, '2019-04-26 05:06:07', NULL),
+(191, 'User Logged In: Admin', 1, 1, 0, '2019-04-26 10:28:53', NULL),
+(192, 'User Logged In: Admin', 1, 1, 0, '2019-04-26 12:21:19', NULL),
+(193, 'User Logged In: Admin', 1, 1, 0, '2019-04-27 07:49:04', NULL),
+(194, 'User Logged In: Admin', 1, 1, 0, '2019-04-27 10:42:50', NULL),
+(195, 'User Logged In: Admin', 1, 1, 0, '2019-04-27 12:05:11', NULL),
+(196, 'User Logged In: Admin', 1, 1, 0, '2019-05-05 08:03:49', NULL),
+(197, 'User Logged In: Admin', 1, 1, 0, '2019-05-05 12:45:29', NULL),
+(198, 'User Logged In: Admin', 1, 1, 0, '2019-05-06 08:09:31', NULL),
+(199, 'User Logged In: Admin', 1, 1, 0, '2019-05-06 12:26:46', NULL),
+(200, 'User Logged In: Admin', 1, 1, 0, '2019-05-07 08:02:50', NULL),
+(201, 'User Logged In: Admin', 1, 1, 0, '2019-05-08 08:18:28', NULL),
+(202, 'User Logged In: Admin', 1, 1, 0, '2019-05-08 08:40:26', NULL),
+(203, 'User Logged In: Admin', 1, 1, 0, '2019-05-08 11:42:40', NULL),
+(204, 'User Logged In: Admin', 1, 1, 0, '2019-05-10 09:26:52', NULL),
+(205, 'User Logged In: Admin', 1, 1, 0, '2019-05-10 19:14:56', NULL),
+(206, 'User Logged In: Jalil', 1, 1, 0, '2019-05-10 19:25:56', NULL),
+(207, 'User Logged In: Admin', 1, 1, 0, '2019-05-10 19:26:45', NULL),
+(208, 'User Logged In: Jalil', 1, 1, 0, '2019-05-10 19:28:03', NULL),
+(209, 'User Logged In: Admin', 1, 1, 0, '2019-05-11 15:07:24', NULL),
+(210, 'User Logged In: Admin', 1, 1, 0, '2019-05-11 17:03:49', NULL),
+(211, 'User Logged In: Admin', 1, 1, 0, '2019-05-11 17:07:19', NULL),
+(212, 'User Logged In: Jalil', 1, 1, 0, '2019-05-11 17:09:09', NULL),
+(213, 'User Logged In: Admin', 1, 1, 0, '2019-05-11 18:00:37', NULL),
+(214, 'User Logged In: Jalil', 1, 1, 0, '2019-05-11 19:02:13', NULL),
+(215, 'User Logged In: Jalil', 1, 1, 0, '2019-05-11 19:07:37', NULL),
+(216, 'User Logged In: Admin', 1, 1, 0, '2019-05-11 19:27:23', NULL),
+(217, 'User Logged In: Admin', 1, 1, 0, '2019-05-12 14:27:45', NULL),
+(218, 'User Logged In: Admin', 1, 1, 0, '2019-05-12 16:26:34', NULL),
+(219, 'User Logged In: Jalil', 1, 1, 0, '2019-05-12 16:37:23', NULL),
+(220, 'User Logged In: Jalil', 1, 1, 0, '2019-05-12 16:53:37', NULL),
+(221, 'User Logged In: Jalil', 1, 1, 0, '2019-05-13 13:07:51', NULL),
+(222, 'User Logged In: Jalil', 1, 1, 0, '2019-05-13 13:28:43', NULL),
+(223, 'User Logged In: Jalil', 1, 1, 0, '2019-05-13 13:52:21', NULL),
+(224, 'User Logged In: Jalil', 1, 1, 0, '2019-05-13 17:16:28', NULL),
+(225, 'User Logged In: Admin', 1, 1, 0, '2019-05-13 17:26:22', NULL),
+(226, 'User Logged In: Admin', 1, 1, 0, '2019-05-13 17:56:05', NULL),
+(227, 'User Logged In: Jalil', 1, 1, 0, '2019-05-13 17:58:41', NULL),
+(228, 'User Logged In: Jalil', 1, 1, 0, '2019-05-13 18:00:19', NULL),
+(229, 'User Logged In: Jalil', 1, 1, 0, '2019-05-13 18:03:02', NULL),
+(230, 'User Logged In: Admin', 1, 1, 0, '2019-05-13 18:15:40', NULL),
+(231, 'User Logged In: Jalil', 1, 1, 0, '2019-05-14 00:34:21', NULL),
+(232, 'User Logged In: Admin', 1, 1, 0, '2019-05-14 00:35:13', NULL),
+(233, 'User Logged In: Jalil', 1, 1, 0, '2019-05-14 00:38:54', NULL),
+(234, 'User Logged In: Admin', 1, 1, 0, '2019-05-14 01:02:11', NULL),
+(235, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-14 01:30:54', NULL),
+(236, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-15 23:14:18', NULL),
+(237, 'User Logged In: Admin', 1, 1, 0, '2019-05-18 21:03:06', NULL),
+(238, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-18 23:16:15', NULL),
+(239, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-18 23:35:11', NULL),
+(240, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-20 00:21:13', NULL),
+(241, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-20 19:44:28', NULL),
+(242, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-20 20:57:04', NULL),
+(243, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-20 21:40:30', NULL),
+(244, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-20 22:40:16', NULL),
+(245, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-20 23:24:39', NULL),
+(246, 'User Logged In: Rashed', 1, 1, 0, '2019-05-20 23:34:38', NULL),
+(247, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-20 23:36:55', NULL),
+(248, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-20 23:41:51', NULL),
+(249, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-20 23:46:49', NULL),
+(250, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-20 23:48:57', NULL),
+(251, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-21 00:40:30', NULL),
+(252, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-21 21:36:15', NULL),
+(253, 'User Logged In: Admin', 1, 1, 0, '2019-05-22 00:16:05', NULL),
+(254, 'User Logged In: Admin', 1, 1, 0, '2019-05-22 03:33:18', NULL),
+(255, 'User Logged In: Admin', 1, 1, 0, '2019-05-22 20:43:51', NULL),
+(256, 'User Logged In: Admin', 1, 1, 0, '2019-05-22 21:05:30', NULL),
+(257, 'User Logged In: Admin', 1, 1, 0, '2019-05-22 21:16:03', NULL),
+(258, 'User Logged In: Admin', 1, 1, 0, '2019-05-24 20:38:16', NULL),
+(259, 'User Logged In: Admin', 1, 1, 0, '2019-05-24 21:09:51', NULL),
+(260, 'User Logged In: Admin', 1, 1, 0, '2019-05-24 22:29:24', NULL),
+(261, 'User Logged In: Admin', 1, 1, 0, '2019-05-24 23:20:12', NULL),
+(262, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-24 23:31:30', NULL),
+(263, 'User Logged In: Admin', 1, 1, 0, '2019-05-25 20:21:19', NULL),
+(264, 'User Logged In: Admin', 1, 1, 0, '2019-05-25 21:05:41', NULL),
+(265, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-25 22:33:43', NULL),
+(266, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-26 22:57:36', NULL),
+(267, 'User Logged In: Admin', 1, 1, 0, '2019-05-27 21:57:41', NULL),
+(268, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-28 00:15:56', NULL),
+(269, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-28 01:16:30', NULL),
+(270, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-28 20:13:04', NULL),
+(271, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-29 21:53:11', NULL),
+(272, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-29 21:56:23', NULL),
+(273, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-29 21:57:56', NULL),
+(274, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-29 22:06:47', NULL),
+(275, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-29 22:34:44', NULL),
+(276, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-05-29 22:48:27', NULL),
+(277, 'User Logged In: Admin', 1, 1, 0, '2019-05-29 22:54:40', NULL),
+(278, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-06-12 01:35:46', NULL),
+(279, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-06-14 21:38:04', NULL),
+(280, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-06-14 22:09:45', NULL),
+(281, 'User Logged In: Admin', 1, 1, 0, '2019-06-16 02:40:57', NULL),
+(282, 'User Logged In: Admin', 1, 1, 0, '2019-06-16 07:51:16', NULL),
+(283, 'User Logged In: Admin', 1, 1, 0, '2019-06-16 10:32:25', NULL),
+(284, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-06-16 19:52:59', NULL),
+(285, 'User Logged In: Admin', 1, 1, 0, '2019-06-16 20:07:50', NULL),
+(286, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-06-16 20:29:19', NULL),
+(287, 'User Logged In: Jalil Khan', 1, 1, 0, '2019-06-16 22:57:48', NULL),
+(288, 'User Logged In: Admin', 1, 1, 0, '2019-06-19 00:53:38', NULL),
+(289, 'User Logged In: Admin', 1, 1, 0, '2019-06-19 01:14:06', NULL),
+(290, 'User Logged In: Admin', 1, 1, 0, '2019-06-19 02:15:57', NULL),
+(291, 'User Logged In: Admin', 1, 1, 0, '2019-06-19 02:21:33', NULL),
+(292, 'User Logged In: Admin', 1, 1, 0, '2019-06-19 02:44:56', NULL),
+(293, 'User Logged In: Admin', 1, 1, 0, '2019-06-19 23:31:20', NULL),
+(294, 'User Logged In: Admin', 1, 1, 0, '2019-06-19 23:57:24', NULL),
+(295, 'User Logged In: Admin', 1, 1, 0, '2019-06-20 00:09:53', NULL),
+(296, 'User Logged In: Admin', 1, 1, 0, '2019-06-21 17:14:36', NULL),
+(297, 'User Logged In: Admin', 1, 1, 0, '2019-06-21 23:02:59', NULL),
+(298, 'User Logged In: Admin', 1, 1, 0, '2019-06-22 01:08:34', NULL),
+(299, 'User Logged In: Admin', 1, 1, 0, '2019-06-23 19:32:31', NULL),
+(300, 'User Logged In: Admin', 1, 1, 0, '2019-06-23 19:59:39', NULL),
+(301, 'User Logged In: Admin', 1, 1, 0, '2019-06-23 20:00:09', NULL),
+(302, 'User Logged In: Admin', 1, 1, 0, '2019-06-23 22:00:12', NULL),
+(303, 'User Logged In: Admin', 1, 1, 0, '2019-06-24 19:31:11', NULL),
+(304, 'User Logged In: Admin', 1, 1, 0, '2019-06-25 00:45:59', NULL),
+(305, 'User Logged In: Admin', 1, 1, 0, '2019-06-25 16:11:00', NULL),
+(306, 'User Logged In: Admin', 1, 1, 0, '2019-06-25 17:17:08', NULL),
+(307, 'User Logged In: Admin', 1, 1, 0, '2019-06-25 11:33:11', NULL),
+(308, 'User Logged In: Admin', 1, 1, 0, '2019-06-25 21:08:01', NULL),
+(309, 'User Logged In: Admin', 1, 1, 0, '2019-06-28 17:00:01', NULL),
+(310, 'User Logged In: Admin', 1, 1, 0, '2019-06-29 15:58:03', NULL),
+(311, 'User Logged In: Admin', 1, 1, 0, '2019-06-30 20:40:58', NULL),
+(312, 'User Logged In: Admin', 1, 1, 0, '2019-07-02 19:26:29', NULL);
 
 -- --------------------------------------------------------
 
@@ -1290,7 +1282,7 @@ CREATE TABLE `pages` (
 --
 
 INSERT INTO `pages` (`id`, `title`, `page_slug`, `description`, `cannonical_link`, `seo_title`, `seo_keyword`, `seo_description`, `status`, `created_by`, `updated_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Terms and conditions', 'terms-and-conditions', 'terms and conditions', NULL, NULL, NULL, NULL, 1, 1, NULL, '2019-01-14 12:17:14', '2019-01-14 12:17:14', NULL);
+(1, 'Terms and conditions', 'terms-and-conditions', 'terms and conditions', NULL, NULL, NULL, NULL, 1, 1, NULL, '2019-01-14 06:17:14', '2019-01-14 06:17:14', NULL);
 
 -- --------------------------------------------------------
 
@@ -1354,84 +1346,84 @@ CREATE TABLE `permissions` (
 --
 
 INSERT INTO `permissions` (`id`, `name`, `display_name`, `sort`, `status`, `created_by`, `updated_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'view-backend', 'View Backend', 1, 1, 1, NULL, '2019-01-14 12:17:03', '2019-01-14 12:17:03', NULL),
-(2, 'view-frontend', 'View Frontend', 2, 1, 1, NULL, '2019-01-14 12:17:03', '2019-01-14 12:17:03', NULL),
-(3, 'view-access-management', 'View Access Management', 3, 1, 1, NULL, '2019-01-14 12:17:03', '2019-01-14 12:17:03', NULL),
-(4, 'view-user-management', 'View User Management', 4, 1, 1, NULL, '2019-01-14 12:17:03', '2019-01-14 12:17:03', NULL),
-(5, 'view-active-user', 'View Active User', 5, 1, 1, NULL, '2019-01-14 12:17:04', '2019-01-14 12:17:04', NULL),
-(6, 'view-deactive-user', 'View Deactive User', 6, 1, 1, NULL, '2019-01-14 12:17:04', '2019-01-14 12:17:04', NULL),
-(7, 'view-deleted-user', 'View Deleted User', 7, 1, 1, NULL, '2019-01-14 12:17:04', '2019-01-14 12:17:04', NULL),
-(8, 'show-user', 'Show User Details', 8, 1, 1, NULL, '2019-01-14 12:17:05', '2019-01-14 12:17:05', NULL),
-(9, 'create-user', 'Create User', 9, 1, 1, NULL, '2019-01-14 12:17:05', '2019-01-14 12:17:05', NULL),
-(10, 'edit-user', 'Edit User', 9, 1, 1, NULL, '2019-01-14 12:17:05', '2019-01-14 12:17:05', NULL),
-(11, 'delete-user', 'Delete User', 10, 1, 1, NULL, '2019-01-14 12:17:05', '2019-01-14 12:17:05', NULL),
-(12, 'activate-user', 'Activate User', 11, 1, 1, NULL, '2019-01-14 12:17:05', '2019-01-14 12:17:05', NULL),
-(13, 'deactivate-user', 'Deactivate User', 12, 1, 1, NULL, '2019-01-14 12:17:05', '2019-01-14 12:17:05', NULL),
-(14, 'login-as-user', 'Login As User', 13, 1, 1, NULL, '2019-01-14 12:17:05', '2019-01-14 12:17:05', NULL),
-(15, 'clear-user-session', 'Clear User Session', 14, 1, 1, NULL, '2019-01-14 12:17:05', '2019-01-14 12:17:05', NULL),
-(16, 'view-role-management', 'View Role Management', 15, 1, 1, NULL, '2019-01-14 12:17:05', '2019-01-14 12:17:05', NULL),
-(17, 'create-role', 'Create Role', 16, 1, 1, NULL, '2019-01-14 12:17:05', '2019-01-14 12:17:05', NULL),
-(18, 'edit-role', 'Edit Role', 17, 1, 1, NULL, '2019-01-14 12:17:05', '2019-01-14 12:17:05', NULL),
-(19, 'delete-role', 'Delete Role', 18, 1, 1, NULL, '2019-01-14 12:17:05', '2019-01-14 12:17:05', NULL),
-(20, 'view-permission-management', 'View Permission Management', 19, 1, 1, NULL, '2019-01-14 12:17:05', '2019-01-14 12:17:05', NULL),
-(21, 'create-permission', 'Create Permission', 20, 1, 1, NULL, '2019-01-14 12:17:05', '2019-01-14 12:17:05', NULL),
-(22, 'edit-permission', 'Edit Permission', 21, 1, 1, NULL, '2019-01-14 12:17:05', '2019-01-14 12:17:05', NULL),
-(23, 'delete-permission', 'Delete Permission', 22, 1, 1, NULL, '2019-01-14 12:17:05', '2019-01-14 12:17:05', NULL),
-(24, 'view-page', 'View Page', 23, 1, 1, NULL, '2019-01-14 12:17:05', '2019-01-14 12:17:05', NULL),
-(25, 'create-page', 'Create Page', 24, 1, 1, NULL, '2019-01-14 12:17:05', '2019-01-14 12:17:05', NULL),
-(26, 'edit-page', 'Edit Page', 25, 1, 1, NULL, '2019-01-14 12:17:05', '2019-01-14 12:17:05', NULL),
-(27, 'delete-page', 'Delete Page', 26, 1, 1, NULL, '2019-01-14 12:17:05', '2019-01-14 12:17:05', NULL),
-(28, 'view-email-template', 'View Email Templates', 27, 1, 1, NULL, '2019-01-14 12:17:05', '2019-01-14 12:17:05', NULL),
-(29, 'create-email-template', 'Create Email Templates', 28, 1, 1, NULL, '2019-01-14 12:17:06', '2019-01-14 12:17:06', NULL),
-(30, 'edit-email-template', 'Edit Email Templates', 29, 1, 1, NULL, '2019-01-14 12:17:06', '2019-01-14 12:17:06', NULL),
-(31, 'delete-email-template', 'Delete Email Templates', 30, 1, 1, NULL, '2019-01-14 12:17:06', '2019-01-14 12:17:06', NULL),
-(32, 'edit-settings', 'Edit Settings', 31, 1, 1, NULL, '2019-01-14 12:17:06', '2019-01-14 12:17:06', NULL),
-(33, 'view-blog-category', 'View Blog Categories Management', 32, 1, 1, NULL, '2019-01-14 12:17:06', '2019-02-24 10:34:13', '2019-02-24 10:34:13'),
-(34, 'create-blog-category', 'Create Blog Category', 33, 1, 1, NULL, '2019-01-14 12:17:07', '2019-02-24 10:34:24', '2019-02-24 10:34:24'),
-(35, 'edit-blog-category', 'Edit Blog Category', 34, 1, 1, NULL, '2019-01-14 12:17:07', '2019-02-24 10:34:36', '2019-02-24 10:34:36'),
-(36, 'delete-blog-category', 'Delete Blog Category', 35, 1, 1, NULL, '2019-01-14 12:17:07', '2019-02-24 10:34:47', '2019-02-24 10:34:47'),
-(37, 'view-blog-tag', 'View Blog Tags Management', 36, 1, 1, NULL, '2019-01-14 12:17:07', '2019-02-24 10:34:57', '2019-02-24 10:34:57'),
-(38, 'create-blog-tag', 'Create Blog Tag', 37, 1, 1, NULL, '2019-01-14 12:17:07', '2019-02-24 10:35:08', '2019-02-24 10:35:08'),
-(39, 'edit-blog-tag', 'Edit Blog Tag', 38, 1, 1, NULL, '2019-01-14 12:17:07', '2019-02-24 10:35:19', '2019-02-24 10:35:19'),
-(40, 'delete-blog-tag', 'Delete Blog Tag', 39, 1, 1, NULL, '2019-01-14 12:17:07', '2019-02-24 10:35:29', '2019-02-24 10:35:29'),
-(41, 'view-blog', 'View Blogs Management', 40, 1, 1, NULL, '2019-01-14 12:17:07', '2019-02-24 10:35:52', '2019-02-24 10:35:52'),
-(42, 'create-blog', 'Create Blog', 41, 1, 1, NULL, '2019-01-14 12:17:07', '2019-02-24 10:36:14', '2019-02-24 10:36:14'),
-(43, 'edit-blog', 'Edit Blog', 42, 1, 1, NULL, '2019-01-14 12:17:07', '2019-02-24 10:36:03', '2019-02-24 10:36:03'),
-(44, 'delete-blog', 'Delete Blog', 43, 1, 1, NULL, '2019-01-14 12:17:07', '2019-02-24 10:37:55', '2019-02-24 10:37:55'),
-(45, 'view-faq', 'View FAQ Management', 44, 1, 1, NULL, '2019-01-14 12:17:07', '2019-02-24 10:38:04', '2019-02-24 10:38:04'),
-(46, 'create-faq', 'Create FAQ', 45, 1, 1, NULL, '2019-01-14 12:17:07', '2019-02-24 10:38:12', '2019-02-24 10:38:12'),
-(47, 'edit-faq', 'Edit FAQ', 46, 1, 1, NULL, '2019-01-14 12:17:07', '2019-02-24 10:38:21', '2019-02-24 10:38:21'),
-(48, 'delete-faq', 'Delete FAQ', 47, 1, 1, NULL, '2019-01-14 12:17:07', '2019-02-24 10:38:54', '2019-02-24 10:38:54'),
-(49, 'create-plant-equipment', 'Create Plant Equipment', 31, 1, 1, 1, '2019-01-21 16:42:35', '2019-01-21 16:43:48', NULL),
-(50, 'edit-plant-equipment', 'Edit Plant Equipment', 32, 1, 1, NULL, '2019-02-09 09:20:08', '2019-02-09 09:20:08', NULL),
-(51, 'view-plant-equipment', 'View Plant Equipment', 33, 1, 1, NULL, '2019-02-09 09:21:08', '2019-02-09 09:21:08', NULL),
-(52, 'delete-plant-equipment', 'Delete Plant Equipment', 34, 1, 1, NULL, '2019-02-09 09:22:25', '2019-02-09 09:22:25', NULL),
-(53, 'view-reports', 'View Reports', 40, 1, 1, NULL, '2019-02-09 09:48:43', '2019-02-09 09:48:43', NULL),
-(54, 'create-projects', 'Create Projects', 41, 1, 1, NULL, '2019-02-09 13:33:20', '2019-02-09 13:33:20', NULL),
-(55, 'edit-projects', 'Edit Projects', 33, 1, 1, NULL, '2019-02-09 13:46:59', '2019-02-09 13:46:59', NULL),
-(56, 'view-projects', 'View Projects', 34, 1, 1, NULL, '2019-02-09 14:12:35', '2019-02-09 14:12:35', NULL),
-(57, 'delete-projects', 'Delete Projects', 38, 1, 1, NULL, '2019-02-09 14:13:20', '2019-02-09 14:13:20', NULL),
-(58, 'create-items', 'Create Items', 45, 1, 1, NULL, '2019-02-22 23:14:05', '2019-02-22 23:14:05', NULL),
-(59, 'edit-items', 'Edit Items', 46, 1, 1, NULL, '2019-02-22 23:15:10', '2019-02-22 23:15:10', NULL),
-(60, 'view-items', 'View Items', 47, 1, 1, NULL, '2019-02-22 23:15:38', '2019-02-22 23:15:38', NULL),
-(61, 'delete-items', 'Delete Items', 48, 1, 1, NULL, '2019-02-22 23:16:35', '2019-02-22 23:16:35', NULL),
-(62, 'view-products', 'View Products', 48, 1, 1, NULL, '2019-02-23 00:09:38', '2019-02-23 00:09:38', NULL),
-(63, 'create-products', 'Create Products', 49, 1, 1, NULL, '2019-02-23 00:10:22', '2019-02-23 00:10:22', NULL),
-(64, 'edit-products', 'Edit Products', 49, 1, 1, 1, '2019-02-23 00:10:55', '2019-02-23 00:11:59', NULL),
-(65, 'delete-products', 'Delete Products', 50, 1, 1, 1, '2019-02-23 00:11:18', '2019-02-23 00:11:35', NULL),
-(66, 'create-product-receive', 'Create Product Receive', 51, 1, 1, NULL, '2019-02-23 01:51:48', '2019-02-23 01:51:48', NULL),
-(67, 'edit-product-receive', 'Edit Product Receive', 52, 1, 1, NULL, '2019-02-23 01:52:36', '2019-02-23 01:52:36', NULL),
-(68, 'view-product-receive', 'View Product Receive', 53, 1, 1, NULL, '2019-02-23 01:53:22', '2019-02-23 01:53:22', NULL),
-(69, 'delete-product-receive', 'Delete Product Receive', 54, 1, 1, NULL, '2019-02-23 01:54:06', '2019-02-23 01:54:06', NULL),
-(70, 'create-project-challan', 'Create Project Challan', 61, 1, 1, NULL, '2019-02-23 03:14:49', '2019-02-23 03:14:49', NULL),
-(71, 'edit-project-challan', 'Ereate Project Challan', 60, 1, 1, NULL, '2019-02-23 03:15:22', '2019-02-23 03:15:22', NULL),
-(72, 'view-project-challan', 'View Project Challan', 62, 1, 1, NULL, '2019-02-23 03:15:58', '2019-02-23 03:15:58', NULL),
-(73, 'delete-project-challan', 'Delete Project Challan', 64, 1, 1, NULL, '2019-02-23 03:16:33', '2019-02-23 03:16:33', NULL),
-(74, 'view-suppliers', 'View Suppliers', 50, 1, 1, NULL, '2019-02-24 10:40:07', '2019-02-24 10:40:07', NULL),
-(75, 'edit-suppliers', 'Edit Suppliers', 51, 1, 1, NULL, '2019-02-24 10:40:39', '2019-02-24 10:40:39', NULL),
-(76, 'create-suppliers', 'Create Suppliers', 52, 1, 1, NULL, '2019-02-24 10:41:08', '2019-02-24 10:41:08', NULL),
-(77, 'delete-suppliers', 'Delete Suppliers', 54, 1, 1, NULL, '2019-02-24 10:41:39', '2019-02-24 10:41:39', NULL),
-(78, 'issue-management', 'Issue Management', 6, 1, 1, NULL, '2019-05-12 22:32:51', '2019-05-12 22:32:51', NULL);
+(1, 'view-backend', 'View Backend', 1, 1, 1, NULL, '2019-01-14 06:17:03', '2019-01-14 06:17:03', NULL),
+(2, 'view-frontend', 'View Frontend', 2, 1, 1, NULL, '2019-01-14 06:17:03', '2019-01-14 06:17:03', NULL),
+(3, 'view-access-management', 'View Access Management', 3, 1, 1, NULL, '2019-01-14 06:17:03', '2019-01-14 06:17:03', NULL),
+(4, 'view-user-management', 'View User Management', 4, 1, 1, NULL, '2019-01-14 06:17:03', '2019-01-14 06:17:03', NULL),
+(5, 'view-active-user', 'View Active User', 5, 1, 1, NULL, '2019-01-14 06:17:04', '2019-01-14 06:17:04', NULL),
+(6, 'view-deactive-user', 'View Deactive User', 6, 1, 1, NULL, '2019-01-14 06:17:04', '2019-01-14 06:17:04', NULL),
+(7, 'view-deleted-user', 'View Deleted User', 7, 1, 1, NULL, '2019-01-14 06:17:04', '2019-01-14 06:17:04', NULL),
+(8, 'show-user', 'Show User Details', 8, 1, 1, NULL, '2019-01-14 06:17:05', '2019-01-14 06:17:05', NULL),
+(9, 'create-user', 'Create User', 9, 1, 1, NULL, '2019-01-14 06:17:05', '2019-01-14 06:17:05', NULL),
+(10, 'edit-user', 'Edit User', 9, 1, 1, NULL, '2019-01-14 06:17:05', '2019-01-14 06:17:05', NULL),
+(11, 'delete-user', 'Delete User', 10, 1, 1, NULL, '2019-01-14 06:17:05', '2019-01-14 06:17:05', NULL),
+(12, 'activate-user', 'Activate User', 11, 1, 1, NULL, '2019-01-14 06:17:05', '2019-01-14 06:17:05', NULL),
+(13, 'deactivate-user', 'Deactivate User', 12, 1, 1, NULL, '2019-01-14 06:17:05', '2019-01-14 06:17:05', NULL),
+(14, 'login-as-user', 'Login As User', 13, 1, 1, NULL, '2019-01-14 06:17:05', '2019-01-14 06:17:05', NULL),
+(15, 'clear-user-session', 'Clear User Session', 14, 1, 1, NULL, '2019-01-14 06:17:05', '2019-01-14 06:17:05', NULL),
+(16, 'view-role-management', 'View Role Management', 15, 1, 1, NULL, '2019-01-14 06:17:05', '2019-01-14 06:17:05', NULL),
+(17, 'create-role', 'Create Role', 16, 1, 1, NULL, '2019-01-14 06:17:05', '2019-01-14 06:17:05', NULL),
+(18, 'edit-role', 'Edit Role', 17, 1, 1, NULL, '2019-01-14 06:17:05', '2019-01-14 06:17:05', NULL),
+(19, 'delete-role', 'Delete Role', 18, 1, 1, NULL, '2019-01-14 06:17:05', '2019-01-14 06:17:05', NULL),
+(20, 'view-permission-management', 'View Permission Management', 19, 1, 1, NULL, '2019-01-14 06:17:05', '2019-01-14 06:17:05', NULL),
+(21, 'create-permission', 'Create Permission', 20, 1, 1, NULL, '2019-01-14 06:17:05', '2019-01-14 06:17:05', NULL),
+(22, 'edit-permission', 'Edit Permission', 21, 1, 1, NULL, '2019-01-14 06:17:05', '2019-01-14 06:17:05', NULL),
+(23, 'delete-permission', 'Delete Permission', 22, 1, 1, NULL, '2019-01-14 06:17:05', '2019-01-14 06:17:05', NULL),
+(24, 'view-page', 'View Page', 23, 1, 1, NULL, '2019-01-14 06:17:05', '2019-01-14 06:17:05', NULL),
+(25, 'create-page', 'Create Page', 24, 1, 1, NULL, '2019-01-14 06:17:05', '2019-01-14 06:17:05', NULL),
+(26, 'edit-page', 'Edit Page', 25, 1, 1, NULL, '2019-01-14 06:17:05', '2019-01-14 06:17:05', NULL),
+(27, 'delete-page', 'Delete Page', 26, 1, 1, NULL, '2019-01-14 06:17:05', '2019-01-14 06:17:05', NULL),
+(28, 'view-email-template', 'View Email Templates', 27, 1, 1, NULL, '2019-01-14 06:17:05', '2019-01-14 06:17:05', NULL),
+(29, 'create-email-template', 'Create Email Templates', 28, 1, 1, NULL, '2019-01-14 06:17:06', '2019-01-14 06:17:06', NULL),
+(30, 'edit-email-template', 'Edit Email Templates', 29, 1, 1, NULL, '2019-01-14 06:17:06', '2019-01-14 06:17:06', NULL),
+(31, 'delete-email-template', 'Delete Email Templates', 30, 1, 1, NULL, '2019-01-14 06:17:06', '2019-01-14 06:17:06', NULL),
+(32, 'edit-settings', 'Edit Settings', 31, 1, 1, NULL, '2019-01-14 06:17:06', '2019-01-14 06:17:06', NULL),
+(33, 'view-blog-category', 'View Blog Categories Management', 32, 1, 1, NULL, '2019-01-14 06:17:06', '2019-02-24 04:34:13', '2019-02-24 04:34:13'),
+(34, 'create-blog-category', 'Create Blog Category', 33, 1, 1, NULL, '2019-01-14 06:17:07', '2019-02-24 04:34:24', '2019-02-24 04:34:24'),
+(35, 'edit-blog-category', 'Edit Blog Category', 34, 1, 1, NULL, '2019-01-14 06:17:07', '2019-02-24 04:34:36', '2019-02-24 04:34:36'),
+(36, 'delete-blog-category', 'Delete Blog Category', 35, 1, 1, NULL, '2019-01-14 06:17:07', '2019-02-24 04:34:47', '2019-02-24 04:34:47'),
+(37, 'view-blog-tag', 'View Blog Tags Management', 36, 1, 1, NULL, '2019-01-14 06:17:07', '2019-02-24 04:34:57', '2019-02-24 04:34:57'),
+(38, 'create-blog-tag', 'Create Blog Tag', 37, 1, 1, NULL, '2019-01-14 06:17:07', '2019-02-24 04:35:08', '2019-02-24 04:35:08'),
+(39, 'edit-blog-tag', 'Edit Blog Tag', 38, 1, 1, NULL, '2019-01-14 06:17:07', '2019-02-24 04:35:19', '2019-02-24 04:35:19'),
+(40, 'delete-blog-tag', 'Delete Blog Tag', 39, 1, 1, NULL, '2019-01-14 06:17:07', '2019-02-24 04:35:29', '2019-02-24 04:35:29'),
+(41, 'view-blog', 'View Blogs Management', 40, 1, 1, NULL, '2019-01-14 06:17:07', '2019-02-24 04:35:52', '2019-02-24 04:35:52'),
+(42, 'create-blog', 'Create Blog', 41, 1, 1, NULL, '2019-01-14 06:17:07', '2019-02-24 04:36:14', '2019-02-24 04:36:14'),
+(43, 'edit-blog', 'Edit Blog', 42, 1, 1, NULL, '2019-01-14 06:17:07', '2019-02-24 04:36:03', '2019-02-24 04:36:03'),
+(44, 'delete-blog', 'Delete Blog', 43, 1, 1, NULL, '2019-01-14 06:17:07', '2019-02-24 04:37:55', '2019-02-24 04:37:55'),
+(45, 'view-faq', 'View FAQ Management', 44, 1, 1, NULL, '2019-01-14 06:17:07', '2019-02-24 04:38:04', '2019-02-24 04:38:04'),
+(46, 'create-faq', 'Create FAQ', 45, 1, 1, NULL, '2019-01-14 06:17:07', '2019-02-24 04:38:12', '2019-02-24 04:38:12'),
+(47, 'edit-faq', 'Edit FAQ', 46, 1, 1, NULL, '2019-01-14 06:17:07', '2019-02-24 04:38:21', '2019-02-24 04:38:21'),
+(48, 'delete-faq', 'Delete FAQ', 47, 1, 1, NULL, '2019-01-14 06:17:07', '2019-02-24 04:38:54', '2019-02-24 04:38:54'),
+(49, 'create-plant-equipment', 'Create Plant Equipment', 31, 1, 1, 1, '2019-01-21 10:42:35', '2019-01-21 10:43:48', NULL),
+(50, 'edit-plant-equipment', 'Edit Plant Equipment', 32, 1, 1, NULL, '2019-02-09 03:20:08', '2019-02-09 03:20:08', NULL),
+(51, 'view-plant-equipment', 'View Plant Equipment', 33, 1, 1, NULL, '2019-02-09 03:21:08', '2019-02-09 03:21:08', NULL),
+(52, 'delete-plant-equipment', 'Delete Plant Equipment', 34, 1, 1, NULL, '2019-02-09 03:22:25', '2019-02-09 03:22:25', NULL),
+(53, 'view-reports', 'View Reports', 40, 1, 1, NULL, '2019-02-09 03:48:43', '2019-02-09 03:48:43', NULL),
+(54, 'create-projects', 'Create Projects', 41, 1, 1, NULL, '2019-02-09 07:33:20', '2019-02-09 07:33:20', NULL),
+(55, 'edit-projects', 'Edit Projects', 33, 1, 1, NULL, '2019-02-09 07:46:59', '2019-02-09 07:46:59', NULL),
+(56, 'view-projects', 'View Projects', 34, 1, 1, NULL, '2019-02-09 08:12:35', '2019-02-09 08:12:35', NULL),
+(57, 'delete-projects', 'Delete Projects', 38, 1, 1, NULL, '2019-02-09 08:13:20', '2019-02-09 08:13:20', NULL),
+(58, 'create-items', 'Create Items', 45, 1, 1, NULL, '2019-02-22 17:14:05', '2019-02-22 17:14:05', NULL),
+(59, 'edit-items', 'Edit Items', 46, 1, 1, NULL, '2019-02-22 17:15:10', '2019-02-22 17:15:10', NULL),
+(60, 'view-items', 'View Items', 47, 1, 1, NULL, '2019-02-22 17:15:38', '2019-02-22 17:15:38', NULL),
+(61, 'delete-items', 'Delete Items', 48, 1, 1, NULL, '2019-02-22 17:16:35', '2019-02-22 17:16:35', NULL),
+(62, 'view-products', 'View Products', 48, 1, 1, NULL, '2019-02-22 18:09:38', '2019-02-22 18:09:38', NULL),
+(63, 'create-products', 'Create Products', 49, 1, 1, NULL, '2019-02-22 18:10:22', '2019-02-22 18:10:22', NULL),
+(64, 'edit-products', 'Edit Products', 49, 1, 1, 1, '2019-02-22 18:10:55', '2019-02-22 18:11:59', NULL),
+(65, 'delete-products', 'Delete Products', 50, 1, 1, 1, '2019-02-22 18:11:18', '2019-02-22 18:11:35', NULL),
+(66, 'create-product-receive', 'Create Product Receive', 51, 1, 1, NULL, '2019-02-22 19:51:48', '2019-02-22 19:51:48', NULL),
+(67, 'edit-product-receive', 'Edit Product Receive', 52, 1, 1, NULL, '2019-02-22 19:52:36', '2019-02-22 19:52:36', NULL),
+(68, 'view-product-receive', 'View Product Receive', 53, 1, 1, NULL, '2019-02-22 19:53:22', '2019-02-22 19:53:22', NULL),
+(69, 'delete-product-receive', 'Delete Product Receive', 54, 1, 1, NULL, '2019-02-22 19:54:06', '2019-02-22 19:54:06', NULL),
+(70, 'create-project-challan', 'Create Project Challan', 61, 1, 1, NULL, '2019-02-22 21:14:49', '2019-02-22 21:14:49', NULL),
+(71, 'edit-project-challan', 'Ereate Project Challan', 60, 1, 1, NULL, '2019-02-22 21:15:22', '2019-02-22 21:15:22', NULL),
+(72, 'view-project-challan', 'View Project Challan', 62, 1, 1, NULL, '2019-02-22 21:15:58', '2019-02-22 21:15:58', NULL),
+(73, 'delete-project-challan', 'Delete Project Challan', 64, 1, 1, NULL, '2019-02-22 21:16:33', '2019-02-22 21:16:33', NULL),
+(74, 'view-suppliers', 'View Suppliers', 50, 1, 1, NULL, '2019-02-24 04:40:07', '2019-02-24 04:40:07', NULL),
+(75, 'edit-suppliers', 'Edit Suppliers', 51, 1, 1, NULL, '2019-02-24 04:40:39', '2019-02-24 04:40:39', NULL),
+(76, 'create-suppliers', 'Create Suppliers', 52, 1, 1, NULL, '2019-02-24 04:41:08', '2019-02-24 04:41:08', NULL),
+(77, 'delete-suppliers', 'Delete Suppliers', 54, 1, 1, NULL, '2019-02-24 04:41:39', '2019-02-24 04:41:39', NULL),
+(78, 'issue-management', 'Issue Management', 6, 1, 1, NULL, '2019-05-12 16:32:51', '2019-05-12 16:32:51', NULL);
 
 -- --------------------------------------------------------
 
@@ -1608,88 +1600,88 @@ CREATE TABLE `plant_and_equipment` (
 --
 
 INSERT INTO `plant_and_equipment` (`id`, `project_id`, `equipment_type`, `date_form`, `date_to`, `name`, `eel_code`, `country_of_origin`, `capacity`, `make_by`, `model`, `year_of_manufac`, `present_location`, `present_condition`, `remarks`, `created_by`, `updated_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(9, 3, 1, NULL, NULL, 'Dump Truck', 'DT-01', '44', '10m3', 'SINO', 'ZZ3168G3615', 2018, 'PCT Yard', NULL, 'No Comments', 5, NULL, '2019-05-13 23:18:42', '2019-05-25 05:34:47', NULL),
-(10, 4, 1, NULL, NULL, 'Dump Truck', 'DT-02', '44', '10m3', 'SINO', 'ZZ3168G3615', 2018, 'NCT,Ctg', '2', 'No Comments', 5, NULL, '2019-05-13 23:22:15', '2019-05-25 05:35:02', NULL),
-(11, 10, 1, NULL, NULL, 'Dump Truck', 'DT-03', '44', '10m3', 'SINO', 'ZZ3168G3615', 2018, 'Raozan Road Project', '2', 'No Comments', 5, NULL, '2019-05-13 23:24:44', '2019-05-25 05:35:20', NULL),
-(12, 3, 1, NULL, NULL, 'Dump Truck', 'DT-04', '44', '10m3', 'SINO', 'ZZ3168G3615', 2018, 'PCT Yard', '2', 'No Comments', 5, NULL, '2019-05-14 00:05:17', '2019-05-25 05:35:38', NULL),
-(13, 4, 1, NULL, NULL, 'Dump Truck', 'DT-05', '44', '10m3', 'SINO', 'ZZ3168G3615', 2018, 'NCT,Ctg', NULL, 'No Comments', 5, NULL, '2019-05-14 00:08:58', '2019-05-25 05:32:45', NULL),
-(14, 10, 1, NULL, NULL, 'Dump Truck', 'DT-06', '44', '10m3', 'SINO', 'ZZ3168G3615', 2018, 'Raozan Road Project', '2', 'No Comments', 5, NULL, '2019-05-14 00:11:01', '2019-05-25 05:32:24', NULL),
-(15, 3, 1, NULL, NULL, 'Dump Truck', 'DT-07', '44', '16m3', 'SINO', 'ZZ257N33647', 2018, 'PCT Yard', '2', 'No Comments', 5, NULL, '2019-05-14 00:15:28', '2019-05-25 05:32:07', NULL),
-(16, 8, 1, NULL, NULL, 'Dump Truck', 'DT-08', '44', '16m3', 'SINO', 'ZZ257N33647', 2018, 'Water  logging', '2', 'No Comments', 5, NULL, '2019-05-14 00:18:17', '2019-05-25 05:31:47', NULL),
-(17, 3, 1, NULL, NULL, 'Prime Mover (Low Bed)', 'LB-01', '44', '80 Ton', 'SINO', 'ZZ4257V3241W TAZ9950TDP', 2018, 'PCT Yard', '2', 'No Comments', 5, NULL, '2019-05-14 00:20:57', '2019-05-25 05:28:13', NULL),
-(18, 3, 1, NULL, NULL, 'Prime Mover (Low Bed)', 'LB-02', '44', '80 Ton', 'SINO', 'ZZ4257V3241W TAZ9950TDP', 2018, 'PCT Yard', '2', 'No Comments', 5, NULL, '2019-05-14 06:36:45', '2019-05-25 05:28:33', NULL),
-(19, 4, 1, NULL, NULL, 'Excavator (standard)', 'EX-01', '113', '0.70 m3', 'DOOSAN', 'DX225LCA', 2018, 'NCT,Ctg', '2', 'No Comments', 5, NULL, '2019-05-14 07:32:07', '2019-05-25 05:31:31', NULL),
-(20, 4, 1, NULL, NULL, 'Excavator (standard)', 'EX-02', '113', '0.70 m3', 'DOOSAN', 'DX225LCA', 2018, 'NCT,Ctg', '2', 'No Comments', 5, NULL, '2019-05-14 07:33:26', '2019-05-25 05:31:14', NULL),
-(21, 8, 1, NULL, NULL, 'Excavator(With Breaker)', 'EX-03', '44', '0.90m3', 'ZOOMLION', 'ZE210E', 2018, 'Water  logging', '2', 'No Comments', 5, NULL, '2019-05-14 07:35:25', '2019-05-25 05:26:25', NULL),
-(22, 3, 1, NULL, NULL, 'Excavator(With Breaker)', 'EX-04', '44', '0.90m3', 'ZOOMLION', 'ZE210E', 2018, 'PCT Yard', '2', 'No Comments', 5, NULL, '2019-05-14 07:37:35', '2019-05-25 05:26:41', NULL),
-(23, 3, 1, NULL, NULL, 'Excavator(Long Boom)', 'EX-05', '44', '0.5m3', 'ZOOMLION', 'ZE360E', 2018, 'PCT Yard', '2', 'No Comments', 5, NULL, '2019-05-14 07:40:49', '2019-05-25 05:30:53', NULL),
-(24, 8, 1, NULL, NULL, 'Excavator(Long Boom)', 'Ex-06', '44', '0.5m3', 'ZOOMLION', 'ZE360E', 2018, 'Water  logging', '2', 'No comments', 5, NULL, '2019-05-19 05:19:13', '2019-05-25 05:30:32', NULL),
-(25, 3, 1, NULL, NULL, 'Excavator(Pile Driver)', 'Ex-07', '44', '1.60m3', 'XCMG', 'XE370CA', 2018, 'PCT Yard', '2', 'Ready for work', 5, NULL, '2019-05-19 05:39:58', '2019-05-25 05:30:15', NULL),
-(26, 3, 1, NULL, NULL, 'Excavator(Pile Driver)', 'Ex-08', '44', '1.60m3', 'XCMG', 'XE370CA', 2018, 'PCT Yard', '2', 'Ready for Work', 5, NULL, '2019-05-19 05:41:39', '2019-05-25 05:29:57', NULL),
-(27, 3, 1, NULL, NULL, 'Amphibious Hydraulic Excavator', 'AEX-01', '129', '0.33m3', 'Ultratex', 'TB285CH', 2019, 'PCT Yard', '2', 'No Comments', 5, NULL, '2019-05-19 05:50:33', '2019-05-25 02:44:11', NULL),
-(28, 3, 1, NULL, NULL, 'Amphibious Hydraulic Excavator', 'AEX-02', '129', '0.33m3', 'Ultratex', 'TB285CH', 2019, 'PCT Yard', '2', 'No Comments', 5, NULL, '2019-05-20 06:23:41', '2019-05-25 05:40:46', NULL),
-(29, 4, 1, NULL, NULL, 'Wheel Loader', 'WL-01', '44', '3 Ton', 'POWER PLUS', 'PP-938-V', 2018, 'NCT,Ctg', '2', 'No Comments', 5, NULL, '2019-05-20 06:26:15', '2019-05-25 04:34:05', NULL),
-(30, 8, 1, NULL, NULL, 'Wheel Loader', 'WL-02', '44', '3 Ton', 'POWER PLUS', 'PP-938-V', 2018, 'Water  logging', '2', 'No Comments', 5, NULL, '2019-05-20 06:29:33', '2019-05-20 06:29:33', NULL),
-(31, 10, 1, NULL, NULL, 'Wheel Loader', 'WL-03', '44', '3 Ton', 'LONG KING', 'LG833N', 2018, 'Raozan Road Project', '2', 'No Comment', 5, NULL, '2019-05-20 06:32:12', '2019-05-25 04:32:01', NULL),
-(32, 3, 1, NULL, NULL, 'Wheel Loader', 'WL-04', '44', '3 Ton', 'LONG KING', 'LG833N', 2018, 'PCT Yard', '2', 'No Comment', 5, NULL, '2019-05-20 06:34:22', '2019-05-25 04:31:17', NULL),
-(33, 3, 1, NULL, NULL, 'Wheel Loader', 'WL-05', '44', '5 Ton', 'LONG KING', 'ZL50C', 2018, 'PCT Yard', '2', 'No Comment', 5, NULL, '2019-05-20 06:37:44', '2019-05-25 04:30:42', NULL),
-(34, 4, 1, NULL, NULL, 'Wheel Loader', 'WL-06', '44', '5 Ton', 'LONG KING', 'ZL50C', 2018, 'NCT,Ctg', '2', 'No Comment', 5, NULL, '2019-05-20 06:39:09', '2019-05-25 04:30:00', NULL),
-(35, 4, 1, NULL, NULL, 'Bull Dozer', 'BD-01', '44', '4.50 m3', 'POWER PLUS', 'D65EX-15', 2018, 'NCT,Ctg', '2', 'No Comment', 5, NULL, '2019-05-20 06:42:41', '2019-05-25 05:39:57', NULL),
-(36, 3, 1, NULL, NULL, 'Bull Dozer', 'BD-02', '44', '4.50 m3', 'ZOOMLION', 'ZD160-3', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 06:45:04', '2019-05-25 05:39:41', NULL),
-(37, 4, 1, NULL, NULL, 'Motor Grader', 'M Gr-01', '99', 'n/a', 'ACE', 'AG-176', 2018, 'NCT,Ctg', '2', 'N/A', 5, NULL, '2019-05-20 06:48:02', '2019-05-25 05:27:52', NULL),
-(38, 4, 1, NULL, NULL, 'Vibratory Roller', 'VR-01', '99', '12 Ton', 'ACE', 'ASD-115', 2018, 'NCT,Ctg', NULL, 'N/A', 5, NULL, '2019-05-20 06:50:55', '2019-05-25 04:42:59', NULL),
-(39, 3, 1, NULL, NULL, 'Vibratory Roller', 'VR-02', '99', '12 Ton', 'ACE', 'ASD-115', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 06:53:15', '2019-05-25 04:32:30', NULL),
-(40, 3, 1, NULL, NULL, 'Vibratory Roller', 'VR-03', '44', '12 Ton', 'CHANGLING', '8108L', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 06:57:08', '2019-05-25 04:33:04', NULL),
-(41, 5, 1, NULL, NULL, 'Vibratory Roller', 'VR-034', '44', '12 Ton', 'CHANGLING', '8108L', 2018, 'Vashanchar', '2', 'N/A', 5, NULL, '2019-05-20 07:10:10', '2019-05-25 04:33:31', NULL),
-(42, 10, 1, NULL, NULL, 'Backhoe Loader', 'BL-01', '99', '0.25m3', 'CASE', '770EXMAGNUM', 2018, 'Raozan Road Project', '2', 'N/A', 5, NULL, '2019-05-20 07:17:13', '2019-05-25 05:40:27', NULL),
-(43, 10, 1, NULL, NULL, 'Backhoe Loader', 'BL-02', '99', '0.25m3', 'CASE', '770EXMAGNUM', 2018, 'Raozan Road Project', '2', 'N/A', 5, NULL, '2019-05-20 07:19:17', '2019-05-25 05:40:11', NULL),
-(44, 3, 1, NULL, NULL, 'Crawler Crane', 'CC-01', '44', '380 Ton', 'ZOOMLION', 'ZCC3800', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 07:30:26', '2019-05-25 05:38:42', NULL),
-(45, 3, 1, NULL, NULL, 'Crawler Crane', 'CC-02', '44', '180 Ton', 'ZOOMLION', 'QUY180', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 07:32:32', '2019-05-25 05:35:55', NULL),
-(46, 3, 1, NULL, NULL, 'Crawler Crane', 'CC-03', '44', '85 Ton', 'XCMG', 'XCMG-85', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-21 01:47:31', '2019-05-25 05:36:07', NULL),
-(47, 3, 1, NULL, NULL, 'Crawler Crane', 'CC-04', '44', '85 Ton', 'XCMG', 'XCMG-85', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-21 01:48:45', '2019-05-25 05:36:24', NULL),
-(48, 3, 1, NULL, NULL, 'Rough Terran Crane', 'RT-01', '44', '300 Ton', 'ZOOMLION', 'ZRT-300', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-21 01:52:35', '2019-05-25 05:28:54', NULL),
-(49, 3, 1, NULL, NULL, 'Rough Terran Crane', 'RT-02', '44', '75 Ton', 'ZOOMLION', 'RT-75', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-21 01:53:46', '2019-05-25 05:29:15', NULL),
-(50, 3, 1, NULL, NULL, 'Rough Terran Crane', 'RT-03', '44', '35 Ton', 'ZOOMLION', 'RT-35', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-21 01:55:11', '2019-05-25 05:29:34', NULL),
-(51, 3, 1, NULL, NULL, 'Diesel Hammer', 'DH-01', '44', '6.2 Ton', 'Starke', 'D62', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-21 02:01:09', '2019-05-25 05:34:15', NULL),
-(52, 3, 1, NULL, NULL, 'Diesel Hammer', 'DH-02', '44', '6.2 Ton', 'STARKE', 'D62', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-21 02:03:04', '2019-05-25 05:34:31', NULL),
-(53, 3, 1, NULL, NULL, 'Transit Mixer Truck', 'MT-01', '44', '9m3', 'ZOOMLION', '9JBH-R', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-21 02:07:01', '2019-05-25 05:21:43', NULL),
-(54, 3, 1, NULL, NULL, 'Transit Mixer Truck', 'MT-02', '44', '9m3', 'ZOOMLION', '9JBH-R', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-21 02:08:20', '2019-05-25 05:21:58', NULL),
-(55, 3, 1, NULL, NULL, 'Transit Mixer Truck', 'MT-03', '44', '9m3', 'ZOOMLION', '9JBH-R', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-21 02:09:18', '2019-05-25 04:45:44', NULL),
-(56, 3, 1, NULL, NULL, 'Transit Mixer Truck', 'MT-04', '44', '9m3', 'ZOOMLION', '9JBH-R', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-21 02:10:49', '2019-05-25 04:45:15', NULL),
-(57, 3, 1, NULL, NULL, 'Stationary Concrete Pump', 'SCP-01', '44', '78/47 m3/Hr', 'ZOOMLION', 'HBT60.174RSU', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-21 02:13:15', '2019-05-25 05:22:51', NULL),
-(58, 3, 1, NULL, NULL, 'Stationary Concrete Pump', 'SCP-02', '44', '78/47 m3/Hr', 'ZOOMLION', 'HBT60.174RSU', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-21 02:14:30', '2019-05-25 05:23:06', NULL),
-(59, 3, 1, NULL, NULL, 'Truck Mounted Concrete Boom Pump', 'BP-01', '44', '120/170 m3/Hr', 'ZOOMLION', '49X-6RZ', 2018, 'NCT,Ctg', '2', 'N/A', 5, NULL, '2019-05-21 03:02:02', '2019-05-25 04:44:55', NULL),
-(60, 9, 1, NULL, NULL, 'Concrete Block Making Machine', 'CBM-01', '44', 'N/A', 'ZENITH', 'QT10', 2019, 'Sirajgonj Project', '2', 'N/A', 5, NULL, '2019-05-21 03:04:44', '2019-05-25 05:38:56', NULL),
-(61, 3, 1, NULL, NULL, 'Concrete Batching Plant', 'CBP-01', '44', '30m3/Hr', 'POWER PLUS', 'PBP350S', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-21 03:09:15', '2019-05-25 05:39:27', NULL),
-(62, 3, 1, NULL, NULL, 'Concrete Batching Plant', 'CBP-02', '44', '60 m3/Hr', 'ZOOMLION', 'HZX60', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-21 03:11:06', '2019-05-25 05:39:14', NULL),
-(63, 7, 1, NULL, NULL, 'Tractor', 'TT-01', '99', '100 Cft', 'SONALIKA', 'D150RX', 2018, 'Payra  Project', '2', 'N/A', 5, NULL, '2019-05-21 03:45:08', '2019-05-25 05:24:07', NULL),
-(64, 7, 1, NULL, NULL, 'Tractor', 'TT-02', '99', '100 Cft', 'SONALIKA', 'D150RX', 2018, 'Payra  Project', '2', 'N/A', 5, NULL, '2019-05-21 03:46:59', '2019-05-25 05:24:26', NULL),
-(65, 7, 1, NULL, NULL, 'Tractor', 'TT-03', '99', '100 Cft', 'SONALIKA', 'D150RX', 2018, 'Payra  Project', '2', 'N/A', 5, NULL, '2019-05-21 03:48:34', '2019-05-25 05:24:50', NULL),
-(66, 7, 1, NULL, NULL, 'Tractor', 'TT-04', '99', '100 Cft', 'SONALIKA', 'D150RX', 2018, 'Payra  Project', '2', 'n/a', 5, NULL, '2019-05-21 03:49:41', '2019-05-25 05:25:11', NULL),
-(67, 5, 1, NULL, NULL, 'Tractor', 'TT-05', '99', '100 Cft', 'SONALIKA', 'D150RX', 2018, 'Vashanchar', '2', 'n/a', 5, NULL, '2019-05-21 03:51:13', '2019-05-25 05:25:30', NULL),
-(68, 10, 1, NULL, NULL, 'Tractor', 'TT-06', '99', '100 Cft', 'SONALIKA', 'D150RX', 2018, 'Raozan Road Project', '2', 'n/a', 5, NULL, '2019-05-21 03:54:56', '2019-05-25 05:25:51', NULL),
-(69, 10, 1, NULL, NULL, 'Tractor', 'TT-07', '99', '100 Cft', 'SONALIKA', 'D150RX', 2018, 'Raozan Road Project', '2', 'n/a', 5, NULL, '2019-05-21 04:43:58', '2019-05-25 04:35:27', NULL),
-(70, 10, 1, NULL, NULL, 'Tractor', 'TT-08', '99', '100 Cft', 'SONALIKA', 'D150RX', 2018, 'Raozan Road Project', '2', 'n/a', 5, NULL, '2019-05-21 04:45:25', '2019-05-25 04:35:52', NULL),
-(71, 9, 1, NULL, NULL, 'Tractor', 'TT-09', '99', '100 Cft', 'TAFE', 'TAFE-45DI', 2018, 'Sirajgonj Project', '2', 'n/a', 5, NULL, '2019-05-21 04:47:33', '2019-05-25 05:21:05', NULL),
-(72, 9, 1, NULL, NULL, 'Tractor', 'TT-10', '99', '10 Ton', 'TAFE', 'TAFE-45DI', 2018, 'Sirajgonj Project', '2', 'n/a', 5, NULL, '2019-05-21 04:49:37', '2019-05-25 05:21:24', NULL),
-(73, 9, 1, NULL, NULL, 'Fork Lift', 'FL-01', '113', '2 Ton', 'DOOSAN', 'D20GP', 2019, 'Sirajgonj Project', '2', 'n/a', 5, NULL, '2019-05-21 04:54:51', '2019-05-25 05:27:20', NULL),
-(74, 9, 1, NULL, NULL, 'Fork Lift', 'FL-02', '113', '2 Ton', 'DOOSAN', 'D20GP', 2019, 'Sirajgonj Project', '2', 'n/a', 5, NULL, '2019-05-21 04:59:36', '2019-05-25 05:27:39', NULL),
-(75, 4, 1, NULL, NULL, 'Diesel Generator', 'D Gn-01', '113', '27 KVA', 'DAWEOO', 'DAWEOO-PJM22-27 KVA', 2018, 'NCT,Ctg', NULL, 'n/a', 5, NULL, '2019-05-21 05:08:38', '2019-05-25 05:36:44', NULL),
-(76, 5, 1, NULL, NULL, 'Diesel Generator', 'D Gn-02', '44', '25 KVA', 'SIFANG', 'SIFANG-1125', 2018, 'Vashanchar', '2', 'n/a', 5, NULL, '2019-05-21 05:12:03', '2019-05-25 05:37:01', NULL),
-(77, 5, 1, NULL, NULL, 'Diesel Generator', 'D Gn-03', '44', '25KVA', 'SIFANG', 'SIFANG-1125', 2018, 'Vashanchar', '2', 'n/a', 5, NULL, '2019-05-21 05:14:03', '2019-05-25 05:37:16', NULL),
-(78, 5, 1, NULL, NULL, 'Diesel Generator', 'D Gn-04', '44', '15KVA', 'FUJIAN', 'FUJIAN-POWER-12KW', 2018, 'Vashanchar', '2', 'n/a', 5, NULL, '2019-05-21 05:32:04', '2019-05-25 05:37:31', NULL),
-(79, 7, 1, NULL, NULL, 'Diesel Generator', 'D Gn-05', '44', '19KVA', 'MINDONG', 'JBT8982011', 2018, 'Payra  Project', '2', 'n/a', 5, NULL, '2019-05-21 05:35:58', '2019-05-25 05:37:49', NULL),
-(80, 7, 1, NULL, NULL, 'Diesel Generator', 'D Gn-06', '44', '18 KVA', 'MINDONG', 'JBT8982011', 2018, 'Payra  Project', '2', 'n/a', 5, NULL, '2019-05-21 05:38:40', '2019-05-25 05:38:03', NULL),
-(81, 3, 1, NULL, NULL, 'Diesel Generator', 'D Gn-07', '218', '329 KVA', 'TEKSAN', 'TJ329DW5L', 2018, 'PCT Yard', '2', 'n/a', 5, NULL, '2019-05-21 05:51:30', '2019-05-25 05:38:20', NULL),
-(82, 3, 1, NULL, NULL, 'Diesel Generator', 'D Gn-08', '218', '329 KVA', 'TEKSAN', 'JBT8982011', 2018, 'PCT Yard', '2', 'n/a', 5, NULL, '2019-05-21 05:53:06', '2019-05-25 05:33:09', NULL),
-(83, 3, 1, NULL, NULL, 'Diesel Generator', 'D Gn-09', '218', '180KVA', 'TEKSAN', 'TJ180DW5A', 2018, 'PCT Yard', '2', 'n/a', 5, NULL, '2019-05-21 05:55:28', '2019-05-25 05:33:24', NULL),
-(84, 3, 1, NULL, NULL, 'Diesel Generator', 'D Gn-10', '44', '65KVA', 'PRAMAC', 'GSW65', 2017, 'PCT Yard', '2', 'n/a', 5, NULL, '2019-05-21 05:57:56', '2019-05-25 05:33:39', NULL),
-(85, 3, 1, NULL, NULL, 'Diesel Generator', 'D Gn-11', '218', '21 KVA', 'TEKSAN', 'TJ21MS5A', 2018, 'PCT Yard', '2', 'n/a', 5, NULL, '2019-05-21 06:00:58', '2019-05-25 05:33:57', NULL),
-(86, 8, 1, NULL, NULL, 'Tower Light', 'TL-01', '107', '3.5KVA', 'PRAMAC', 'LPW8T-KUBOTAZ482', 2017, 'Water  logging', '2', 'n/a', 5, NULL, '2019-05-21 06:04:49', '2019-05-25 05:23:23', NULL),
-(87, 4, 1, NULL, NULL, 'Tower Light', 'TL-02', '107', '3.5KVA', 'PRAMAC', 'LPW8T-KUBOTAZ482', 2017, 'NCT,Ctg', '2', 'n/a', 5, NULL, '2019-05-21 06:16:23', '2019-05-25 05:23:47', NULL),
-(88, 11, 1, NULL, NULL, 'Dump Truck', 'DT-09', '99', '10m3', 'EICHER', 'VE Terra-16XP', 2019, 'mongla', '2', 'no comments', 5, NULL, '2019-05-25 05:41:09', '2019-05-28 07:20:41', NULL),
-(89, 11, 1, NULL, NULL, 'Dump Truck', 'DT-10', '99', '10m3', 'EICHER', 'VE Terra-16XP', 2019, 'Mongla Prpject', '2', 'no comments', 5, NULL, '2019-05-28 07:23:35', '2019-05-28 07:23:35', NULL),
-(90, 11, 1, NULL, NULL, 'Dump Truck', 'DT-11', '99', '10m3', 'EICHER', 'VE Terra-16XP', 2019, 'Mongla Project', '2', 'no comments', 5, NULL, '2019-05-28 07:25:26', '2019-05-28 07:25:26', NULL);
+(9, 3, 1, NULL, NULL, 'Dump Truck', 'DT-01', '44', '10m3', 'SINO', 'ZZ3168G3615', 2018, 'PCT Yard', NULL, 'No Comments', 5, NULL, '2019-05-13 17:18:42', '2019-05-24 23:34:47', NULL),
+(10, 4, 1, NULL, NULL, 'Dump Truck', 'DT-02', '44', '10m3', 'SINO', 'ZZ3168G3615', 2018, 'NCT,Ctg', '2', 'No Comments', 5, NULL, '2019-05-13 17:22:15', '2019-05-24 23:35:02', NULL),
+(11, 10, 1, NULL, NULL, 'Dump Truck', 'DT-03', '44', '10m3', 'SINO', 'ZZ3168G3615', 2018, 'Raozan Road Project', '2', 'No Comments', 5, NULL, '2019-05-13 17:24:44', '2019-05-24 23:35:20', NULL),
+(12, 3, 1, NULL, NULL, 'Dump Truck', 'DT-04', '44', '10m3', 'SINO', 'ZZ3168G3615', 2018, 'PCT Yard', '2', 'No Comments', 5, NULL, '2019-05-13 18:05:17', '2019-05-24 23:35:38', NULL),
+(13, 4, 1, NULL, NULL, 'Dump Truck', 'DT-05', '44', '10m3', 'SINO', 'ZZ3168G3615', 2018, 'NCT,Ctg', NULL, 'No Comments', 5, NULL, '2019-05-13 18:08:58', '2019-05-24 23:32:45', NULL),
+(14, 10, 1, NULL, NULL, 'Dump Truck', 'DT-06', '44', '10m3', 'SINO', 'ZZ3168G3615', 2018, 'Raozan Road Project', '2', 'No Comments', 5, NULL, '2019-05-13 18:11:01', '2019-05-24 23:32:24', NULL),
+(15, 3, 1, NULL, NULL, 'Dump Truck', 'DT-07', '44', '16m3', 'SINO', 'ZZ257N33647', 2018, 'PCT Yard', '2', 'No Comments', 5, NULL, '2019-05-13 18:15:28', '2019-05-24 23:32:07', NULL),
+(16, 8, 1, NULL, NULL, 'Dump Truck', 'DT-08', '44', '16m3', 'SINO', 'ZZ257N33647', 2018, 'Water  logging', '2', 'No Comments', 5, NULL, '2019-05-13 18:18:17', '2019-05-24 23:31:47', NULL),
+(17, 3, 1, NULL, NULL, 'Prime Mover (Low Bed)', 'LB-01', '44', '80 Ton', 'SINO', 'ZZ4257V3241W TAZ9950TDP', 2018, 'PCT Yard', '2', 'No Comments', 5, NULL, '2019-05-13 18:20:57', '2019-05-24 23:28:13', NULL),
+(18, 3, 1, NULL, NULL, 'Prime Mover (Low Bed)', 'LB-02', '44', '80 Ton', 'SINO', 'ZZ4257V3241W TAZ9950TDP', 2018, 'PCT Yard', '2', 'No Comments', 5, NULL, '2019-05-14 00:36:45', '2019-05-24 23:28:33', NULL),
+(19, 4, 1, NULL, NULL, 'Excavator (standard)', 'EX-01', '113', '0.70 m3', 'DOOSAN', 'DX225LCA', 2018, 'NCT,Ctg', '2', 'No Comments', 5, NULL, '2019-05-14 01:32:07', '2019-05-24 23:31:31', NULL),
+(20, 4, 1, NULL, NULL, 'Excavator (standard)', 'EX-02', '113', '0.70 m3', 'DOOSAN', 'DX225LCA', 2018, 'NCT,Ctg', '2', 'No Comments', 5, NULL, '2019-05-14 01:33:26', '2019-05-24 23:31:14', NULL),
+(21, 8, 1, NULL, NULL, 'Excavator(With Breaker)', 'EX-03', '44', '0.90m3', 'ZOOMLION', 'ZE210E', 2018, 'Water  logging', '2', 'No Comments', 5, NULL, '2019-05-14 01:35:25', '2019-05-24 23:26:25', NULL),
+(22, 3, 1, NULL, NULL, 'Excavator(With Breaker)', 'EX-04', '44', '0.90m3', 'ZOOMLION', 'ZE210E', 2018, 'PCT Yard', '2', 'No Comments', 5, NULL, '2019-05-14 01:37:35', '2019-05-24 23:26:41', NULL),
+(23, 3, 1, NULL, NULL, 'Excavator(Long Boom)', 'EX-05', '44', '0.5m3', 'ZOOMLION', 'ZE360E', 2018, 'PCT Yard', '2', 'No Comments', 5, NULL, '2019-05-14 01:40:49', '2019-05-24 23:30:53', NULL),
+(24, 8, 1, NULL, NULL, 'Excavator(Long Boom)', 'Ex-06', '44', '0.5m3', 'ZOOMLION', 'ZE360E', 2018, 'Water  logging', '2', 'No comments', 5, NULL, '2019-05-18 23:19:13', '2019-05-24 23:30:32', NULL),
+(25, 3, 1, NULL, NULL, 'Excavator(Pile Driver)', 'Ex-07', '44', '1.60m3', 'XCMG', 'XE370CA', 2018, 'PCT Yard', '2', 'Ready for work', 5, NULL, '2019-05-18 23:39:58', '2019-05-24 23:30:15', NULL),
+(26, 3, 1, NULL, NULL, 'Excavator(Pile Driver)', 'Ex-08', '44', '1.60m3', 'XCMG', 'XE370CA', 2018, 'PCT Yard', '2', 'Ready for Work', 5, NULL, '2019-05-18 23:41:39', '2019-05-24 23:29:57', NULL),
+(27, 3, 1, NULL, NULL, 'Amphibious Hydraulic Excavator', 'AEX-01', '129', '0.33m3', 'Ultratex', 'TB285CH', 2019, 'PCT Yard', '2', 'No Comments', 5, NULL, '2019-05-18 23:50:33', '2019-05-24 20:44:11', NULL),
+(28, 3, 1, NULL, NULL, 'Amphibious Hydraulic Excavator', 'AEX-02', '129', '0.33m3', 'Ultratex', 'TB285CH', 2019, 'PCT Yard', '2', 'No Comments', 5, NULL, '2019-05-20 00:23:41', '2019-05-24 23:40:46', NULL),
+(29, 4, 1, NULL, NULL, 'Wheel Loader', 'WL-01', '44', '3 Ton', 'POWER PLUS', 'PP-938-V', 2018, 'NCT,Ctg', '2', 'No Comments', 5, NULL, '2019-05-20 00:26:15', '2019-05-24 22:34:05', NULL),
+(30, 8, 1, NULL, NULL, 'Wheel Loader', 'WL-02', '44', '3 Ton', 'POWER PLUS', 'PP-938-V', 2018, 'Water  logging', '2', 'No Comments', 5, NULL, '2019-05-20 00:29:33', '2019-05-20 00:29:33', NULL),
+(31, 10, 1, NULL, NULL, 'Wheel Loader', 'WL-03', '44', '3 Ton', 'LONG KING', 'LG833N', 2018, 'Raozan Road Project', '2', 'No Comment', 5, NULL, '2019-05-20 00:32:12', '2019-05-24 22:32:01', NULL),
+(32, 3, 1, NULL, NULL, 'Wheel Loader', 'WL-04', '44', '3 Ton', 'LONG KING', 'LG833N', 2018, 'PCT Yard', '2', 'No Comment', 5, NULL, '2019-05-20 00:34:22', '2019-05-24 22:31:17', NULL),
+(33, 3, 1, NULL, NULL, 'Wheel Loader', 'WL-05', '44', '5 Ton', 'LONG KING', 'ZL50C', 2018, 'PCT Yard', '2', 'No Comment', 5, NULL, '2019-05-20 00:37:44', '2019-05-24 22:30:42', NULL),
+(34, 4, 1, NULL, NULL, 'Wheel Loader', 'WL-06', '44', '5 Ton', 'LONG KING', 'ZL50C', 2018, 'NCT,Ctg', '2', 'No Comment', 5, NULL, '2019-05-20 00:39:09', '2019-05-24 22:30:00', NULL),
+(35, 4, 1, NULL, NULL, 'Bull Dozer', 'BD-01', '44', '4.50 m3', 'POWER PLUS', 'D65EX-15', 2018, 'NCT,Ctg', '2', 'No Comment', 5, NULL, '2019-05-20 00:42:41', '2019-05-24 23:39:57', NULL),
+(36, 3, 1, NULL, NULL, 'Bull Dozer', 'BD-02', '44', '4.50 m3', 'ZOOMLION', 'ZD160-3', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 00:45:04', '2019-05-24 23:39:41', NULL),
+(37, 4, 1, NULL, NULL, 'Motor Grader', 'M Gr-01', '99', 'n/a', 'ACE', 'AG-176', 2018, 'NCT,Ctg', '2', 'N/A', 5, NULL, '2019-05-20 00:48:02', '2019-05-24 23:27:52', NULL),
+(38, 4, 1, NULL, NULL, 'Vibratory Roller', 'VR-01', '99', '12 Ton', 'ACE', 'ASD-115', 2018, 'NCT,Ctg', NULL, 'N/A', 5, NULL, '2019-05-20 00:50:55', '2019-05-24 22:42:59', NULL),
+(39, 3, 1, NULL, NULL, 'Vibratory Roller', 'VR-02', '99', '12 Ton', 'ACE', 'ASD-115', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 00:53:15', '2019-05-24 22:32:30', NULL),
+(40, 3, 1, NULL, NULL, 'Vibratory Roller', 'VR-03', '44', '12 Ton', 'CHANGLING', '8108L', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 00:57:08', '2019-05-24 22:33:04', NULL),
+(41, 5, 1, NULL, NULL, 'Vibratory Roller', 'VR-034', '44', '12 Ton', 'CHANGLING', '8108L', 2018, 'Vashanchar', '2', 'N/A', 5, NULL, '2019-05-20 01:10:10', '2019-05-24 22:33:31', NULL),
+(42, 10, 1, NULL, NULL, 'Backhoe Loader', 'BL-01', '99', '0.25m3', 'CASE', '770EXMAGNUM', 2018, 'Raozan Road Project', '2', 'N/A', 5, NULL, '2019-05-20 01:17:13', '2019-05-24 23:40:27', NULL),
+(43, 10, 1, NULL, NULL, 'Backhoe Loader', 'BL-02', '99', '0.25m3', 'CASE', '770EXMAGNUM', 2018, 'Raozan Road Project', '2', 'N/A', 5, NULL, '2019-05-20 01:19:17', '2019-05-24 23:40:11', NULL),
+(44, 3, 1, NULL, NULL, 'Crawler Crane', 'CC-01', '44', '380 Ton', 'ZOOMLION', 'ZCC3800', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 01:30:26', '2019-05-24 23:38:42', NULL),
+(45, 3, 1, NULL, NULL, 'Crawler Crane', 'CC-02', '44', '180 Ton', 'ZOOMLION', 'QUY180', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 01:32:32', '2019-05-24 23:35:55', NULL),
+(46, 3, 1, NULL, NULL, 'Crawler Crane', 'CC-03', '44', '85 Ton', 'XCMG', 'XCMG-85', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 19:47:31', '2019-05-24 23:36:07', NULL),
+(47, 3, 1, NULL, NULL, 'Crawler Crane', 'CC-04', '44', '85 Ton', 'XCMG', 'XCMG-85', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 19:48:45', '2019-05-24 23:36:24', NULL),
+(48, 3, 1, NULL, NULL, 'Rough Terran Crane', 'RT-01', '44', '300 Ton', 'ZOOMLION', 'ZRT-300', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 19:52:35', '2019-05-24 23:28:54', NULL),
+(49, 3, 1, NULL, NULL, 'Rough Terran Crane', 'RT-02', '44', '75 Ton', 'ZOOMLION', 'RT-75', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 19:53:46', '2019-05-24 23:29:15', NULL),
+(50, 3, 1, NULL, NULL, 'Rough Terran Crane', 'RT-03', '44', '35 Ton', 'ZOOMLION', 'RT-35', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 19:55:11', '2019-05-24 23:29:34', NULL),
+(51, 3, 1, NULL, NULL, 'Diesel Hammer', 'DH-01', '44', '6.2 Ton', 'Starke', 'D62', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 20:01:09', '2019-05-24 23:34:15', NULL),
+(52, 3, 1, NULL, NULL, 'Diesel Hammer', 'DH-02', '44', '6.2 Ton', 'STARKE', 'D62', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 20:03:04', '2019-05-24 23:34:31', NULL),
+(53, 3, 1, NULL, NULL, 'Transit Mixer Truck', 'MT-01', '44', '9m3', 'ZOOMLION', '9JBH-R', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 20:07:01', '2019-05-24 23:21:43', NULL),
+(54, 3, 1, NULL, NULL, 'Transit Mixer Truck', 'MT-02', '44', '9m3', 'ZOOMLION', '9JBH-R', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 20:08:20', '2019-05-24 23:21:58', NULL),
+(55, 3, 1, NULL, NULL, 'Transit Mixer Truck', 'MT-03', '44', '9m3', 'ZOOMLION', '9JBH-R', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 20:09:18', '2019-05-24 22:45:44', NULL),
+(56, 3, 1, NULL, NULL, 'Transit Mixer Truck', 'MT-04', '44', '9m3', 'ZOOMLION', '9JBH-R', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 20:10:49', '2019-05-24 22:45:15', NULL),
+(57, 3, 1, NULL, NULL, 'Stationary Concrete Pump', 'SCP-01', '44', '78/47 m3/Hr', 'ZOOMLION', 'HBT60.174RSU', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 20:13:15', '2019-05-24 23:22:51', NULL),
+(58, 3, 1, NULL, NULL, 'Stationary Concrete Pump', 'SCP-02', '44', '78/47 m3/Hr', 'ZOOMLION', 'HBT60.174RSU', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 20:14:30', '2019-05-24 23:23:06', NULL),
+(59, 3, 1, NULL, NULL, 'Truck Mounted Concrete Boom Pump', 'BP-01', '44', '120/170 m3/Hr', 'ZOOMLION', '49X-6RZ', 2018, 'NCT,Ctg', '2', 'N/A', 5, NULL, '2019-05-20 21:02:02', '2019-05-24 22:44:55', NULL),
+(60, 9, 1, NULL, NULL, 'Concrete Block Making Machine', 'CBM-01', '44', 'N/A', 'ZENITH', 'QT10', 2019, 'Sirajgonj Project', '2', 'N/A', 5, NULL, '2019-05-20 21:04:44', '2019-05-24 23:38:56', NULL),
+(61, 3, 1, NULL, NULL, 'Concrete Batching Plant', 'CBP-01', '44', '30m3/Hr', 'POWER PLUS', 'PBP350S', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 21:09:15', '2019-05-24 23:39:27', NULL),
+(62, 3, 1, NULL, NULL, 'Concrete Batching Plant', 'CBP-02', '44', '60 m3/Hr', 'ZOOMLION', 'HZX60', 2018, 'PCT Yard', '2', 'N/A', 5, NULL, '2019-05-20 21:11:06', '2019-05-24 23:39:14', NULL),
+(63, 7, 1, NULL, NULL, 'Tractor', 'TT-01', '99', '100 Cft', 'SONALIKA', 'D150RX', 2018, 'Payra  Project', '2', 'N/A', 5, NULL, '2019-05-20 21:45:08', '2019-05-24 23:24:07', NULL),
+(64, 7, 1, NULL, NULL, 'Tractor', 'TT-02', '99', '100 Cft', 'SONALIKA', 'D150RX', 2018, 'Payra  Project', '2', 'N/A', 5, NULL, '2019-05-20 21:46:59', '2019-05-24 23:24:26', NULL),
+(65, 7, 1, NULL, NULL, 'Tractor', 'TT-03', '99', '100 Cft', 'SONALIKA', 'D150RX', 2018, 'Payra  Project', '2', 'N/A', 5, NULL, '2019-05-20 21:48:34', '2019-05-24 23:24:50', NULL),
+(66, 7, 1, NULL, NULL, 'Tractor', 'TT-04', '99', '100 Cft', 'SONALIKA', 'D150RX', 2018, 'Payra  Project', '2', 'n/a', 5, NULL, '2019-05-20 21:49:41', '2019-05-24 23:25:11', NULL),
+(67, 5, 1, NULL, NULL, 'Tractor', 'TT-05', '99', '100 Cft', 'SONALIKA', 'D150RX', 2018, 'Vashanchar', '2', 'n/a', 5, NULL, '2019-05-20 21:51:13', '2019-05-24 23:25:30', NULL),
+(68, 10, 1, NULL, NULL, 'Tractor', 'TT-06', '99', '100 Cft', 'SONALIKA', 'D150RX', 2018, 'Raozan Road Project', '2', 'n/a', 5, NULL, '2019-05-20 21:54:56', '2019-05-24 23:25:51', NULL),
+(69, 10, 1, NULL, NULL, 'Tractor', 'TT-07', '99', '100 Cft', 'SONALIKA', 'D150RX', 2018, 'Raozan Road Project', '2', 'n/a', 5, NULL, '2019-05-20 22:43:58', '2019-05-24 22:35:27', NULL),
+(70, 10, 1, NULL, NULL, 'Tractor', 'TT-08', '99', '100 Cft', 'SONALIKA', 'D150RX', 2018, 'Raozan Road Project', '2', 'n/a', 5, NULL, '2019-05-20 22:45:25', '2019-05-24 22:35:52', NULL),
+(71, 9, 1, NULL, NULL, 'Tractor', 'TT-09', '99', '100 Cft', 'TAFE', 'TAFE-45DI', 2018, 'Sirajgonj Project', '2', 'n/a', 5, NULL, '2019-05-20 22:47:33', '2019-05-24 23:21:05', NULL),
+(72, 9, 1, NULL, NULL, 'Tractor', 'TT-10', '99', '10 Ton', 'TAFE', 'TAFE-45DI', 2018, 'Sirajgonj Project', '2', 'n/a', 5, NULL, '2019-05-20 22:49:37', '2019-05-24 23:21:24', NULL),
+(73, 9, 1, NULL, NULL, 'Fork Lift', 'FL-01', '113', '2 Ton', 'DOOSAN', 'D20GP', 2019, 'Sirajgonj Project', '2', 'n/a', 5, NULL, '2019-05-20 22:54:51', '2019-05-24 23:27:20', NULL),
+(74, 9, 1, NULL, NULL, 'Fork Lift', 'FL-02', '113', '2 Ton', 'DOOSAN', 'D20GP', 2019, 'Sirajgonj Project', '2', 'n/a', 5, NULL, '2019-05-20 22:59:36', '2019-05-24 23:27:39', NULL),
+(75, 4, 1, NULL, NULL, 'Diesel Generator', 'D Gn-01', '113', '27 KVA', 'DAWEOO', 'DAWEOO-PJM22-27 KVA', 2018, 'NCT,Ctg', NULL, 'n/a', 5, NULL, '2019-05-20 23:08:38', '2019-05-24 23:36:44', NULL),
+(76, 5, 1, NULL, NULL, 'Diesel Generator', 'D Gn-02', '44', '25 KVA', 'SIFANG', 'SIFANG-1125', 2018, 'Vashanchar', '2', 'n/a', 5, NULL, '2019-05-20 23:12:03', '2019-05-24 23:37:01', NULL),
+(77, 5, 1, NULL, NULL, 'Diesel Generator', 'D Gn-03', '44', '25KVA', 'SIFANG', 'SIFANG-1125', 2018, 'Vashanchar', '2', 'n/a', 5, NULL, '2019-05-20 23:14:03', '2019-05-24 23:37:16', NULL),
+(78, 5, 1, NULL, NULL, 'Diesel Generator', 'D Gn-04', '44', '15KVA', 'FUJIAN', 'FUJIAN-POWER-12KW', 2018, 'Vashanchar', '2', 'n/a', 5, NULL, '2019-05-20 23:32:04', '2019-05-24 23:37:31', NULL),
+(79, 7, 1, NULL, NULL, 'Diesel Generator', 'D Gn-05', '44', '19KVA', 'MINDONG', 'JBT8982011', 2018, 'Payra  Project', '2', 'n/a', 5, NULL, '2019-05-20 23:35:58', '2019-05-24 23:37:49', NULL),
+(80, 7, 1, NULL, NULL, 'Diesel Generator', 'D Gn-06', '44', '18 KVA', 'MINDONG', 'JBT8982011', 2018, 'Payra  Project', '2', 'n/a', 5, NULL, '2019-05-20 23:38:40', '2019-05-24 23:38:03', NULL),
+(81, 3, 1, NULL, NULL, 'Diesel Generator', 'D Gn-07', '218', '329 KVA', 'TEKSAN', 'TJ329DW5L', 2018, 'PCT Yard', '2', 'n/a', 5, NULL, '2019-05-20 23:51:30', '2019-05-24 23:38:20', NULL),
+(82, 3, 1, NULL, NULL, 'Diesel Generator', 'D Gn-08', '218', '329 KVA', 'TEKSAN', 'JBT8982011', 2018, 'PCT Yard', '2', 'n/a', 5, NULL, '2019-05-20 23:53:06', '2019-05-24 23:33:09', NULL),
+(83, 3, 1, NULL, NULL, 'Diesel Generator', 'D Gn-09', '218', '180KVA', 'TEKSAN', 'TJ180DW5A', 2018, 'PCT Yard', '2', 'n/a', 5, NULL, '2019-05-20 23:55:28', '2019-05-24 23:33:24', NULL),
+(84, 3, 1, NULL, NULL, 'Diesel Generator', 'D Gn-10', '44', '65KVA', 'PRAMAC', 'GSW65', 2017, 'PCT Yard', '2', 'n/a', 5, NULL, '2019-05-20 23:57:56', '2019-05-24 23:33:39', NULL),
+(85, 3, 1, NULL, NULL, 'Diesel Generator', 'D Gn-11', '218', '21 KVA', 'TEKSAN', 'TJ21MS5A', 2018, 'PCT Yard', '2', 'n/a', 5, NULL, '2019-05-21 00:00:58', '2019-05-24 23:33:57', NULL),
+(86, 8, 1, NULL, NULL, 'Tower Light', 'TL-01', '107', '3.5KVA', 'PRAMAC', 'LPW8T-KUBOTAZ482', 2017, 'Water  logging', '2', 'n/a', 5, NULL, '2019-05-21 00:04:49', '2019-05-24 23:23:23', NULL),
+(87, 4, 1, NULL, NULL, 'Tower Light', 'TL-02', '107', '3.5KVA', 'PRAMAC', 'LPW8T-KUBOTAZ482', 2017, 'NCT,Ctg', '2', 'n/a', 5, NULL, '2019-05-21 00:16:23', '2019-05-24 23:23:47', NULL),
+(88, 11, 1, NULL, NULL, 'Dump Truck', 'DT-09', '99', '10m3', 'EICHER', 'VE Terra-16XP', 2019, 'mongla', '2', 'no comments', 5, NULL, '2019-05-24 23:41:09', '2019-05-28 01:20:41', NULL),
+(89, 11, 1, NULL, NULL, 'Dump Truck', 'DT-10', '99', '10m3', 'EICHER', 'VE Terra-16XP', 2019, 'Mongla Prpject', '2', 'no comments', 5, NULL, '2019-05-28 01:23:35', '2019-05-28 01:23:35', NULL),
+(90, 11, 1, NULL, NULL, 'Dump Truck', 'DT-11', '99', '10m3', 'EICHER', 'VE Terra-16XP', 2019, 'Mongla Project', '2', 'no comments', 5, NULL, '2019-05-28 01:25:26', '2019-05-28 01:25:26', NULL);
 
 -- --------------------------------------------------------
 
@@ -1734,8 +1726,8 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `item_id`, `code`, `name`, `unit_name`, `created_by`, `updated_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(2, 1, 'product-01', 'product-01', 'kg', 1, NULL, '2019-02-24 12:00:51', '2019-02-24 12:39:28', NULL),
-(3, 2, 'product-02', 'Product 02', 'kg', 1, NULL, '2019-02-24 13:54:41', '2019-02-24 13:54:41', NULL);
+(2, 1, 'product-01', 'product-01', 'kg', 1, NULL, '2019-02-24 06:00:51', '2019-02-24 06:39:28', NULL),
+(3, 2, 'product-02', 'Product 02', 'kg', 1, NULL, '2019-02-24 07:54:41', '2019-02-24 07:54:41', NULL);
 
 -- --------------------------------------------------------
 
@@ -1802,16 +1794,16 @@ CREATE TABLE `projects` (
 --
 
 INSERT INTO `projects` (`id`, `code`, `project_name`, `address`, `created_by`, `updated_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'P-001', 'E-Engineering', '72, Mohakhali C/A, (8th Floor), Rupayan Center, Dhaka-1212, Bangladesh.\r\nTel. : (88-02) 9825705, 9891562, 9891597, 9856358-9,\r\n9857902, 9852454, 9854423,\r\nFax: (88-02) 9855949, \r\nWeb:www.saifpowertecltd.com', 1, NULL, '2019-02-09 20:09:28', '2019-04-08 15:46:55', NULL),
-(3, 'P-003', 'PCT,Ctg', '72, Mohakhali C/A, (8th Floor), Rupayan Center, Dhaka-1212, Bangladesh.\r\nTel. : (88-02) 9825705, 9891562, 9891597, 9856358-9,\r\n9857902, 9852454, 9854423,\r\nFax: (88-02) 9855949, \r\nWeb:www.saifpowertecltd.com', 1, NULL, '2019-02-09 21:05:36', '2019-05-12 01:09:34', NULL),
-(4, '04', 'NCT,Ctg', 'test', 5, NULL, '2019-05-12 01:14:45', '2019-05-12 01:14:45', NULL),
-(5, '03', 'Vashanchar', ',', 5, NULL, '2019-05-13 19:54:29', '2019-05-13 19:54:29', NULL),
-(6, '04', 'Karnophuli', NULL, 5, NULL, '2019-05-13 19:55:39', '2019-05-13 19:55:39', NULL),
-(7, '05', 'Payra', NULL, 5, NULL, '2019-05-13 19:56:11', '2019-05-13 19:56:11', NULL),
-(8, '06', 'Water Logging', NULL, 5, NULL, '2019-05-13 20:02:16', '2019-05-13 20:02:16', NULL),
-(9, '07', 'Shirajgonj', NULL, 5, NULL, '2019-05-13 20:03:14', '2019-05-13 20:03:14', NULL),
-(10, '08', 'Raozan Road', NULL, 5, NULL, '2019-05-13 20:05:55', '2019-05-13 20:05:55', NULL),
-(11, '10', 'Mongla Poet Project', NULL, 5, NULL, '2019-05-25 05:38:21', '2019-05-25 05:38:21', NULL);
+(1, 'P-001', 'E-Engineering', '72, Mohakhali C/A, (8th Floor), Rupayan Center, Dhaka-1212, Bangladesh.\r\nTel. : (88-02) 9825705, 9891562, 9891597, 9856358-9,\r\n9857902, 9852454, 9854423,\r\nFax: (88-02) 9855949, \r\nWeb:www.saifpowertecltd.com', 1, NULL, '2019-02-09 14:09:28', '2019-04-08 09:46:55', NULL),
+(3, 'P-003', 'PCT,Ctg', '72, Mohakhali C/A, (8th Floor), Rupayan Center, Dhaka-1212, Bangladesh.\r\nTel. : (88-02) 9825705, 9891562, 9891597, 9856358-9,\r\n9857902, 9852454, 9854423,\r\nFax: (88-02) 9855949, \r\nWeb:www.saifpowertecltd.com', 1, NULL, '2019-02-09 15:05:36', '2019-05-11 19:09:34', NULL),
+(4, '04', 'NCT,Ctg', 'test', 5, NULL, '2019-05-11 19:14:45', '2019-05-11 19:14:45', NULL),
+(5, '03', 'Vashanchar', ',', 5, NULL, '2019-05-13 13:54:29', '2019-05-13 13:54:29', NULL),
+(6, '04', 'Karnophuli', NULL, 5, NULL, '2019-05-13 13:55:39', '2019-05-13 13:55:39', NULL),
+(7, '05', 'Payra', NULL, 5, NULL, '2019-05-13 13:56:11', '2019-05-13 13:56:11', NULL),
+(8, '06', 'Water Logging', NULL, 5, NULL, '2019-05-13 14:02:16', '2019-05-13 14:02:16', NULL),
+(9, '07', 'Shirajgonj', NULL, 5, NULL, '2019-05-13 14:03:14', '2019-05-13 14:03:14', NULL),
+(10, '08', 'Raozan Road', NULL, 5, NULL, '2019-05-13 14:05:55', '2019-05-13 14:05:55', NULL),
+(11, '10', 'Mongla Poet Project', NULL, 5, NULL, '2019-05-24 23:38:21', '2019-05-24 23:38:21', NULL);
 
 -- --------------------------------------------------------
 
@@ -1834,8 +1826,8 @@ CREATE TABLE `project_type` (
 --
 
 INSERT INTO `project_type` (`id`, `name`, `created_by`, `updated_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Owned', 0, 0, '2019-02-10 03:18:18', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(2, 'Rented', 0, 0, '2019-02-10 03:18:18', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+(1, 'Owned', 0, 0, '2019-02-09 21:18:18', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(2, 'Rented', 0, 0, '2019-02-09 21:18:18', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1861,9 +1853,9 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `name`, `all`, `sort`, `status`, `created_by`, `updated_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Administrator', 1, 1, 1, 1, NULL, '2019-01-14 12:17:02', '2019-01-14 12:17:02', NULL),
-(2, 'Executive', 0, 2, 0, 1, 1, '2019-01-14 12:17:02', '2019-01-21 16:46:25', NULL),
-(3, 'User', 0, 3, 1, 1, NULL, '2019-01-14 12:17:02', '2019-01-14 12:17:02', NULL);
+(1, 'Administrator', 1, 1, 1, 1, NULL, '2019-01-14 06:17:02', '2019-01-14 06:17:02', NULL),
+(2, 'Executive', 0, 2, 0, 1, 1, '2019-01-14 06:17:02', '2019-01-21 10:46:25', NULL),
+(3, 'User', 0, 3, 1, 1, NULL, '2019-01-14 06:17:02', '2019-01-14 06:17:02', NULL);
 
 -- --------------------------------------------------------
 
@@ -1950,7 +1942,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `name`, `logo`, `favicon`, `seo_title`, `seo_keyword`, `seo_description`, `company_contact`, `company_address`, `from_name`, `from_email`, `facebook`, `linkedin`, `twitter`, `google`, `copyright_text`, `footer_text`, `terms`, `disclaimer`, `google_analytics`, `home_video1`, `home_video2`, `home_video3`, `home_video4`, `explanation1`, `explanation2`, `explanation3`, `explanation4`, `values`, `data_type`, `post_type`, `created_at`, `updated_at`) VALUES
-(1, NULL, '1547629427Saif--Power-tec-Logo-226x48.jpg', '1547632780Saif--Power-tec-Logo-favicon.jpg', 'Saif Inventory Management System', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-01-15 14:59:40');
+(1, NULL, '1547629427Saif--Power-tec-Logo-226x48.jpg', '1547632780Saif--Power-tec-Logo-favicon.jpg', 'Saif Inventory Management System', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-01-15 08:59:40');
 
 -- --------------------------------------------------------
 
@@ -2017,8 +2009,8 @@ CREATE TABLE `suppliers` (
 --
 
 INSERT INTO `suppliers` (`id`, `code`, `name`, `address`, `created_by`, `updated_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'sup-01', 'Apex Production', 'Contact: 017166998877\r\nMohammadpur, Housing LTD\r\nRoad: 03; House: 01\r\nDhaka,1207', 1, 0, 2019, '2019-04-08 15:21:09', '0000-00-00 00:00:00'),
-(2, 'tata-012', 'Tata', 'test', 1, 0, 2019, '2019-05-08 14:51:14', '0000-00-00 00:00:00');
+(1, 'sup-01', 'Apex Production', 'Contact: 017166998877\r\nMohammadpur, Housing LTD\r\nRoad: 03; House: 01\r\nDhaka,1207', 1, 0, 2019, '2019-04-08 09:21:09', '0000-00-00 00:00:00'),
+(2, 'tata-012', 'Tata', 'test', 1, 0, 2019, '2019-05-08 08:51:14', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -2094,11 +2086,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `password`, `status`, `confirmation_code`, `confirmed`, `is_term_accept`, `remember_token`, `created_by`, `updated_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Admin', 'Saif', 'admin@admin.com', '$2y$10$yzdRh.HNr8RukRLgiuVfoe37Ckjmr1wFdlQi0XHoTrCSLeBjLLYMS', 1, 'b1970adb3f301c8440c81e45b526060c', 1, 0, 'PCgsDtfHhHDhADntGcj7D97A9e4U0gtx0hlLn2heuaMyQBq5Gaa2sP55BPGr', 1, 1, '2019-01-14 12:17:02', '2019-01-21 08:36:38', NULL),
-(2, 'Vipul', 'Basapati', 'executive@executive.com', '$2y$10$Xtds/X9sMuHoguyev.I6JO0g2b1c2eT4UiEuB3L6FUmmQlEI7h4gu', 1, '68c7a7b3a2968803ae6db884ae89f446', 1, 0, NULL, 1, NULL, '2019-01-14 12:17:02', '2019-01-14 12:17:02', NULL),
-(3, 'User', 'Test', 'user@user.com', '$2y$10$hK926V1W.U2666U50rhQ7uj0TAMbB0cwa.kivaTzkVpSNVPQ7Re12', 1, 'fe3ae4e0b22211d756922a0bede508cf', 1, 0, NULL, 1, NULL, '2019-01-14 12:17:02', '2019-01-14 12:17:02', NULL),
-(4, 'Rashed', 'Al Banna', 'r@gmail.com', '$2y$10$TKxuqIrAdSNAR5cvG0MtAeJrV34bRogqLC9bTmyyhsxZldb6THXtK', 1, 'b9a747f4ee9cab6be9906c6af5b4e04a', 1, 0, '0sC2zHt1RTTq6DhjXygPnrS7bQmLeSKe16Iq1ZzzELszRYcTxrEiU3ACZbiy', 1, NULL, '2019-02-03 14:18:51', '2019-02-03 14:18:51', NULL),
-(5, 'Jalil Khan', 'Noyan', 'jalil@user.com', '$2y$10$9lxgfNkvft7KbMDsclTw0.nJ.VSWVVBxCh2PKfd631L3CCC348lC2', 1, '912486b93ae1907a983fd312ad08e270', 1, 0, 'c2nAyCV2lNVA4Mvc0cxWhlYByIDf4oaxntOl8ABW1bTYUWnxtOj9zgjQAV95', 1, 5, '2019-05-11 01:24:40', '2019-05-14 06:44:11', NULL);
+(1, 'Admin', 'Saif', 'admin@admin.com', '$2y$10$yzdRh.HNr8RukRLgiuVfoe37Ckjmr1wFdlQi0XHoTrCSLeBjLLYMS', 1, 'b1970adb3f301c8440c81e45b526060c', 1, 0, 'PCgsDtfHhHDhADntGcj7D97A9e4U0gtx0hlLn2heuaMyQBq5Gaa2sP55BPGr', 1, 1, '2019-01-14 06:17:02', '2019-01-21 02:36:38', NULL),
+(2, 'Vipul', 'Basapati', 'executive@executive.com', '$2y$10$Xtds/X9sMuHoguyev.I6JO0g2b1c2eT4UiEuB3L6FUmmQlEI7h4gu', 1, '68c7a7b3a2968803ae6db884ae89f446', 1, 0, NULL, 1, NULL, '2019-01-14 06:17:02', '2019-01-14 06:17:02', NULL),
+(3, 'User', 'Test', 'user@user.com', '$2y$10$hK926V1W.U2666U50rhQ7uj0TAMbB0cwa.kivaTzkVpSNVPQ7Re12', 1, 'fe3ae4e0b22211d756922a0bede508cf', 1, 0, NULL, 1, NULL, '2019-01-14 06:17:02', '2019-01-14 06:17:02', NULL),
+(4, 'Rashed', 'Al Banna', 'r@gmail.com', '$2y$10$TKxuqIrAdSNAR5cvG0MtAeJrV34bRogqLC9bTmyyhsxZldb6THXtK', 1, 'b9a747f4ee9cab6be9906c6af5b4e04a', 1, 0, '0sC2zHt1RTTq6DhjXygPnrS7bQmLeSKe16Iq1ZzzELszRYcTxrEiU3ACZbiy', 1, NULL, '2019-02-03 08:18:51', '2019-02-03 08:18:51', NULL),
+(5, 'Jalil Khan', 'Noyan', 'jalil@user.com', '$2y$10$9lxgfNkvft7KbMDsclTw0.nJ.VSWVVBxCh2PKfd631L3CCC348lC2', 1, '912486b93ae1907a983fd312ad08e270', 1, 0, 'c2nAyCV2lNVA4Mvc0cxWhlYByIDf4oaxntOl8ABW1bTYUWnxtOj9zgjQAV95', 1, 5, '2019-05-10 19:24:40', '2019-05-14 00:44:11', NULL);
 
 --
 -- Indexes for dumped tables
@@ -2403,221 +2395,265 @@ ALTER TABLE `users`
 --
 ALTER TABLE `country`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=240;
+
 --
 -- AUTO_INCREMENT for table `history`
 --
 ALTER TABLE `history`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+
 --
 -- AUTO_INCREMENT for table `history_types`
 --
 ALTER TABLE `history_types`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
 -- AUTO_INCREMENT for table `inv_ga_listunit`
 --
 ALTER TABLE `inv_ga_listunit`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `inv_issue`
 --
 ALTER TABLE `inv_issue`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `inv_issuedetail`
 --
 ALTER TABLE `inv_issuedetail`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
 --
 -- AUTO_INCREMENT for table `inv_item_unit`
 --
 ALTER TABLE `inv_item_unit`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `inv_material`
 --
 ALTER TABLE `inv_material`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
 -- AUTO_INCREMENT for table `inv_materialbalance`
 --
 ALTER TABLE `inv_materialbalance`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
 --
 -- AUTO_INCREMENT for table `inv_materialcategory`
 --
 ALTER TABLE `inv_materialcategory`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `inv_materialcategorysub`
 --
 ALTER TABLE `inv_materialcategorysub`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `inv_receive`
 --
 ALTER TABLE `inv_receive`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
 --
 -- AUTO_INCREMENT for table `inv_receivedetail`
 --
 ALTER TABLE `inv_receivedetail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+
 --
 -- AUTO_INCREMENT for table `inv_requisition`
 --
 ALTER TABLE `inv_requisition`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `inv_requisition_details`
 --
 ALTER TABLE `inv_requisition_details`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
 --
 -- AUTO_INCREMENT for table `inv_supplier`
 --
 ALTER TABLE `inv_supplier`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `inv_supplierbalance`
 --
 ALTER TABLE `inv_supplierbalance`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `inv_warehosueinfo`
 --
 ALTER TABLE `inv_warehosueinfo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
 --
 -- AUTO_INCREMENT for table `item_details`
 --
 ALTER TABLE `item_details`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `menus`
 --
 ALTER TABLE `menus`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
 --
 -- AUTO_INCREMENT for table `modules`
 --
 ALTER TABLE `modules`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
 --
 -- AUTO_INCREMENT for table `notifications`
 --
 ALTER TABLE `notifications`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=313;
+
 --
 -- AUTO_INCREMENT for table `pages`
 --
 ALTER TABLE `pages`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `parent_category`
 --
 ALTER TABLE `parent_category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+
 --
 -- AUTO_INCREMENT for table `permission_role`
 --
 ALTER TABLE `permission_role`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+
 --
 -- AUTO_INCREMENT for table `permission_user`
 --
 ALTER TABLE `permission_user`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=201;
+
 --
 -- AUTO_INCREMENT for table `plant_and_equipment`
 --
 ALTER TABLE `plant_and_equipment`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+
 --
 -- AUTO_INCREMENT for table `present_condition`
 --
 ALTER TABLE `present_condition`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `product_movement`
 --
 ALTER TABLE `product_movement`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `product_movement_details`
 --
 ALTER TABLE `product_movement_details`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `projects`
 --
 ALTER TABLE `projects`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
 --
 -- AUTO_INCREMENT for table `project_type`
 --
 ALTER TABLE `project_type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `role_user`
 --
 ALTER TABLE `role_user`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
 --
 -- AUTO_INCREMENT for table `settings`
 --
 ALTER TABLE `settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `social_logins`
 --
 ALTER TABLE `social_logins`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `sub_category`
 --
 ALTER TABLE `sub_category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `suppliers`
 --
 ALTER TABLE `suppliers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `temp_product_receive_data`
 --
 ALTER TABLE `temp_product_receive_data`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
+
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- Constraints for dumped tables
 --

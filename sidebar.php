@@ -8,8 +8,49 @@
     <li class="nav-item">
         <a class="nav-link" href="material.php">
             <i class="fas fa-fw fa-chart-area"></i>
-            <span>Material</span></a>
+            <span>Material Information</span></a>
     </li>
+	
+	
+	<li class="nav-item">
+        <a class="nav-link" href="warehouse_entry.php">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Warehouse Information</span></a>
+    </li>
+	
+	
+	
+	
+		<li class="nav-item">
+        <a class="nav-link" href="Project_entry.php">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Project Information</span></a>
+    </li>
+	
+	
+	
+	
+		<li class="nav-item">
+        <a class="nav-link" href="supplier_entry.php">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Supplier Information</span></a>
+    </li>
+	
+	
+	
+	<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Purchase informat</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item" href="Purchase_entry.php">Purchase Entry</a>
+            <a class="dropdown-item" href="Purchase_list.php">Purchase  List</a>
+        </div>
+    </li>
+	
+	
+	
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-fw fa-folder"></i>
@@ -20,20 +61,42 @@
             <a class="dropdown-item" href="receive_list.php">Receive List</a>
         </div>
     </li>
+	
+	
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-fw fa-folder"></i>
-            <span>Pages</span>
+            <span>Material issue</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <h6 class="dropdown-header">Login Screens:</h6>
-            <a class="dropdown-item" href="login.html">Login</a>
-            <a class="dropdown-item" href="register.html">Register</a>
-            <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
-            <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header">Other Pages:</h6>
-            <a class="dropdown-item" href="404.html">404 Page</a>
-            <a class="dropdown-item" href="blank.html">Blank Page</a>
+           <a class="dropdown-item" href="issue_entry.php">Material issue</a>
+            <a class="dropdown-item" href="issue_list.php">Issue List</a>
         </div>
     </li>
+	
+	
+	
+	
+	
+	   <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Warehouse Transfer</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+           <a class="dropdown-item" href="warehousetransfer_entry.php">Warehouse Transfer</a>
+            <a class="dropdown-item" href="issue_list.php">W.Transfer List</a>
+        </div>
+    </li>
+	
+	
+	
+	
+	<li class="nav-item">
+        <a class="nav-link" href="openingstock_entry.php">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Opening Stock Entry</span></a>
+    </li>
+	
+	
 </ul>

@@ -9,7 +9,7 @@
         <li class="breadcrumb-item">
             <a href="#">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">Receive Entry</li>
+        <li class="breadcrumb-item active">Overview</li>
     </ol>
     <!-- DataTables Example -->
     <div class="card mb-3">
@@ -23,53 +23,22 @@
                     <div class="row" id="div1" style="">
 						<div class="col-xs-2">
 							<div class="form-group">
-								<label>MRR Date</label>
+								<label>Purchase Date</label>
 								<input type="text" autocomplete="off" name="mrr_date" id="mrr_date" class="form-control datepicker" value="<?php echo date('Y-m-d'); ?>">
 							</div>
 						</div>
 						<div class="col-xs-3">
 							<div class="form-group">
-								<label>MRR No</label>
+								<label>Purchase No</label>
 								<input type="text" name="mrr_no" id="mrr_no" class="form-control" readonly="readonly" value="<?php echo getDefaultCategoryCode('inv_receive', 'mrr_no', '03d', '001', 'RCV') ?>">
                                 <input type="hidden" name="receive_no" id="receive_no" value="<?php echo getDefaultCategoryCode('inv_receive', 'mrr_no', '03d', '001', 'RCV') ?>">
 							</div>
 						</div>
-						<div class="col-xs-3">
-							<div class="form-group">
-								<label>Purchase ID</label>
-								<input type="text" name="purchase_id" id="purchase_id" class="form-control">
-							</div>
-						</div>
-						<div class="col-xs-2">
-							<div class="form-group">
-								<label>Purchase Date</label>
-								<input type="text" autocomplete="off" name="Purchase_date" id="Purchase_date" class="form-control datepicker" value="<?php echo date('Y-m-d'); ?>">	
-							</div>
-						</div>
-						<div class="col-xs-2">
-							<div class="form-group">
-								<label for="id">Supplier Challan No</label>
-								<input type="text" name="challan_no" id="challan_no" class="form-control">
-							</div>
-						</div>
-						<div class="col-xs-2">
-							<div class="form-group">
-								<label for="id">Challan Date</label>
-								<input type="text" autocomplete="off" name="challan_date" id="challan_date" class="form-control datepicker" value="<?php echo date('Y-m-d'); ?>">
-							</div>
-						</div>
-						<div class="col-xs-3">
-							<div class="form-group">
-								<label for="id">Requisition No.</label>
-								<input type="text" name="requisition_no" id="requisition_no" class="form-control">
-							</div>
-						</div>
-						<div class="col-xs-3">
-							<div class="form-group">
-								<label for="id">Requisition Date</label>
-								<input type="text" autocomplete="off" name="requisition_date" id="requisition_date" class="form-control datepicker" value="<?php echo date('Y-m-d'); ?>">
-							</div>
-						</div>
+						
+						
+						
+						
+						
 						<div class="col-xs-2">
 							<div class="form-group">
 								<label for="id">Select Supplier Name</label>

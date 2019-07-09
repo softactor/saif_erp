@@ -12,7 +12,7 @@ include 'helper/utilities.php';
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="icon" href="images/fav.png">
-  <title>SI</title>
+  <title>Saif Inventory</title>
   <!-- Custom fonts for this template-->
   <link href="css/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
   <!-- Page level plugin CSS-->

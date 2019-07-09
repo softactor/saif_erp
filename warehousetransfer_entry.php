@@ -9,13 +9,13 @@
         <li class="breadcrumb-item">
             <a href="#">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">Receive Entry</li>
+        <li class="breadcrumb-item active">Overview</li>
     </ol>
     <!-- DataTables Example -->
     <div class="card mb-3">
         <div class="card-header">
             <i class="fas fa-table"></i>
-            Data Table Example</div>
+            Issue Entry Form</div>
         <div class="card-body">
             <!--here your code will go-->
 			<div class="form-group">
@@ -23,56 +23,24 @@
                     <div class="row" id="div1" style="">
 						<div class="col-xs-2">
 							<div class="form-group">
-								<label>MRR Date</label>
+								<label>Issue Date</label>
 								<input type="text" autocomplete="off" name="mrr_date" id="mrr_date" class="form-control datepicker" value="<?php echo date('Y-m-d'); ?>">
 							</div>
 						</div>
 						<div class="col-xs-3">
 							<div class="form-group">
-								<label>MRR No</label>
+								<label>Issue No</label>
 								<input type="text" name="mrr_no" id="mrr_no" class="form-control" readonly="readonly" value="<?php echo getDefaultCategoryCode('inv_receive', 'mrr_no', '03d', '001', 'RCV') ?>">
                                 <input type="hidden" name="receive_no" id="receive_no" value="<?php echo getDefaultCategoryCode('inv_receive', 'mrr_no', '03d', '001', 'RCV') ?>">
 							</div>
 						</div>
-						<div class="col-xs-3">
-							<div class="form-group">
-								<label>Purchase ID</label>
-								<input type="text" name="purchase_id" id="purchase_id" class="form-control">
-							</div>
-						</div>
+						
+						
+						
+						
 						<div class="col-xs-2">
 							<div class="form-group">
-								<label>Purchase Date</label>
-								<input type="text" autocomplete="off" name="Purchase_date" id="Purchase_date" class="form-control datepicker" value="<?php echo date('Y-m-d'); ?>">	
-							</div>
-						</div>
-						<div class="col-xs-2">
-							<div class="form-group">
-								<label for="id">Supplier Challan No</label>
-								<input type="text" name="challan_no" id="challan_no" class="form-control">
-							</div>
-						</div>
-						<div class="col-xs-2">
-							<div class="form-group">
-								<label for="id">Challan Date</label>
-								<input type="text" autocomplete="off" name="challan_date" id="challan_date" class="form-control datepicker" value="<?php echo date('Y-m-d'); ?>">
-							</div>
-						</div>
-						<div class="col-xs-3">
-							<div class="form-group">
-								<label for="id">Requisition No.</label>
-								<input type="text" name="requisition_no" id="requisition_no" class="form-control">
-							</div>
-						</div>
-						<div class="col-xs-3">
-							<div class="form-group">
-								<label for="id">Requisition Date</label>
-								<input type="text" autocomplete="off" name="requisition_date" id="requisition_date" class="form-control datepicker" value="<?php echo date('Y-m-d'); ?>">
-							</div>
-						</div>
-						<div class="col-xs-2">
-							<div class="form-group">
-								<label for="id">Select Supplier Name</label>
+								<label for="id">From Warehouse </label>
 								<select class="form-control" id="supplier_name" name="supplier_name" required>
 									<option value="">Select</option>
 									<?php
@@ -89,12 +57,35 @@
 								</select>
 							</div>
 						</div>
+						
+						
+						
+						
+						
 						<div class="col-xs-2">
 							<div class="form-group">
-								<label for="id">Supplier ID</label>
-								<input type="text" name="supplier_id" id="supplier_id" class="form-control">
+								<label for="id">To Warehouse </label>
+								<select class="form-control" id="supplier_name" name="supplier_name" required>
+									<option value="">Select</option>
+									<?php
+									$projectsData = getTableDataByTableName('suppliers');
+
+									if (isset($projectsData) && !empty($projectsData)) {
+										foreach ($projectsData as $data) {
+											?>
+											<option value="<?php echo $data['id']; ?>"><?php echo $data['name']; ?></option>
+											<?php
+										}
+									}
+									?>
+								</select>
 							</div>
 						</div>
+						
+						
+						
+						
+						
 					</div>
 					<div class="row" id="div1"  style="">
 						<div class="table-responsive">

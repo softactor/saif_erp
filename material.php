@@ -50,7 +50,7 @@
                                                         </div>
                                                     </td>
                                                 </tr>  
-                                        <?php ?>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
                             </div><!--table-responsive-->
@@ -96,7 +96,7 @@
                                                         </div>
                                                     </td>
                                                 </tr>  
-                                        <?php ?>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
                             </div><!--table-responsive-->
@@ -148,7 +148,7 @@
                                                         </div>
                                                     </td>
                                                 </tr>  
-                                        <?php ?>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
                             </div><!--table-responsive-->

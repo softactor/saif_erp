@@ -1,2 +1,2 @@
-var baseUrl =   "http://dev.local/three_layer_cat/";
+var baseUrl =   "http://dev.local/inventory/";
 

@@ -24,20 +24,18 @@
                                         <tr>
                                             <th>Code</th>
                                             <th>Name</th>
-                                            <th>Description</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody id="parent_category_body">
                                         <?php
-                                        $parentCats = getTableDataByTableName('parent_category');
+                                        $parentCats = getTableDataByTableName('inv_materialcategorysub', '', 'category_description');
                                         if (isset($parentCats) && !empty($parentCats)) {
                                             foreach ($parentCats as $pcat) {
                                                 ?>
                                                 <tr>
-                                                    <td><?php echo $pcat['parent_code']; ?></td>
-                                                    <td><?php echo $pcat['name']; ?></td>
-                                                    <td><?php echo $pcat['description']; ?></td>
+                                                    <td><?php echo $pcat['category_id']; ?></td>
+                                                    <td><?php echo $pcat['category_description']; ?></td>
                                                     <td>
                                                         Action
                                                     </td>
@@ -64,21 +62,19 @@
                                             <th>Parent</th>
                                             <th>Code</th>
                                             <th>Sub Category</th>
-                                            <th>Description</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody id="sub_category_body">
                                         <?php
-                                        $childInfo = getTableDataByTableName('sub_category');
+                                        $childInfo = getTableDataByTableName('inv_materialcategory', '', 'material_sub_description');
                                         if (isset($childInfo) && !empty($childInfo)) {
                                             foreach ($childInfo as $sub) {
                                                 ?>
                                                 <tr>
-                                                    <td><?php echo getDataRowByTableAndId('parent_category', $sub['parent_id'])->name; ?></td>
-                                                    <td><?php echo $sub['sub_code']; ?></td>
-                                                    <td><?php echo $sub['name']; ?></td>
-                                                    <td><?php echo $sub['description']; ?></td>
+                                                    <td><?php echo getDataRowByTableAndId('inv_materialcategorysub', $sub['category_id'])->category_description; ?></td>
+                                                    <td><?php echo $sub['material_sub_id']; ?></td>
+                                                    <td><?php echo $sub['material_sub_description']; ?></td>
                                                     <td>
                                                         Action
                                                     </td>
@@ -106,22 +102,24 @@
                                             <th>Sub Material</th>
                                             <th>Code</th>
                                             <th>Material</th>
-                                            <th>Description</th>
+                                            <th>Material Min Stock</th>
+                                            <th>Unit</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody id="item_category_body">
                                         <?php
-                                        $item_details = getTableDataByTableName('item_details');
+                                        $item_details = getTableDataByTableName('inv_material', '', 'material_description');
                                         if (isset($item_details) && !empty($item_details)) {
                                             foreach ($item_details as $item) {
                                                 ?>
                                                 <tr>
-                                                    <td><?php echo getDataRowByTableAndId('parent_category', $item['parent_item_id'])->name; ?></td>
-                                                    <td><?php echo getDataRowByTableAndId('sub_category', $item['sub_item_id'])->name; ?></td>
-                                                    <td><?php echo $item['item_code']; ?></td>
-                                                    <td><?php echo $item['name']; ?></td>
-                                                    <td><?php echo $item['description']; ?></td>
+                                                    <td><?php echo getDataRowByTableAndId('inv_materialcategorysub', $item['material_id'])->category_description; ?></td>
+                                                    <td><?php echo getDataRowByTableAndId('inv_materialcategory', $item['material_sub_id'])->material_sub_description; ?></td>
+                                                    <td><?php echo $item['material_id_code']; ?></td>
+                                                    <td><?php echo $item['material_description']; ?></td>
+                                                    <td><?php echo $item['material_min_stock']; ?></td>
+                                                    <td><?php echo getDataRowByTableAndId('inv_item_unit', $item['qty_unit'])->unit_name; ?></td>
                                                     <td>
                                                         Action
                                                     </td>

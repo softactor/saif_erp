@@ -5,7 +5,6 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header modal_header_custom_background">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title">Sub category add</h4>
                 </div>
                 <div class="modal-body modal_body_custom_background">
@@ -16,11 +15,11 @@
                                 <select class="form-control" id="parent_item_id" name="parent_id">
                                     <option value="">Select</option>
                                     <?php
-                                    $parentCats = getTableDataByTableName('parent_category');
+                                    $parentCats = getTableDataByTableName('inv_materialcategorysub', '', 'category_description');
                                     if (isset($parentCats) && !empty($parentCats)) {
                                         foreach ($parentCats as $pcat) {
                                             ?>
-                                            <option value="<?php echo $pcat['id'] ?>"><?php echo $pcat['name'] ?></option>
+                                            <option value="<?php echo $pcat['id'] ?>"><?php echo $pcat['category_description'] ?></option>
                                         <?php }
                                     } ?>
                                 </select>
@@ -36,12 +35,6 @@
                             <label class="control-label col-sm-5" for="name">Name:</label>
                             <div class="col-sm-7">
                                 <input type="text" class="form-control" id="sub_name" placeholder="name" name="name">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-sm-5" for="description">Description:</label>
-                            <div class="col-sm-7">
-                                <textarea class="form-control" rows="5" id="sub_description" name="sub_description" placeholder="Enter description"></textarea>
                             </div>
                         </div>
                     </div>

@@ -18,9 +18,8 @@ function processParentItems(form_id){
         dataType:'html',
         data: $("#"+form_id).serialize(),
         success: function(response) {
-            $('#parent_code').val('');
+            $('#category_id').val('');
             $('#parent_name').val('');
-            $('#parent_description').val('');
             $('#parent_category_body').html(response);
             $("#item_information").accordion({ active: 0 });
         }

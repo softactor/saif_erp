@@ -37,7 +37,12 @@
                                                     <td><?php echo $pcat['category_id']; ?></td>
                                                     <td><?php echo $pcat['category_description']; ?></td>
                                                     <td>
-                                                        Action
+                                                        <button type="button" class="btn btn-sm" onclick="openParentEditForm('<?php echo $pcat['id']; ?>');">
+                                                            <i class="fa fa-edit" aria-hidden="true"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-sm">
+                                                            <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                                                        </button>
                                                     </td>
                                                 </tr>
                                                 <?php
@@ -88,7 +93,12 @@
                                                     <td><?php echo $sub['material_sub_id']; ?></td>
                                                     <td><?php echo $sub['material_sub_description']; ?></td>
                                                     <td>
-                                                        Action
+                                                        <button type="button" class="btn btn-sm" onclick="openSubMaterialEditForm('<?php echo $sub['id']; ?>');">
+                                                            <i class="fa fa-edit" aria-hidden="true"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-sm">
+                                                            <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                                                        </button>
                                                     </td>
                                                 </tr>
                                                 <?php
@@ -150,7 +160,12 @@
                                                     <td><?php echo $item['material_min_stock']; ?></td>
                                                     <td><?php echo getDataRowByTableAndId('inv_item_unit', $item['qty_unit'])->unit_name; ?></td>
                                                     <td>
-                                                        Action
+                                                        <button type="button" class="btn btn-sm" onclick="openMaterialEditForm('<?php echo $item['id']; ?>');">
+                                                            <i class="fa fa-edit" aria-hidden="true"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-sm">
+                                                            <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                                                        </button>
                                                     </td>
                                                 </tr>
                                                 <?php

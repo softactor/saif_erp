@@ -46,7 +46,7 @@
                                               <tr>
                                                   <td colspan="3">
                                                         <div class="alert alert-info" role="alert">
-                                                            This is a info alert—check it out!
+                                                            Sorry, no data found!
                                                         </div>
                                                     </td>
                                                 </tr>  
@@ -92,7 +92,7 @@
                                               <tr>
                                                   <td colspan="4">
                                                         <div class="alert alert-info" role="alert">
-                                                            This is a info alert—check it out!
+                                                            Sorry, no data found!
                                                         </div>
                                                     </td>
                                                 </tr>  
@@ -128,7 +128,7 @@
                                             foreach ($item_details as $item) {
                                                 ?>
                                                 <tr>
-                                                    <td><?php echo getDataRowByTableAndId('inv_materialcategorysub', $item['material_id'])->category_description; ?></td>
+                                                    <td><?php echo (isset(getDataRowByTableAndId('inv_materialcategorysub', $item['material_id'])) ? getDataRowByTableAndId('inv_materialcategorysub', $item['material_id'])->category_description : ''); ?></td>
                                                     <td><?php echo getDataRowByTableAndId('inv_materialcategory', $item['material_sub_id'])->material_sub_description; ?></td>
                                                     <td><?php echo $item['material_id_code']; ?></td>
                                                     <td><?php echo $item['material_description']; ?></td>
@@ -144,7 +144,7 @@
                                               <tr>
                                                   <td colspan="7">
                                                         <div class="alert alert-info" role="alert">
-                                                            This is a info alert—check it out!
+                                                            Sorry, no data found!
                                                         </div>
                                                     </td>
                                                 </tr>  

@@ -48,16 +48,8 @@ function processParentItems(form_id){
             $('#material_min_stock').val('');
             $('#category_id').val('');
             $('#parent_name').val('');
-            if(form_id == 'item_added_form_value'){
-                $('#item_added_form').modal('hide');
-            }else if(form_id == 'sub_item_added_form_value'){
-                $('#sub_item_added_form').modal('hide');
-            }else if(form_id == 'parent_item_added_form_value'){
+            if(form_id == 'parent_item_added_form_value'){
                 $('#parent_item_added_form').modal('hide');
-            }else if(form_id == 'item_updated_form_value'){
-                $('#item_edit_form').modal('hide');
-            }else if(form_id == 'sub_item_update_form_value'){
-                $('#sub_item_edit_form').modal('hide');
             }else if(form_id == 'parent_item_edit_form_value'){
                 $('#parent_item_edit_form').modal('hide');
             }
@@ -77,7 +69,11 @@ function processSubItems(form_id){
             $('#sub_code').val('');
             $('#sub_name').val('');
             $('#sub_description').val('');
-            $('#sub_item_added_form').modal('hide');
+            if(form_id == 'sub_item_added_form_value'){
+                $('#sub_item_added_form').modal('hide');
+            }else if(form_id == 'sub_item_update_form_value'){
+                $('#sub_item_edit_form').modal('hide');
+            }
             $('#sub_category_body').html(response);
             $("#item_information").accordion({ active: 1 });
         }
@@ -96,7 +92,11 @@ function processItems(form_id){
             $('#item_code').val('');
             $('#item_name').val('');
             $('#item_description').val('');
-            $('#item_added_form').modal('hide');
+            if(form_id == 'item_added_form_value'){
+                $('#item_added_form').modal('hide');
+            }else if(form_id == 'item_updated_form_value'){
+                $('#item_edit_form').modal('hide');
+            }
             $('#item_category_body').html(response);
             $("#item_information").accordion({ active: 2 });
         }

@@ -62,7 +62,12 @@ function sub_category_table_json_response($tableName) {
         foreach ($tableData as $data) {
  ?>
             <tr>
-                <td><?php echo getDataRowByTableAndId('inv_materialcategorysub', $data['category_id'])->category_description; ?></td>
+                <td>
+                    <?php 
+                        $dataresult =   getDataRowByTableAndId('inv_materialcategorysub', $data['category_id']);
+                        echo (isset($dataresult) && !empty($dataresult) ? $dataresult->category_description : '');
+                    ?>
+                </td>
                 <td><?php echo $data['material_sub_id']; ?></td>
                 <td><?php echo $data['material_sub_description']; ?></td>
                 <td>
@@ -104,7 +109,12 @@ function item_table_json_response($tableName) {
         foreach ($tableData as $item) {
  ?>
             <tr>
-                <td><?php echo getDataRowByTableAndId('inv_materialcategorysub', $item['material_id'])->category_description; ?></td>
+                <td>
+                    <?php 
+                        $dataresult =   getDataRowByTableAndId('inv_materialcategorysub', $item['material_id']);
+                        echo (isset($dataresult) && !empty($dataresult) ? $dataresult->category_description : '');
+                    ?>
+                </td>
                 <td><?php echo getDataRowByTableAndId('inv_materialcategory', $item['material_sub_id'])->material_sub_description; ?></td>
                 <td><?php echo $item['material_id_code']; ?></td>
                 <td><?php echo $item['material_description']; ?></td>

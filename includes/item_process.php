@@ -140,7 +140,7 @@ if(isset($_GET['process_type']) && $_GET['process_type'] == 'get_sub_by_parent')
     if (isset($tableData) && !empty($tableData)) {
         echo "<option value=''>Please Select</option>";
         foreach ($tableData as $data) { ?>
-            <option value="<?php echo $data['id']; ?>"><?php echo $data['material_sub_description']; ?></option>
+            <option value="<?php echo $data['id']; ?>"><?php echo $data['material_sub_description'].'('.$data['material_sub_id'].')'; ?></option>
             <?php
         }
     }
@@ -167,7 +167,7 @@ if(isset($_GET['process_type']) && $_GET['process_type'] == 'material_edit'){
                         if (isset($parentCats) && !empty($parentCats)) {
                             foreach ($parentCats as $pcat) {
                                 ?>
-                                <option value="<?php echo $pcat['id'] ?>" <?php if(isset($editData->material_id) && $editData->material_id == $pcat['id']){ echo 'selected'; } ?>><?php echo $pcat['category_description'] ?></option>
+                                <option value="<?php echo $pcat['id'] ?>" <?php if(isset($editData->material_id) && $editData->material_id == $pcat['id']){ echo 'selected'; } ?>><?php echo $pcat['category_description'].'('.$pcat['category_id'].')'; ?></option>
                             <?php }
                         }
                         ?>
@@ -184,7 +184,7 @@ if(isset($_GET['process_type']) && $_GET['process_type'] == 'material_edit'){
                         if (isset($parentCats) && !empty($parentCats)) {
                             foreach ($parentCats as $pcat) {
                                 ?>
-                                <option value="<?php echo $pcat['id'] ?>"<?php if(isset($editData->material_sub_id) && $editData->material_sub_id == $pcat['id']){ echo 'selected'; } ?>><?php echo $pcat['material_sub_description'] ?></option>
+                                <option value="<?php echo $pcat['id'] ?>"<?php if(isset($editData->material_sub_id) && $editData->material_sub_id == $pcat['id']){ echo 'selected'; } ?>><?php echo $pcat['material_sub_description'].'('.$pcat['material_sub_id'].')'; ?></option>
                             <?php }
                         }
                         ?>
@@ -245,7 +245,7 @@ if(isset($_GET['process_type']) && $_GET['process_type'] == 'sub_material_edit')
                     if (isset($parentCats) && !empty($parentCats)) {
                         foreach ($parentCats as $pcat) {
                             ?>
-                            <option value="<?php echo $pcat['id'] ?>"<?php if(isset($editData->category_id) && $editData->category_id == $pcat['id']){ echo 'selected'; } ?>><?php echo $pcat['category_description'] ?></option>
+                            <option value="<?php echo $pcat['id'] ?>"<?php if(isset($editData->category_id) && $editData->category_id == $pcat['id']){ echo 'selected'; } ?>><?php echo $pcat['category_description'].'('.$pcat['category_id'].')'; ?></option>
                         <?php }
                     } ?>
                 </select>
@@ -284,4 +284,17 @@ if(isset($_GET['process_type']) && $_GET['process_type'] == 'parent_material_edi
                 <input type="text" class="form-control" id="parent_name" placeholder="name" name="name" value="<?php if(isset($editData->category_description)){ echo $editData->category_description; } ?>">
             </div>
         </div>
-<?php } ?>
+<?php }
+if(isset($_GET['process_type']) && $_GET['process_type'] == 'get_parent_category'){
+    include '../connection/connect.php';
+    include '../helper/utilities.php';
+    echo "<option value=''>Please Select</option>";
+    $tableData      = getTableDataByTableName('inv_materialcategorysub', '', 'category_description');
+    if (isset($tableData) && !empty($tableData)) {
+        foreach ($tableData as $data) { ?>
+            <option value="<?php echo $data['id']; ?>"><?php echo $data['category_description'].'('.$data['category_id'].')'; ?></option>
+            <?php
+        }
+    }
+}
+?>

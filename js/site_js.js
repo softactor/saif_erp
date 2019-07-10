@@ -5,7 +5,29 @@
  * adding parent category (1st layer category)
  */
 function openModal(modalId){
-    $('#'+modalId).modal('show');
+    if(modalId == 'sub_item_added_form'){
+        $.ajax({
+            url: baseUrl + "includes/item_process.php?process_type=get_parent_category",
+            type: 'POST',
+            dataType: 'html',
+            success: function (response) {
+                $('#'+modalId).modal('show');
+                $('#parent_item_id').html(response);
+            }
+        });
+    }else if(modalId == 'item_added_form'){
+        $.ajax({
+            url: baseUrl + "includes/item_process.php?process_type=get_parent_category",
+            type: 'POST',
+            dataType: 'html',
+            success: function (response) {
+                $('#'+modalId).modal('show');
+                $('#main_item_id').html(response);
+            }
+        });
+    }else{
+        $('#'+modalId).modal('show');
+    }
 }
 function closeModal(modalId){
     $('#'+modalId).modal('hide');

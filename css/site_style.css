@@ -23,15 +23,18 @@ and open the template in the editor.
 table.site_custome_table{
     border: 1px solid lightgray;
     border-collapse : collapse;
+    font-size: 13px;
 }
 table.site_custome_table thead tr th{
     text-align      : center;
     border-collapse : collapse;
-    border: 1px solid lightgray;
+    /*border: 1px solid lightgray;*/
+    background-color: lightgray;
 }
 table.site_custome_table tbody tr td{
     border-collapse : collapse;
     border: 1px solid lightgray;
+    padding: 1px 5px;
 }
 #item_information .row{
     background-color: #F8FFF0;

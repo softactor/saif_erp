@@ -40,9 +40,6 @@
                                                         <button type="button" class="btn btn-sm" onclick="openParentEditForm('<?php echo $pcat['id']; ?>');">
                                                             <i class="fa fa-edit" aria-hidden="true"></i>
                                                         </button>
-                                                        <button type="button" class="btn btn-sm">
-                                                            <i class="fa fa-minus-circle" aria-hidden="true"></i>
-                                                        </button>
                                                     </td>
                                                 </tr>
                                                 <?php
@@ -95,9 +92,6 @@
                                                     <td>
                                                         <button type="button" class="btn btn-sm" onclick="openSubMaterialEditForm('<?php echo $sub['id']; ?>');">
                                                             <i class="fa fa-edit" aria-hidden="true"></i>
-                                                        </button>
-                                                        <button type="button" class="btn btn-sm">
-                                                            <i class="fa fa-minus-circle" aria-hidden="true"></i>
                                                         </button>
                                                     </td>
                                                 </tr>
@@ -162,9 +156,6 @@
                                                     <td>
                                                         <button type="button" class="btn btn-sm" onclick="openMaterialEditForm('<?php echo $item['id']; ?>');">
                                                             <i class="fa fa-edit" aria-hidden="true"></i>
-                                                        </button>
-                                                        <button type="button" class="btn btn-sm">
-                                                            <i class="fa fa-minus-circle" aria-hidden="true"></i>
                                                         </button>
                                                     </td>
                                                 </tr>

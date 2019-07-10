@@ -29,9 +29,6 @@ function parent_category_table_json_response($tableName) {
                     <button type="button" class="btn btn-sm" onclick="openParentEditForm('<?php echo $data['id']; ?>');">
                         <i class="fa fa-edit" aria-hidden="true"></i>
                     </button>
-                    <button type="button" class="btn btn-sm">
-                        <i class="fa fa-minus-circle" aria-hidden="true"></i>
-                    </button>
                 </td>
             </tr>
             <?php
@@ -71,9 +68,6 @@ function sub_category_table_json_response($tableName) {
                 <td>
                     <button type="button" class="btn btn-sm" onclick="openSubMaterialEditForm('<?php echo $data['id']; ?>');">
                         <i class="fa fa-edit" aria-hidden="true"></i>
-                    </button>
-                    <button type="button" class="btn btn-sm">
-                        <i class="fa fa-minus-circle" aria-hidden="true"></i>
                     </button>
                 </td>
             </tr>
@@ -119,9 +113,6 @@ function item_table_json_response($tableName) {
                 <td>
                     <button type="button" class="btn btn-sm" onclick="openMaterialEditForm('<?php echo $item['id']; ?>');">
                         <i class="fa fa-edit" aria-hidden="true"></i>
-                    </button>
-                    <button type="button" class="btn btn-sm">
-                        <i class="fa fa-minus-circle" aria-hidden="true"></i>
                     </button>
                 </td>
             </tr>

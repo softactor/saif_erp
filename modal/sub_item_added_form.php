@@ -12,7 +12,7 @@
                         <div class="form-group">
                             <label class="control-label col-sm-5" for="parent_id">Parent Category:</label>
                             <div class="col-sm-7">
-                                <select class="form-control" id="parent_item_id" name="parent_id">
+                                <select class="form-control" id="parent_item_id" name="parent_id" onchange="getSubCodeByParenId(this.value);">
                                     <option value="">Select</option>
                                     <?php
                                     $parentCats = getTableDataByTableName('inv_materialcategorysub', '', 'category_description');

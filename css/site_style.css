@@ -39,3 +39,6 @@ table.site_custome_table tbody tr td{
 #item_information .row{
     background-color: #F8FFF0;
 }
+.error{
+    color: red;
+}

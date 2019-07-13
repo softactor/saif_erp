@@ -28,7 +28,7 @@
                         <div class="form-group">
                             <label class="control-label col-sm-5" for="parent_code">Sub Category:</label>
                             <div class="col-sm-7">
-                                <select class="form-control" id="main_sub_item_id" name="sub_item_id">
+                                <select class="form-control" id="main_sub_item_id" name="sub_item_id" onchange="getMatCodeBySubId(this.value);">
                                     <option value="">Select</option>
                                     <?php
                                     $parentCats = getTableDataByTableName('inv_materialcategory','','material_sub_description');

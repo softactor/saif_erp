@@ -121,3 +121,17 @@ function get_product_with_category() {
     }
     return $final_array;
 }
+
+function isDuplicateData($table, $where, $notWhere=''){
+    global $conn;
+    $sql='';
+    $sql.="SELECT * FROM $table where $where ";
+    if(isset($notWhere) && !empty($notWhere)){
+        $sql.=" And $notWhere";
+    }
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        return true;
+    }
+    return false;
+}

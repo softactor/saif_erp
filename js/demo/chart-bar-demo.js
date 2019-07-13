@@ -4,6 +4,7 @@ Chart.defaults.global.defaultFontColor = '#292b2c';
 
 // Bar Chart Example
 var ctx = document.getElementById("myBarChart");
+if(ctx && ctx!='undefine'){
 var myLineChart = new Chart(ctx, {
   type: 'bar',
   data: {
@@ -44,3 +45,4 @@ var myLineChart = new Chart(ctx, {
     }
   }
 });
+}

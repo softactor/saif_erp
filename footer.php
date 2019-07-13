@@ -2,7 +2,7 @@
       <footer class="sticky-footer">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright © Your Website 2019</span>
+            <span>Copyright © Saif ERP <?php echo date('Y') ?></span>
           </div>
         </div>
       </footer>
@@ -39,6 +39,7 @@
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
@@ -46,6 +47,7 @@
     <script src="js/Chart.min.js"></script>
     <script src="js/jquery.dataTables.js"></script>
   <script src="js/dataTables.bootstrap4.min.js"></script>
+  <script src="js/sweetalert.min.js"></script>
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin.min.js"></script>
     

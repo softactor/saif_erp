@@ -17,6 +17,7 @@ include 'helper/utilities.php';
   <link href="css/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
   <!-- Page level plugin CSS-->
   <link href="css/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link href="css/sweetalert.css" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="css/sb-admin.css" rel="stylesheet">
   <link href="css/jquery-ui.css" rel="stylesheet">

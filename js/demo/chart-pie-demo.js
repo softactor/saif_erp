@@ -4,6 +4,7 @@ Chart.defaults.global.defaultFontColor = '#292b2c';
 
 // Pie Chart Example
 var ctx = document.getElementById("myPieChart");
+if(ctx && ctx!='undefine'){
 var myPieChart = new Chart(ctx, {
   type: 'pie',
   data: {
@@ -14,3 +15,4 @@ var myPieChart = new Chart(ctx, {
     }],
   },
 });
+}

@@ -9,7 +9,7 @@
         <li class="breadcrumb-item">
             <a href="#">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">Receive Entry</li>
+        <li class="breadcrumb-item active">Overview</li>
     </ol>
     <!-- DataTables Example -->
     <div class="card mb-3">

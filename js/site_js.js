@@ -63,7 +63,20 @@ function processParentItems(form_id) {
         });
         validationResult = $("#parent_item_added_form_value").valid();
     } else if (form_id == 'parent_item_edit_form_value') {
-        $("#parent_item_added_form_value").valid();
+        $("#parent_item_edit_form_value").valid();
+        $("#edit_category_id").rules("add", {
+            required: true,
+            messages: {
+                required: "Please specify Category"
+            }
+        });
+        $("#edit_parent_name").rules("add", {
+            required: true,
+            messages: {
+                required: "Please specify Name"
+            }
+        });
+        validationResult = $("#parent_item_edit_form_value").valid();
     }
     if (validationResult) {
         $.ajax({
@@ -119,8 +132,27 @@ function processSubItems(form_id) {
             }
         });
         validationResult = $("#sub_item_added_form_value").valid();
-    } else if (form_id == 'parent_item_edit_form_value') {
-        $("#parent_item_added_form_value").valid();
+    } else if (form_id == 'sub_item_update_form_value') {
+        $("#sub_item_update_form_value").validate();
+        $("#edit_parent_item_id").rules("add", {
+            required: true,
+            messages: {
+                required: "Please specify Category"
+            }
+        });
+        $("#edit_sub_code").rules("add", {
+            required: true,
+            messages: {
+                required: "Please specify Code"
+            }
+        });
+        $("#edit_sub_name").rules("add", {
+            required: true,
+            messages: {
+                required: "Please specify Name"
+            }
+        });
+        validationResult = $("#sub_item_update_form_value").valid();
     }
     if (validationResult) {
         $.ajax({
@@ -151,6 +183,7 @@ function processSubItems(form_id) {
 }
 
 function processItems(form_id) {
+    
     var validationResult;
     if (form_id == 'item_added_form_value') {
         $("#item_added_form_value").validate();
@@ -179,8 +212,33 @@ function processItems(form_id) {
             }
         });
         validationResult = $("#item_added_form_value").valid();
-    } else if (form_id == 'parent_item_edit_form_value') {
-        $("#parent_item_added_form_value").valid();
+    } else if (form_id == 'item_updated_form_value') {
+        $("#item_updated_form_value").validate();
+        $("#edit_main_item_id").rules("add", {
+            required: true,
+            messages: {
+                required: "Please specify Category"
+            }
+        });
+        $("#edit_sub_item_id").rules("add", {
+            required: true,
+            messages: {
+                required: "Please specify Sub Category"
+            }
+        });
+        $("#item_edit_code").rules("add", {
+            required: true,
+            messages: {
+                required: "Please specify Code"
+            }
+        });
+        $("#edit_item_name").rules("add", {
+            required: true,
+            messages: {
+                required: "Please specify Name"
+            }
+        });
+        validationResult = $("#item_updated_form_value").valid();
     }
     if (validationResult) {
         $.ajax({
@@ -268,22 +326,26 @@ function openParentEditForm(edit_id){
     });
 }
 
-function getSubCodeByParenId(parent_id) {
+function getSubCodeByParenId(parent_id, selector=false) {
     if (parent_id) {
         $.ajax({
             url: baseUrl + "includes/item_process.php?process_type=get_category_code",
             type: 'POST',
             dataType: 'json',
             data: 'cat_type=sub&data_type=ajax&parent_cat=' + parent_id,
-            success: function (response) {
-                $('#sub_code').val(response.code);
+            success: function (response) {                
+                if(selector){
+                    $('#'+selector).val(response.code);
+                }else{
+                    $('#sub_code').val(response.code);
+                }
             }
         });
     }else{
         $('#sub_code').val('');
     }
 }
-function getMatCodeBySubId(sub_id) {
+function getMatCodeBySubId(sub_id, selector=false) {
     if (sub_id) {
         $.ajax({
             url     : baseUrl + "includes/item_process.php?process_type=get_category_code",
@@ -291,7 +353,11 @@ function getMatCodeBySubId(sub_id) {
             dataType: 'json',
             data    : 'cat_type=mat&data_type=ajax&parent_cat='+$('#main_item_id').val()+'&sub_id='+sub_id,
             success: function (response) {
-                $('#item_code').val(response.code);
+                if(selector){
+                    $('#'+selector).val(response.code);
+                }else{
+                    $('#item_code').val(response.code);
+                }
             }
         });
     }else{

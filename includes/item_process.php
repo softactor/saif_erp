@@ -11,7 +11,12 @@ if (isset($_GET['process_type']) && $_GET['process_type'] == 'parent') {
     $table = 'inv_materialcategorysub';
 //    $where = 'category_id=' . "$parent_code" . ' and category_description=' . "$name";
     $where = "category_id='$parent_code' and category_description='$name'";
-    $duplicatedata = isDuplicateData($table, $where);
+    if(isset($_POST['parent_material_update_id']) && !empty($_POST['parent_material_update_id'])){
+        $notWhere   =   "id!=".$_POST['parent_material_update_id'];
+        $duplicatedata = isDuplicateData($table, $where, $notWhere);
+    }else{
+        $duplicatedata = isDuplicateData($table, $where);
+    }
     if ($duplicatedata) {
         $status     =   'error';
         $message    =   'Current operation was faild. Duplicate data found!';
@@ -71,7 +76,12 @@ if (isset($_GET['process_type']) && $_GET['process_type'] == 'sub_cat') {
     $table = 'inv_materialcategory';
 //    $where = 'category_id=' . "$parent_code" . ' and category_description=' . "$name";
     $where = "category_id='$parent_id' and material_sub_id='$sub_code' and material_sub_description='$name'";
-    $duplicatedata = isDuplicateData($table, $where);
+    if(isset($_POST['sub_material_update_id']) && !empty($_POST['sub_material_update_id'])){
+        $notWhere   =   "id!=".$_POST['sub_material_update_id'];
+        $duplicatedata = isDuplicateData($table, $where, $notWhere);
+    }else{
+        $duplicatedata = isDuplicateData($table, $where);
+    }
     if ($duplicatedata) {
         $status  = 'error';
         $message = 'Current operation was faild. Duplicate data found!';
@@ -139,9 +149,13 @@ if(isset($_GET['process_type']) && $_GET['process_type'] == 'item'){
     $material_min_stock =   mysqli_real_escape_string($conn, $_POST['material_min_stock']);
     // check duplicate:
     $table = 'inv_material';
-//    $where = 'category_id=' . "$parent_code" . ' and category_description=' . "$name";
     $where = "material_id=".$parent_id." and material_sub_id='$sub_item_id' and material_id_code='$item_code' and material_description='$name'";
-    $duplicatedata = isDuplicateData($table, $where);
+    if(isset($_POST['material_update_id']) && !empty($_POST['material_update_id'])){
+        $notWhere   =   "id!=".$_POST['material_update_id'];
+        $duplicatedata = isDuplicateData($table, $where, $notWhere);
+    }else{
+        $duplicatedata = isDuplicateData($table, $where);
+    }
     if ($duplicatedata) {
         $status  = 'error';
         $message = 'Current operation was faild. Duplicate data found!';
@@ -232,7 +246,7 @@ if(isset($_GET['process_type']) && $_GET['process_type'] == 'material_edit'){
             <div class="form-group">
                 <label class="control-label col-sm-5" for="parent_code">Parent Category:</label>
                 <div class="col-sm-7">
-                    <select class="form-control" id="main_item_id" name="parent_item_id" onchange="getSubCategoryByParent(this.value, 'edit_sub_item_id');">
+                    <select class="form-control" id="edit_main_item_id" name="parent_item_id" onchange="getSubCategoryByParent(this.value, 'edit_sub_item_id');">
                         <option value="">Select</option>
                         <?php
                         $parentCats = getTableDataByTableName('inv_materialcategorysub', '', 'category_description');
@@ -249,7 +263,7 @@ if(isset($_GET['process_type']) && $_GET['process_type'] == 'material_edit'){
             <div class="form-group">
                 <label class="control-label col-sm-5" for="parent_code">Sub Category:</label>
                 <div class="col-sm-7">
-                    <select class="form-control" id="edit_sub_item_id" name="sub_item_id">
+                    <select class="form-control" id="edit_sub_item_id" name="sub_item_id" onchange="getMatCodeBySubId(this.value, 'item_edit_code');">
                         <option value="">Select</option>
                         <?php
                         $parentCats = getTableDataByTableName('inv_materialcategory', '', 'material_sub_description');
@@ -266,13 +280,13 @@ if(isset($_GET['process_type']) && $_GET['process_type'] == 'material_edit'){
             <div class="form-group">
                 <label class="control-label col-sm-5" for="parent_code">Material Code:</label>
                 <div class="col-sm-7">
-                    <input type="text" class="form-control" id="item_code" placeholder="Enter item code" name="item_code" value="<?php if(isset($editData->material_id_code)){ echo $editData->material_id_code; } ?>">
+                    <input type="text" class="form-control" id="item_edit_code" placeholder="Enter item code" name="item_code" value="<?php if(isset($editData->material_id_code)){ echo $editData->material_id_code; } ?>">
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-5" for="name">Name:</label>
                 <div class="col-sm-7">
-                    <input type="text" class="form-control" id="item_name" placeholder="name" name="name" value="<?php if(isset($editData->material_description)){ echo $editData->material_description; } ?>">
+                    <input type="text" class="form-control" id="edit_item_name" placeholder="name" name="name" value="<?php if(isset($editData->material_description)){ echo $editData->material_description; } ?>">
                 </div>
             </div>
             <div class="form-group">
@@ -285,7 +299,7 @@ if(isset($_GET['process_type']) && $_GET['process_type'] == 'material_edit'){
                         if (isset($parentCats) && !empty($parentCats)) {
                             foreach ($parentCats as $pcat) {
                                 ?>
-                                <option value="<?php echo $pcat['id'] ?>" <?php if(isset($editData->material_sub_id) && $editData->material_sub_id == $pcat['id']){ echo 'selected'; } ?>><?php echo $pcat['unit_name'] ?></option>
+                                <option value="<?php echo $pcat['id'] ?>" <?php if(isset($editData->qty_unit) && $editData->qty_unit == $pcat['id']){ echo 'selected'; } ?>><?php echo $pcat['unit_name'] ?></option>
 <?php }
 }
 ?>
@@ -310,7 +324,7 @@ if(isset($_GET['process_type']) && $_GET['process_type'] == 'sub_material_edit')
             <input type="hidden" name="sub_material_update_id" value="<?php echo $editData->id; ?>">
             <label class="control-label col-sm-5" for="parent_id">Parent Category:</label>
             <div class="col-sm-7">
-                <select class="form-control" id="parent_item_id" name="parent_id">
+                <select class="form-control" id="edit_parent_item_id" name="parent_id" onchange="getSubCodeByParenId(this.value, 'edit_sub_code');">
                     <option value="">Select</option>
                     <?php
                     $parentCats = getTableDataByTableName('inv_materialcategorysub', '', 'category_description');
@@ -326,13 +340,13 @@ if(isset($_GET['process_type']) && $_GET['process_type'] == 'sub_material_edit')
         <div class="form-group">
             <label class="control-label col-sm-5" for="sub_code">Sub Code:</label>
             <div class="col-sm-7">
-                <input type="text" class="form-control" id="sub_code" placeholder="Enter sub code" name="sub_code" value="<?php if(isset($editData->material_sub_id)){ echo $editData->material_sub_id; } ?>">
+                <input type="text" class="form-control" id="edit_sub_code" placeholder="Enter sub code" name="sub_code" value="<?php if(isset($editData->material_sub_id)){ echo $editData->material_sub_id; } ?>">
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-sm-5" for="name">Name:</label>
             <div class="col-sm-7">
-                <input type="text" class="form-control" id="sub_name" placeholder="name" name="name" value="<?php if(isset($editData->material_sub_description)){ echo $editData->material_sub_description; } ?>">
+                <input type="text" class="form-control" id="edit_sub_name" placeholder="name" name="name" value="<?php if(isset($editData->material_sub_description)){ echo $editData->material_sub_description; } ?>">
             </div>
         </div>
 <?php }
@@ -347,13 +361,13 @@ if(isset($_GET['process_type']) && $_GET['process_type'] == 'parent_material_edi
             <input type="hidden" name="parent_material_update_id" value="<?php echo $editData->id; ?>">
             <label class="control-label col-sm-5" for="category_id">Category Id:</label>
             <div class="col-sm-7">
-                <input type="text" class="form-control" id="category_id" placeholder="Enter Category Id" name="category_id" value="<?php if(isset($editData->category_id)){ echo $editData->category_id; } ?>">
+                <input type="text" class="form-control" id="edit_category_id" placeholder="Enter Category Id" name="category_id" value="<?php if(isset($editData->category_id)){ echo $editData->category_id; } ?>">
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-sm-5" for="name">Name:</label>
             <div class="col-sm-7">
-                <input type="text" class="form-control" id="parent_name" placeholder="name" name="name" value="<?php if(isset($editData->category_description)){ echo $editData->category_description; } ?>">
+                <input type="text" class="form-control" id="edit_parent_name" placeholder="name" name="name" value="<?php if(isset($editData->category_description)){ echo $editData->category_description; } ?>">
             </div>
         </div>
 <?php }

@@ -36,9 +36,8 @@ if (isset($_POST['receive_submit']) && !empty($_POST['receive_submit'])) {
         $conn->query($query);
     }
 
-    echo $query2 = "INSERT INTO `inv_receive` (`mrr_no`,`mrr_date`,`purchase_id`,`receive_acct_id`,`supplier_id`,`postedtogl`,`remarks`,`receive_type`,`receive_ware_hosue_id`,`receive_unit_id`,`receive_total`,`no_of_material`,`challanno`,`requisitionno`) VALUES ('$mrr_no','$mrr_date','$purchase_id','6-14-010','$supplier_id','0','$remarks','Credit','001','1','$receive_total','$no_of_material','$challan_no','$requisition_no')";
+    $query2 = "INSERT INTO `inv_receive` (`mrr_no`,`mrr_date`,`purchase_id`,`receive_acct_id`,`supplier_id`,`postedtogl`,`remarks`,`receive_type`,`receive_ware_hosue_id`,`receive_unit_id`,`receive_total`,`no_of_material`,`challanno`,`requisitionno`) VALUES ('$mrr_no','$mrr_date','$purchase_id','6-14-010','$supplier_id','0','$remarks','Credit','001','1','$receive_total','$no_of_material','$challan_no','$requisition_no')";
 //$query2 = "INSERT INTO `inv_receive` (`mrr_no`,`mrr_date`,`purchase_id`) VALUES ('$mrr_no','$mrr_date','$purchase_id')";
-    exit;
     $result2 = $conn->query($query2);
     $_SESSION['success']    =   "Receive process have been successfully completed.";
     header("location: receive_entry.php");

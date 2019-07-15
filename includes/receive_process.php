@@ -1,6 +1,8 @@
 <?php
 
 if (isset($_POST['receive_submit']) && !empty($_POST['receive_submit'])) {
+    $receive_total      =   0;
+    $no_of_material     =   0;
     for ($count = 0; $count < count($_POST['quantity']); $count++) {
         $mrr_date           = $_POST['mrr_date'];
         $mrr_no             = getDefaultCategoryCode('inv_receive', 'mrr_no', '03d', '001', 'RCV');
@@ -19,9 +21,10 @@ if (isset($_POST['receive_submit']) && !empty($_POST['receive_submit'])) {
         $unit               = $_POST['unit'][$count];
         $part_no            = $_POST['part_no'][$count];
         $quantity           = $_POST['quantity'][$count];
+        $no_of_material     = $no_of_material+$quantity;
         $unit_price         = $_POST['unit_price'][$count];
         $totalamount        = $_POST['totalamount'][$count];
-
+        $receive_total      = $receive_total+$totalamount;
         $project_id         = $_POST['project_id'];
         $remarks            = $_POST['remarks'];
 
@@ -33,7 +36,7 @@ if (isset($_POST['receive_submit']) && !empty($_POST['receive_submit'])) {
         $conn->query($query);
     }
 
-    $query2 = "INSERT INTO `inv_receive` (`mrr_no`,`mrr_date`,`purchase_id`,`receive_acct_id`,`supplier_id`,`postedtogl`,`remarks`,`receive_type`,`receive_ware_hosue_id`,`receive_unit_id`,`receive_total`,`no_of_material`,`challanno`,`requisitionno`) VALUES ('$mrr_no','$mrr_date','$purchase_id','6-14-010','$supplier_id','0','$remarks','Credit','001','1','$totalamount','2','$challan_no','$requisition_no')";
+    $query2 = "INSERT INTO `inv_receive` (`mrr_no`,`mrr_date`,`purchase_id`,`receive_acct_id`,`supplier_id`,`postedtogl`,`remarks`,`receive_type`,`receive_ware_hosue_id`,`receive_unit_id`,`receive_total`,`no_of_material`,`challanno`,`requisitionno`) VALUES ('$mrr_no','$mrr_date','$purchase_id','6-14-010','$supplier_id','0','$remarks','Credit','001','1','$receive_total','$no_of_material','$challan_no','$requisition_no')";
 //$query2 = "INSERT INTO `inv_receive` (`mrr_no`,`mrr_date`,`purchase_id`) VALUES ('$mrr_no','$mrr_date','$purchase_id')";
 
     $result2 = $conn->query($query2) or die(mysql_error());

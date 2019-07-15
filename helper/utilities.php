@@ -83,16 +83,14 @@ function getDataRowByTableAndId($table, $id){
 }
 function getDefaultCategoryCode($table, $fieldName, $modifier, $defaultCode, $prefix){
     global $conn;
-    $sql    = "SELECT * FROM $table order by id desc";
+    $sql    = "SELECT count($fieldName) as total_row FROM $table";
     $result = $conn->query($sql);
     $name   =   '';
-    if ($result->num_rows > 0) {
-        $lastRows   = $result->fetch_object();
-        $number     = intval($lastRows->{$fieldName}) + 1;
-        $defaultCode = $prefix.sprintf('%'.$modifier, $number);
-        return $defaultCode;
-    }
-    return $prefix.$defaultCode;
+    $lastRows   = $result->fetch_object();
+    $number     = intval($lastRows->total_row) + 1;
+    $defaultCode = $prefix.sprintf('%'.$modifier, $number);
+    return $defaultCode;
+    
 }
 
 function get_product_with_category() {

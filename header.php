@@ -1,8 +1,8 @@
 <?php session_start(); 
 include 'connection/connect.php';
+include 'helper/utilities.php';
 include 'includes/item_process.php';
 include 'includes/receive_process.php';
-include 'helper/utilities.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

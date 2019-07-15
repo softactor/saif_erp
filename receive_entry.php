@@ -176,7 +176,7 @@ include 'header.php';
                         <div class="col-xs-12">
                             <div class="form-group">
                                 <div class="modal-footer">
-                                    <input type="submit" name="receive_submit" id="submit" class="btn btn-block" style="background-color:#f26522;color:#ffffff;" value="Submit" />
+                                    <input type="submit" name="receive_submit" id="submit" class="btn btn-block" style="background-color:#f26522;color:#ffffff;" value="Save" />
                                 </div>    
                             </div>
                         </div>

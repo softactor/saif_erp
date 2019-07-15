@@ -3,7 +3,7 @@
 if (isset($_POST['receive_submit']) && !empty($_POST['receive_submit'])) {
     for ($count = 0; $count < count($_POST['quantity']); $count++) {
         $mrr_date           = $_POST['mrr_date'];
-        $mrr_no             = $_POST['mrr_no'];
+        $mrr_no             = getDefaultCategoryCode('inv_receive', 'mrr_no', '03d', '001', 'RCV');
         $purchase_id        = $_POST['purchase_id'];
         $Purchase_date      = $_POST['Purchase_date'];
         $challan_no         = $_POST['challan_no'];

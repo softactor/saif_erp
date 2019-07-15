@@ -42,3 +42,9 @@ table.site_custome_table tbody tr td{
 .error{
     color: red;
 }
+.operation_message{
+    margin: 1% 1%;
+}
+.json_alert_message{
+    display: none;
+}

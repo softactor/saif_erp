@@ -88,30 +88,29 @@ function getDefaultCategoryCode($table, $fieldName, $modifier, $defaultCode, $pr
 function get_product_with_category() {
     $final_array = [];
     global $conn;
-    $sql = "SELECT * FROM parent_category order by name asc";
+    $sql = "SELECT * FROM inv_materialcategorysub order by category_description asc";
     $presult = $conn->query($sql);
     if ($presult->num_rows > 0) {
         // output data of each row
         while ($cat = $presult->fetch_object()) {
             $parent_id      = $cat->id;
-            $parent_name    = $cat->name;
-            $ssql = "SELECT * FROM sub_category where parent_id=$parent_id order by name asc";
-            $sresult = $conn->query($ssql);
+            $parent_name    = $cat->category_description;
+            $ssql           = "SELECT * FROM inv_materialcategory where category_id=$parent_id order by material_sub_description asc";
+            $sresult        = $conn->query($ssql);
             if ($sresult->num_rows > 0) {
                 while ($scat = $sresult->fetch_object()) {
                     $sub_item_id    = $scat->id;
-                    $sub_item_name  = $scat->name;
-                    $msql = "SELECT * FROM item_details where parent_item_id=$parent_id and sub_item_id=$sub_item_id order by name asc";
+                    $sub_item_name  = $scat->material_sub_description;
+                    $msql           = "SELECT * FROM inv_material where material_id=$parent_id and material_sub_id=$sub_item_id order by material_description asc";
                     $mresult = $conn->query($msql);
                     if ($mresult->num_rows > 0) {
-                        while ($material = $mresult->fetch_object()) {
-                            $final_array[] = [
+                        while ($material    = $mresult->fetch_object()) {
+                            $final_array[]  = [
                                 'id'                    => $material->id,
-                                'parent_item_id'        => $material->parent_item_id,
-                                'sub_item_id'           => $material->sub_item_id,
-                                'item_code'             => $material->item_code,
-                                'description'           => $material->description,
-                                'material_name'         => $material->name.' ('.$parent_name.' - '.$sub_item_name.')',
+                                'parent_item_id'        => $material->material_id,
+                                'sub_item_id'           => $material->material_sub_id,
+                                'item_code'             => $material->material_id_code,
+                                'material_name'         => $material->material_description.' ('.$parent_name.' - '.$sub_item_name.')',
                             ];
                         }
                     }

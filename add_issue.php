@@ -16,9 +16,9 @@ $remarks 		= $_POST['remarks'];
 
 $material_name 		= $_POST['material_name'][$count];
 $material_id 		= $_POST['material_id'][$count];
-$unit 				= $_POST['unit'][$count];
-$part_no 			= $_POST['part_no'][$count];
-$quantity 			= $_POST['quantity'][$count];
+$unit 			= $_POST['unit'][$count];
+$part_no 		= $_POST['part_no'][$count];
+$quantity 		= $_POST['quantity'][$count];
 $unit_price 		= $_POST['unit_price'][$count];
 $totalamount 		= $_POST['totalamount'][$count];
 

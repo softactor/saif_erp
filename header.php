@@ -1,6 +1,7 @@
-<?php 
+<?php session_start(); 
 include 'connection/connect.php';
 include 'includes/item_process.php';
+include 'includes/receive_process.php';
 include 'helper/utilities.php';
 ?>
 <!DOCTYPE html>
@@ -65,3 +66,5 @@ include 'helper/utilities.php';
     <?php include 'sidebar.php' ?>
 
     <div id="content-wrapper">    
+        <!-- Sidebar -->
+    <?php include 'operation_message.php'; ?>

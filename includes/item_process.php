@@ -459,4 +459,18 @@ if(isset($_GET['process_type']) && $_GET['process_type'] == 'get_category_code')
     ];
     echo json_encode($feedback);
 }
+
+if(isset($_GET['process_type']) && $_GET['process_type'] == 'getItemCodeByParam'){
+    include '../connection/connect.php';
+    include '../helper/utilities.php';
+    $table  =   $_POST['table']." where id=".$_POST['id'];
+    $field  =   $_POST['field'];
+    $code   = getItemCodeByParam($table, $field);
+    $feedback   =   [
+        'status'    =>  'success',
+        'message'   =>  'Found Code',
+        'data'      =>  $code
+    ];
+    echo json_encode($feedback);
+}
 ?>

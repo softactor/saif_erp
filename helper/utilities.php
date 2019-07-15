@@ -49,6 +49,16 @@ function getNameByIdAndTable($table){
     }
     return $name;
 }
+function getItemCodeByParam($table, $field){
+    global $conn;
+    $sql = "SELECT * FROM $table";
+    $result = $conn->query($sql);
+    $name   =   '';
+    if ($result->num_rows > 0) {
+        $name   =   $result->fetch_object()->{$field};
+    }
+    return $name;
+}
 
 function getDataRowIdAndTable($table){
     global $conn;

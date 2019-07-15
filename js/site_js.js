@@ -364,3 +364,47 @@ function getMatCodeBySubId(sub_id, selector=false) {
         $('#item_code').val('');
     }
 }
+
+function getItemCodeByParam(id, table, field, selector){
+    console.log(id);
+    if (id) {
+        var paramDetails    =   {
+            id      :   id,
+            table   :   table,
+            field   :   field,
+        };
+        $.ajax({
+            url     : baseUrl + "includes/item_process.php?process_type=getItemCodeByParam",
+            type    : 'POST',
+            dataType: 'json',
+            data    : paramDetails,
+            success: function (response) {
+                $('#'+selector).val(response.data);
+            }
+        });
+    }else{
+        $('#'+selector).val('');
+    }
+}
+function getAppendItemCodeByParam(id, table, field, selector){
+    var materialId      =   $('#material_name'+id).val();
+    var fieldSelector   =   selector+id;
+    if (id) {
+        var paramDetails    =   {
+            id      :   materialId,
+            table   :   table,
+            field   :   field,
+        };
+        $.ajax({
+            url     : baseUrl + "includes/item_process.php?process_type=getItemCodeByParam",
+            type    : 'POST',
+            dataType: 'json',
+            data    : paramDetails,
+            success: function (response) {
+                $('#'+fieldSelector).val(response.data);
+            }
+        });
+    }else{
+        $('#'+selector).val('');
+    }
+}

@@ -74,8 +74,8 @@ include 'header.php';
                         </div>
                         <div class="col-xs-2">
                             <div class="form-group">
-                                <label for="id">Select Supplier Name</label>
-                                <select class="form-control" id="supplier_name" name="supplier_name" required>
+                                <label for="id">Supplier</label>
+                                <select class="form-control" id="supplier_name" name="supplier_name" required onchange="getItemCodeByParam(this.value, 'suppliers', 'code', 'supplier_id');">
                                     <option value="">Select</option>
                                     <?php
                                     $projectsData = getTableDataByTableName('suppliers');
@@ -114,7 +114,7 @@ include 'header.php';
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <select class="form-control select2" id="material_name" name="material_name[]" required>
+                                            <select class="form-control select2" id="material_name" name="material_name[]" required onchange="getItemCodeByParam(this.value, 'inv_material', 'material_id_code', 'material_id0');">
                                                 <option value="">Select</option>
                                                 <?php
                                                 $projectsData = get_product_with_category();
@@ -128,7 +128,7 @@ include 'header.php';
                                                 ?>
                                             </select>
                                         </td>
-                                        <td><input type="text" name="material_id[]" id="material_id" class="form-control"></td>
+                                        <td><input type="text" name="material_id[]" id="material_id0" class="form-control"></td>
                                         <td><input type="text" name="unit[]" id="unit" class="form-control"></td>
                                         <td><input type="text" name="part_no[]" id="part_no" class="form-control"></td>
                                         <td><input type="text" name="quantity[]" id="quantity0" onchange="sum(0)" class="form-control"></td>
@@ -194,7 +194,7 @@ include 'header.php';
     $(document).ready(function () {
         $('#add').click(function () {
             i++;
-            $('#dynamic_field').append('<tr id="row' + i + '"><td><select class="form-control select2" id="material_name[]" name="material_name[]' + i + '" required><option value="">Select</option><?php $projectsData = get_product_with_category();
+            $('#dynamic_field').append('<tr id="row' + i + '"><td><select class="form-control select2" id="material_name'+i+'" name="material_name[]' + i + '" required onchange="getAppendItemCodeByParam('+i+",'inv_material'"+",'material_id_code'"+",'material_id'"+')"><option value="">Select</option><?php $projectsData = get_product_with_category();
                                     if (isset($projectsData) && !empty($projectsData)) {
                                         foreach ($projectsData as $data) { ?><option value="<?php echo $data['id']; ?>"><?php echo $data['material_name']; ?></option><?php }
                                     } ?></select></td><td><input type="text" name="material_id[]" id="material_id' + i + '" class="form-control"></td><td><input type="text" name="unit[]" id="unit' + i + '" class="form-control"></td><td><input type="text" name="part_no[]" id="part_no' + i + '" class="form-control"></td><td><input type="text" name="quantity[]" id="quantity' + i + '" onchange="sum(0)" class="form-control"></td><td><input type="text" name="unit_price[]" id="unit_price' + i + '" onchange="sum(0)" class="form-control"></td><td><input type="text" name="totalamount[]" id="sum' + i + '" class="form-control"></td><td><button type="button" name="remove" id="' + i + '" class="btn btn_remove" style="background-color:#f26522;color:#ffffff;">X</button></td></tr>');

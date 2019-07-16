@@ -32,7 +32,7 @@ include 'header.php';
                         <div class="col-xs-3">
                             <div class="form-group">
                                 <label>MRR No</label>
-                                <input type="text" name="mrr_no" id="mrr_no" class="form-control" readonly="readonly" value="<?php echo getDefaultCategoryCode('inv_receive', 'mrr_no', '03d', '001', 'RCV') ?>">
+                                <input type="text" name="mrr_no" id="mrr_no" class="form-control" readonly="readonly" value="<?php echo getDefaultCategoryCode('inv_receive', 'mrr_no', '03d', '001', 'MRR') ?>">
                                 <input type="hidden" name="receive_no" id="receive_no" value="<?php echo getDefaultCategoryCode('inv_receive', 'mrr_no', '03d', '001', 'MRR') ?>">
                             </div>
                         </div>

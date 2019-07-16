@@ -1,6 +1,6 @@
 <?php
 
-function getTableDataByTableName($table, $order = 'asc', $column='name') {
+function getTableDataByTableName($table, $order = 'asc', $column='name', $dataType = '') {
     global $conn;
     $dataContainer  =   [];
     $sql = "SELECT * FROM $table order by $column $order";
@@ -8,8 +8,14 @@ function getTableDataByTableName($table, $order = 'asc', $column='name') {
 
     if ($result->num_rows > 0) {
         // output data of each row
-        while ($row = $result->fetch_assoc()) {
-            $dataContainer[]    =   $row;
+        if (isset($dataType) && $dataType == 'obj') {
+            while ($row = $result->fetch_object()) {
+                $dataContainer[] = $row;
+            }
+        } else {
+            while ($row = $result->fetch_assoc()) {
+                $dataContainer[] = $row;
+            }
         }
     }
     return $dataContainer;

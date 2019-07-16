@@ -9,9 +9,9 @@ include 'header.php';
     <!-- Breadcrumbs-->
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
-            <a href="#">Dashboard</a>
+            <a href="dashboard.php">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">Receive Entry</li>
+        <li class="breadcrumb-item active">Entry</li>
     </ol>
     <!-- DataTables Example -->
     <div class="card mb-3">
@@ -33,7 +33,7 @@ include 'header.php';
                             <div class="form-group">
                                 <label>MRR No</label>
                                 <input type="text" name="mrr_no" id="mrr_no" class="form-control" readonly="readonly" value="<?php echo getDefaultCategoryCode('inv_receive', 'mrr_no', '03d', '001', 'RCV') ?>">
-                                <input type="hidden" name="receive_no" id="receive_no" value="<?php echo getDefaultCategoryCode('inv_receive', 'mrr_no', '03d', '001', 'RCV') ?>">
+                                <input type="hidden" name="receive_no" id="receive_no" value="<?php echo getDefaultCategoryCode('inv_receive', 'mrr_no', '03d', '001', 'MRR') ?>">
                             </div>
                         </div>
                         <div class="col-xs-3">

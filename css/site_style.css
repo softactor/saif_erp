@@ -48,3 +48,16 @@ table.site_custome_table tbody tr td{
 .json_alert_message{
     display: none;
 }
+table.search-table{
+    background-color: #F9F8F6;
+}
+table.search-table tr td{
+    vertical-align: text-top;
+    padding: 1px 5px !important;
+}
+table.data-list-table{
+    font-size: 14px;
+}
+table.data-list-table tr th{
+    text-align: center;
+}

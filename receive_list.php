@@ -25,7 +25,7 @@
             $dataType           = 'obj';
             $receiveDataList    = getTableDataByTableName($table, $order, $column, $dataType);
             ?>
-            <table class="table table-striped table-bordered data-list-table">            
+            <table class="table table-striped table-bordered data-list-table" id="material_receive_list">            
                 <?php
                 if (isset($receiveDataList) && !empty($receiveDataList)) {
                     ?>

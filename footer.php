@@ -46,8 +46,8 @@
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/Chart.min.js"></script>
     <script src="js/jquery.dataTables.js"></script>
-  <script src="js/dataTables.bootstrap4.min.js"></script>
-  <script src="js/sweetalert.min.js"></script>
+    <script src="js/dataTables.bootstrap4.min.js"></script>
+    <script src="js/sweetalert.min.js"></script>
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin.min.js"></script>
     
@@ -58,6 +58,9 @@
         jQuery( document ).ready(function( $ ) {
             $('#dataTable').DataTable();
             $( "#item_information" ).accordion();
+            if($('#material_receive_list')){
+                $('#material_receive_list').DataTable();
+            }
         });
     </script>
 </body>

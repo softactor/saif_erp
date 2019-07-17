@@ -16,56 +16,11 @@
             <i class="fas fa-table"></i>
             Receive List
         </div>
-        <div class="card-body">
+        <div class="card-body" id="material_receive_list_body">
             <!--here your code will go-->
-            <?php
-            $table              = 'inv_receive';
-            $order              = 'DESC';
-            $column             = 'mrr_date';
-            $dataType           = 'obj';
-            $receiveDataList    = getTableDataByTableName($table, $order, $column, $dataType);
-            ?>
-            <table class="table table-striped table-bordered data-list-table" id="material_receive_list">            
-                <?php
-                if (isset($receiveDataList) && !empty($receiveDataList)) {
-                    ?>
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Date</th>
-                            <th>MRR</th>
-                            <th>Supplier</th>
-                            <th>Total Quantity</th>
-                            <th>Total Amount</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody id="material_receive_list_body">
-                        <?php
-                        $sl = 1;
-                        foreach ($receiveDataList as $listData) {
-                            ?>
-                            <tr>
-                                <td><?php echo $sl++; ?></td>
-                                <td><?php echo date("jS F, Y", strtotime($listData->mrr_date)); ?></td>
-                                <td><?php echo $listData->mrr_no; ?></td>
-                                <td><?php echo $listData->supplier_id; ?></td>
-                                <td><?php echo $listData->no_of_material; ?></td>
-                                <td><?php echo $listData->receive_total; ?></td>
-                                <td style="text-align: right;">
-                                    <a href="receive_edit.php?edit_id=<?php echo $listData->id; ?>">Edit</a> | Details
-                                </td>
-                            </tr>
-                        <?php } ?>
-                    </tbody>
-                <?php } else { ?>
-                    <thead>
-                        <tr>
-                            <th>Sorry, Database have no information!</th>
-                        </tr>
-                    </thead>
-                <?php } ?>
-            </table>
+            <div class="alert alert-success">
+                Search result will be shown here..
+            </div>
         </div>
     </div>
 

@@ -410,12 +410,18 @@ function getAppendItemCodeByParam(id, table, field, selector){
 }
 
 function getSearchTableData(formSelector, tableBodySelector){
-    $.ajax({
-            url     : baseUrl + "includes/search_process.php?search_data="+formSelector,
-            type    : 'POST',
-            dataType: 'json',
+    var checkMrrNo = $('#mrr_no_search').val();
+    if (checkMrrNo) {
+        $.ajax({
+            url: baseUrl + "includes/search_process.php?search_data=" + formSelector,
+            type: 'POST',
+            dataType: 'html',
+            data: $("#" + formSelector).serialize(),
             success: function (response) {
-                $('#'+tableBodySelector).val(response.data);
+                $('#' + tableBodySelector).html(response);
             }
         });
+    } else {
+        swal("Attention", 'Please select MRR', "error");
+    }
 }

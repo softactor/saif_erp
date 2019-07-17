@@ -408,3 +408,14 @@ function getAppendItemCodeByParam(id, table, field, selector){
         $('#'+selector).val('');
     }
 }
+
+function getSearchTableData(formSelector, tableBodySelector){
+    $.ajax({
+            url     : baseUrl + "includes/search_process.php?search_data="+formSelector,
+            type    : 'POST',
+            dataType: 'json',
+            success: function (response) {
+                $('#'+tableBodySelector).val(response.data);
+            }
+        });
+}

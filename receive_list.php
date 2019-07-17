@@ -40,7 +40,7 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="material_receive_list_body">
                         <?php
                         $sl = 1;
                         foreach ($receiveDataList as $listData) {
@@ -52,7 +52,9 @@
                                 <td><?php echo $listData->supplier_id; ?></td>
                                 <td><?php echo $listData->no_of_material; ?></td>
                                 <td><?php echo $listData->receive_total; ?></td>
-                                <td style="text-align: right;">Edit | Details | Delete</td>
+                                <td style="text-align: right;">
+                                    <a href="receive_edit.php?edit_id=<?php echo $listData->id; ?>">Edit</a> | Details
+                                </td>
                             </tr>
                         <?php } ?>
                     </tbody>

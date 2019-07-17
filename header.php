@@ -3,6 +3,7 @@ include 'connection/connect.php';
 include 'helper/utilities.php';
 include 'includes/item_process.php';
 include 'includes/receive_process.php';
+include 'includes/search_process.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

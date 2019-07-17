@@ -1,5 +1,4 @@
 <?php
-
 if (isset($_POST['receive_submit']) && !empty($_POST['receive_submit'])) {
     $receive_total      =   0;
     $no_of_material     =   0;
@@ -43,4 +42,36 @@ if (isset($_POST['receive_submit']) && !empty($_POST['receive_submit'])) {
     header("location: receive_entry.php");
     exit();
 }
+
+function getReceiveDataDetailsById($id){
+    global $conn;
+    $receieves      =   "";
+    $receiveDetails =   "";
+    
+    // get receive data
+    $sql1           = "SELECT * FROM inv_receive where id=".$id;
+    $result1        = $conn->query($sql1);
+
+    if ($result1->num_rows > 0) {
+        $receieves = $result1->fetch_object();
+    }
+    
+    // get receive details data
+    $table                  =   'inv_receivedetail where mrr_no='."'$receieves->mrr_no'";
+    $order                  =   'DESC';
+    $column                 =   'receive_qty';
+    $dataType               =   'obj';
+    $receiveDetailsData     = getTableDataByTableName($table, $order, $column, $dataType);
+    if(isset($receiveDetailsData) && !empty($receiveDetailsData)){
+        $receiveDetails     =   $receiveDetailsData;
+    }
+    
+    $feedbackData   =   [
+        'receiveData'           =>  $receieves,
+        'receiveDetailsData'    =>  $receiveDetails
+    ];
+    
+    return $feedbackData;
+}
+
 ?>

@@ -28,9 +28,20 @@
                             </td>     
                             <td>
                                 <div class="form-group">
-                                    <label for="supplyer">Supplyer:</label>
+                                    <label for="supplyer">suppliers:</label>
                                     <select class="form-control" id="supplyer_id" name="supplyer_id">
                                         <option value="">Select</option>
+                                        <?php
+                                    $projectsData = getTableDataByTableName('suppliers');
+
+                                    if (isset($projectsData) && !empty($projectsData)) {
+                                        foreach ($projectsData as $data) {
+                                            ?>
+                                            <option value="<?php echo $data['id']; ?>"><?php echo $data['name']; ?></option>
+                                            <?php
+                                        }
+                                    }
+                                    ?>
                                     </select>
                                 </div>
                             </td>
@@ -56,7 +67,7 @@
                     </tbody>
                 </table>
             </div>
-            <button type="button" class="btn btn-primary">Search</button>
+            <button type="button" class="btn btn-primary" onclick="getSearchTableData('material_receive_search_form', 'material_receive_list_body');">Search</button>
         </form>
     </div>
 </div>

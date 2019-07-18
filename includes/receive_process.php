@@ -27,17 +27,13 @@ if (isset($_POST['receive_submit']) && !empty($_POST['receive_submit'])) {
         $project_id         = $_POST['project_id'];
         $remarks            = $_POST['remarks'];
 
-        $query = "INSERT INTO `inv_receivedetail` (`mrr_no`,`material_id`,`receive_qty`,`unit_price`,`sl_no`,`total_receive`,`part_no`) VALUES ('$mrr_no','$material_id','$quantity','$unit_price','1','$totalamount','$part_no')";
-
-
-//$query = "INSERT INTO `inv_receivedetail` (`mrr_no`,`material_id`,`receive_qty`,`unit_price`) VALUES ('$mrr_no','$material_id','$quantity','$unit_price')";
-
+        $query = "INSERT INTO `inv_receivedetail` (`mrr_no`,`material_id`,'unit_id',`receive_qty`,`unit_price`,`sl_no`,`total_receive`,`part_no`) VALUES ('$mrr_no','$material_id','$unit','$quantity','$unit_price','1','$totalamount','$part_no')";
         $conn->query($query);
     }
 
     $query2 = "INSERT INTO `inv_receive` (`mrr_no`,`mrr_date`,`purchase_id`,`receive_acct_id`,`supplier_id`,`postedtogl`,`remarks`,`receive_type`,`receive_ware_hosue_id`,`receive_unit_id`,`receive_total`,`no_of_material`,`challanno`,`requisitionno`) VALUES ('$mrr_no','$mrr_date','$purchase_id','6-14-010','$supplier_id','0','$remarks','Credit','001','1','$receive_total','$no_of_material','$challan_no','$requisition_no')";
-//$query2 = "INSERT INTO `inv_receive` (`mrr_no`,`mrr_date`,`purchase_id`) VALUES ('$mrr_no','$mrr_date','$purchase_id')";
     $result2 = $conn->query($query2);
+    
     $_SESSION['success']    =   "Receive process have been successfully completed.";
     header("location: receive_entry.php");
     exit();
@@ -72,6 +68,51 @@ function getReceiveDataDetailsById($id){
     ];
     
     return $feedbackData;
+}
+
+if(isset($_POST['receive_update_submit']) && !empty($_POST['receive_update_submit'])){
+    $receive_total      =   0;
+    $no_of_material     =   0;
+    $edit_id            =   $_POST['edit_id'];
+    $mrr_no             =   $_POST['mrr_no'];
+    
+    // first delete all from inv_receivedetail; 
+    $delsql    = "DELETE FROM inv_receivedetail WHERE mrr_no='$mrr_no'";
+    $conn->query($delsql);
+    for ($count = 0; $count < count($_POST['quantity']); $count++) {
+        $mrr_date           = $_POST['mrr_date'];        
+        $purchase_id        = $_POST['purchase_id'];
+        $Purchase_date      = $_POST['Purchase_date'];
+        $challan_no         = $_POST['challan_no'];
+        $challan_date       = $_POST['challan_date'];
+        $requisition_no     = $_POST['requisition_no'];
+        $requisition_date   = $_POST['requisition_date'];
+        $supplier_name      = $_POST['supplier_name'];
+        $supplier_id        = $_POST['supplier_id'];
+
+
+        $material_name      = $_POST['material_name'][$count];
+        $material_id        = $_POST['material_id'][$count];
+        $unit               = $_POST['unit'][$count];
+        $part_no            = $_POST['part_no'][$count];
+        $quantity           = $_POST['quantity'][$count];
+        $no_of_material     = $no_of_material+$quantity;
+        $unit_price         = $_POST['unit_price'][$count];
+        $totalamount        = $_POST['totalamount'][$count];
+        $receive_total      = $receive_total+$totalamount;
+        $project_id         = $_POST['project_id'];
+        $remarks            = $_POST['remarks'];
+
+        $query = "INSERT INTO `inv_receivedetail` (`mrr_no`,`material_id`,`unit_id`,`receive_qty`,`unit_price`,`sl_no`,`total_receive`,`part_no`) VALUES ('$mrr_no','$material_id','$unit','$quantity','$unit_price','1','$totalamount','$part_no')";
+        
+        $conn->query($query);
+    }
+    $query2    = "UPDATE inv_receive SET mrr_no='$mrr_no',mrr_date='$mrr_date',purchase_id='$purchase_id',receive_acct_id='16-001-001',supplier_id='$supplier_id',postedtogl='0',remarks='$remarks',receive_type='Credit',receive_ware_hosue_id='$project_id',receive_unit_id='1',receive_total='$receive_total',no_of_material='$no_of_material',challanno='$challan_no',requisitionno='$requisition_no' WHERE id=$edit_id";
+    $result2 = $conn->query($query2);
+    
+    $_SESSION['success']    =   "Receive process have been successfully updated.";
+    header("location: receive_edit.php?edit_id=".$edit_id);
+    exit();
 }
 
 ?>

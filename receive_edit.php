@@ -127,7 +127,7 @@ if(isset($_GET['edit_id']) && !empty($_GET['edit_id'])){
                                     ?>
                                     <tr>
                                         <td>
-                                            <select class="form-control select2" id="material_name<?php echo $key; ?>" name="material_name[]" required onchange="getItemCodeByParam(this.value, 'inv_material', 'material_id_code', 'material_id0');">
+                                            <select class="form-control select2" id="material_name<?php echo $key; ?>" name="material_name[]" required onchange="getAppendItemCodeByParam('<?php echo $key; ?>', 'inv_material', 'material_id_code', 'material_id','unit_id');">
                                                 <option value="">Select</option>
                                                 <?php
                                                 $projectsData = get_product_with_category();

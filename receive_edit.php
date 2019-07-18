@@ -1,11 +1,10 @@
-<?php 
+<?php
 include 'header.php';
-if(isset($_GET['edit_id']) && !empty($_GET['edit_id'])){
-    $edit_id                =   $_GET['edit_id'];
-    $data                   =   getReceiveDataDetailsById($edit_id);
-    $receiveData            =   $data['receiveData'];
-    $receiveDetailsData     =   $data['receiveDetailsData'];
-    
+if (isset($_GET['edit_id']) && !empty($_GET['edit_id'])) {
+    $edit_id = $_GET['edit_id'];
+    $data = getReceiveDataDetailsById($edit_id);
+    $receiveData = $data['receiveData'];
+    $receiveDetailsData = $data['receiveDetailsData'];
 }
 ?>
 <!-- Left Sidebar End -->
@@ -90,7 +89,9 @@ if(isset($_GET['edit_id']) && !empty($_GET['edit_id'])){
                                     if (isset($projectsData) && !empty($projectsData)) {
                                         foreach ($projectsData as $data) {
                                             ?>
-                                            <option value="<?php echo $data['id']; ?>" <?php if(isset($receiveData->supplier_id) && $receiveData->supplier_id  ==  $data['code']){ echo 'selected'; } ?>><?php echo $data['name']; ?></option>
+                                            <option value="<?php echo $data['id']; ?>" <?php if (isset($receiveData->supplier_id) && $receiveData->supplier_id == $data['code']) {
+                                        echo 'selected';
+                                    } ?>><?php echo $data['name']; ?></option>
                                             <?php
                                         }
                                     }
@@ -109,68 +110,112 @@ if(isset($_GET['edit_id']) && !empty($_GET['edit_id'])){
                         <div class="table-responsive">
                             <table class="table table-bordered" id="dynamic_field">
                                 <thead>
-                                    <th>Material Name</th>
-                                    <th>Material ID</th>
-                                    <th>Unit</th>
-                                    <th>Part No</th>
-                                    <th>Quantity</th>
-                                    <th>Unit Price</th>
-                                    <th>Total Amount</th>
-                                    <th></th>
+                                <th>Material Name</th>
+                                <th>Material ID</th>
+                                <th>Unit</th>
+                                <th>Part No</th>
+                                <th>Quantity</th>
+                                <th>Unit Price</th>
+                                <th>Total Amount</th>
+                                <th></th>
                                 </thead>
                                 <tbody>
                                     <?php
-                                        $productSerial  =   0;
-                                        if(isset($receiveDetailsData) && !empty($receiveDetailsData)){
-                                            foreach($receiveDetailsData as $key=>$editDatas){
-                                                $productSerial++;
-                                    ?>
-                                    <tr>
-                                        <td>
-                                            <select class="form-control select2" id="material_name<?php echo $key; ?>" name="material_name[]" required onchange="getAppendItemCodeByParam('<?php echo $key; ?>', 'inv_material', 'material_id_code', 'material_id','unit_id');">
-                                                <option value="">Select</option>
-                                                <?php
-                                                $projectsData = get_product_with_category();
-                                                if (isset($projectsData) && !empty($projectsData)) {
-                                                    foreach ($projectsData as $data) {
-                                                        ?>
-                                                        <option value="<?php echo $data['id']; ?>"<?php if(isset($editDatas->material_id) && $editDatas->material_id  ==  $data['item_code']){ echo 'selected'; } ?>><?php echo $data['material_name']; ?></option>
+                                    $productSerial = 0;
+                                    if (isset($receiveDetailsData) && !empty($receiveDetailsData)) {
+                                        foreach ($receiveDetailsData as $key => $editDatas) {
+                                            $productSerial++;
+                                            ?>
+                                            <tr>
+                                                <td>
+                                                    <select class="form-control select2" id="material_name<?php echo $key; ?>" name="material_name[]" required onchange="getAppendItemCodeByParam('<?php echo $key; ?>', 'inv_material', 'material_id_code', 'material_id', 'unit_id');">
+                                                        <option value="">Select</option>
                                                         <?php
-                                                    }
-                                                }
-                                                ?>
-                                            </select>
-                                        </td>
-                                        <td><input type="text" name="material_id[]" id="material_id<?php echo $key; ?>" class="form-control" value="<?php echo (isset($editDatas->material_id) && !empty($editDatas->material_id) ? $editDatas->material_id : ''); ?>"></td>
-                                        <td>
-                                            <select class="form-control" id="unit<?php echo $key; ?>" name="unit[]" required>
-                                                <option value="">Select</option>
-                                                <?php
-                                                $projectsData = getTableDataByTableName('inv_item_unit', '', 'unit_name');
-                                                if (isset($projectsData) && !empty($projectsData)) {
-                                                    foreach ($projectsData as $data) {
+                                                        $projectsData = get_product_with_category();
+                                                        if (isset($projectsData) && !empty($projectsData)) {
+                                                            foreach ($projectsData as $data) {
+                                                                ?>
+                                                                <option value="<?php echo $data['id']; ?>"<?php if (isset($editDatas->material_id) && $editDatas->material_id == $data['item_code']) {
+                                                    echo 'selected';
+                                                } ?>><?php echo $data['material_name']; ?></option>
+                                                                <?php
+                                                            }
+                                                        }
                                                         ?>
-                                                        <option value="<?php echo $data['id']; ?>"<?php if(isset($editDatas->unit_id) && $editDatas->unit_id  ==  $data['id']){ echo 'selected'; } ?>><?php echo $data['unit_name']; ?></option>
+                                                    </select>
+                                                </td>
+                                                <td><input type="text" name="material_id[]" id="material_id<?php echo $key; ?>" class="form-control" value="<?php echo (isset($editDatas->material_id) && !empty($editDatas->material_id) ? $editDatas->material_id : ''); ?>"></td>
+                                                <td>
+                                                    <select class="form-control" id="unit<?php echo $key; ?>" name="unit[]" required>
+                                                        <option value="">Select</option>
                                                         <?php
-                                                    }
-                                                }
-                                                ?>
-                                            </select>
-                                        </td>
-                                        <td><input type="text" name="part_no[]" id="part_no<?php echo $key; ?>" class="form-control" value="<?php echo (isset($editDatas->part_no) && !empty($editDatas->part_no) ? $editDatas->part_no : ''); ?>"></td>
-                                        <td><input type="text" name="quantity[]" id="quantity<?php echo $key; ?>" onchange="sum(0)" class="form-control" value="<?php echo (isset($editDatas->receive_qty) && !empty($editDatas->receive_qty) ? $editDatas->receive_qty : ''); ?>"></td>
-                                        <td><input type="text" name="unit_price[]" id="unit_price<?php echo $key; ?>" onchange="sum(0)" class="form-control" value="<?php echo (isset($editDatas->unit_price) && !empty($editDatas->unit_price) ? $editDatas->unit_price : ''); ?>"></td>
-                                        <td><input type="text" name="totalamount[]" id="sum<?php echo $key; ?>" class="form-control" value="<?php echo (isset($editDatas->total_receive) && !empty($editDatas->total_receive) ? $editDatas->total_receive : ''); ?>"></td>
-                                        <?php if($key == 0){ ?>
-                                        <td><button type="button" name="add" id="add" class="btn" style="background-color:#2e3192;color:#ffffff;">+</button></td>
-                                        <?php }else{ ?>
-                                        <td><button type="button" name="remove" id="<?php echo $key; ?>" class="btn btn_remove" style="background-color:#f26522;color:#ffffff;">X</button></td>
-                                        <?php } ?>
-                                    </tr>
-                                    <?php                                    
-                                            }//End of foreach
-                                        }//End of if
-                                    ?>
+                                                        $projectsData = getTableDataByTableName('inv_item_unit', '', 'unit_name');
+                                                        if (isset($projectsData) && !empty($projectsData)) {
+                                                            foreach ($projectsData as $data) {
+                                                                ?>
+                                                                <option value="<?php echo $data['id']; ?>"<?php if (isset($editDatas->unit_id) && $editDatas->unit_id == $data['id']) {
+                                                    echo 'selected';
+                                                } ?>><?php echo $data['unit_name']; ?></option>
+                <?php
+            }
+        }
+        ?>
+                                                    </select>
+                                                </td>
+                                                <td><input type="text" name="part_no[]" id="part_no<?php echo $key; ?>" class="form-control" value="<?php echo (isset($editDatas->part_no) && !empty($editDatas->part_no) ? $editDatas->part_no : ''); ?>"></td>
+                                                <td><input type="text" name="quantity[]" id="quantity<?php echo $key; ?>" onchange="sum(0)" class="form-control" value="<?php echo (isset($editDatas->receive_qty) && !empty($editDatas->receive_qty) ? $editDatas->receive_qty : ''); ?>"></td>
+                                                <td><input type="text" name="unit_price[]" id="unit_price<?php echo $key; ?>" onchange="sum(0)" class="form-control" value="<?php echo (isset($editDatas->unit_price) && !empty($editDatas->unit_price) ? $editDatas->unit_price : ''); ?>"></td>
+                                                <td><input type="text" name="totalamount[]" id="sum<?php echo $key; ?>" class="form-control" value="<?php echo (isset($editDatas->total_receive) && !empty($editDatas->total_receive) ? $editDatas->total_receive : ''); ?>"></td>
+                                            <?php if ($key == 0) { ?>
+                                                    <td><button type="button" name="add" id="add" class="btn" style="background-color:#2e3192;color:#ffffff;">+</button></td>
+                                            <?php } else { ?>
+                                                    <td><button type="button" name="remove" id="<?php echo $key; ?>" class="btn btn_remove" style="background-color:#f26522;color:#ffffff;">X</button></td>
+                                            <?php } ?>
+                                            </tr>
+        <?php
+    }//End of foreach
+} else {
+    ?>
+                                        <tr>
+                                            <td>
+                                                <select class="form-control select2" id="material_name" name="material_name[]" required onchange="getItemCodeByParam(this.value, 'inv_material', 'material_id_code', 'material_id0', 'qty_unit');">
+                                                    <option value="">Select</option>
+                                                    <?php
+                                                    $projectsData = get_product_with_category();
+                                                    if (isset($projectsData) && !empty($projectsData)) {
+                                                        foreach ($projectsData as $data) {
+                                                            ?>
+                                                            <option value="<?php echo $data['id']; ?>"><?php echo $data['material_name']; ?></option>
+            <?php
+        }
+    }
+    ?>
+                                                </select>
+                                            </td>
+                                            <td><input type="text" name="material_id[]" id="material_id0" class="form-control"></td>
+                                            <td>
+                                                <!--<input type="text" name="unit[]" id="unit0" class="form-control">-->
+                                                <select class="form-control" id="unit0" name="unit[]" required>
+                                                    <option value="">Select</option>
+                                                    <?php
+                                                    $projectsData = getTableDataByTableName('inv_item_unit', '', 'unit_name');
+                                                    if (isset($projectsData) && !empty($projectsData)) {
+                                                        foreach ($projectsData as $data) {
+                                                            ?>
+                                                            <option value="<?php echo $data['id']; ?>"><?php echo $data['unit_name']; ?></option>
+            <?php
+        }
+    }
+    ?>
+                                                </select>
+                                            </td>
+                                            <td><input type="text" name="part_no[]" id="part_no" class="form-control"></td>
+                                            <td><input type="text" name="quantity[]" id="quantity0" onchange="sum(0)" class="form-control"></td>
+                                            <td><input type="text" name="unit_price[]" id="unit_price0" onchange="sum(0)" class="form-control"></td>
+                                            <td><input type="text" name="totalamount[]" id="sum0" class="form-control"></td>
+                                            <td><button type="button" name="add" id="add" class="btn" style="background-color:#2e3192;color:#ffffff;">+</button></td>
+                                        </tr>
+<?php } ?>
                                 </tbody>
                             </table>
                         </div>
@@ -186,11 +231,13 @@ if(isset($_GET['edit_id']) && !empty($_GET['edit_id'])){
                                     if (isset($projectsData) && !empty($projectsData)) {
                                         foreach ($projectsData as $data) {
                                             ?>
-                                            <option value="<?php echo $data['id']; ?>"<?php if(isset($receiveData->receive_ware_hosue_id) && $receiveData->receive_ware_hosue_id  ==  $data['id']){ echo 'selected'; } ?>><?php echo $data['project_name']; ?></option>
-                                            <?php
-                                        }
-                                    }
-                                    ?>
+                                            <option value="<?php echo $data['id']; ?>"<?php if (isset($receiveData->receive_ware_hosue_id) && $receiveData->receive_ware_hosue_id == $data['id']) {
+                                        echo 'selected';
+                                    } ?>><?php echo $data['project_name']; ?></option>
+        <?php
+    }
+}
+?>
                                 </select>
                             </div>
                         </div>
@@ -204,7 +251,9 @@ if(isset($_GET['edit_id']) && !empty($_GET['edit_id'])){
                         <div class="col-xs-6">
                             <div class="form-group">
                                 <label>Remarks</label>
-                                <textarea id="remarks" name="remarks" class="form-control"><?php if(isset($receiveData->remarks)){ echo $receiveData->remarks; } ?></textarea>
+                                <textarea id="remarks" name="remarks" class="form-control"><?php if (isset($receiveData->remarks)) {
+    echo $receiveData->remarks;
+} ?></textarea>
                             </div>
                         </div>
                         <div class="col-xs-12">
@@ -229,13 +278,19 @@ if(isset($_GET['edit_id']) && !empty($_GET['edit_id'])){
     $(document).ready(function () {
         $('#add').click(function () {
             i++;
-            $('#dynamic_field').append('<tr id="row' + i + '"><td><select class="form-control select2" id="material_name'+i+'" name="material_name[]' + i + '" required onchange="getAppendItemCodeByParam('+i+",'inv_material'"+",'material_id_code'"+",'material_id',"+"'qty_unit'"+')"><option value="">Select</option><?php $projectsData = get_product_with_category();
-                                    if (isset($projectsData) && !empty($projectsData)) {
-                                        foreach ($projectsData as $data) { ?><option value="<?php echo $data['id']; ?>"><?php echo $data['material_name']; ?></option><?php }
-                                    } ?></select></td><td><input type="text" name="material_id[]" id="material_id' + i + '" class="form-control"></td><td><select class="form-control select2" id="unit'+i+'" name="unit[]' + i + '" required onchange="getAppendItemCodeByParam('+i+",'inv_material'"+",'material_id_code'"+",'material_id''"+",'qty_unit'"+')"><option value="">Select</option><?php $projectsData = getTableDataByTableName('inv_item_unit', '', 'unit_name');
-                                    if (isset($projectsData) && !empty($projectsData)) {
-                                        foreach ($projectsData as $data) { ?><option value="<?php echo $data['id']; ?>"><?php echo $data['unit_name']; ?></option><?php }
-                                    } ?></select></td><td><input type="text" name="part_no[]" id="part_no' + i + '" class="form-control"></td><td><input type="text" name="quantity[]" id="quantity' + i + '" onchange="sum(0)" class="form-control"></td><td><input type="text" name="unit_price[]" id="unit_price' + i + '" onchange="sum(0)" class="form-control"></td><td><input type="text" name="totalamount[]" id="sum' + i + '" class="form-control"></td><td><button type="button" name="remove" id="' + i + '" class="btn btn_remove" style="background-color:#f26522;color:#ffffff;">X</button></td></tr>');
+            $('#dynamic_field').append('<tr id="row' + i + '"><td><select class="form-control select2" id="material_name' + i + '" name="material_name[]' + i + '" required onchange="getAppendItemCodeByParam(' + i + ",'inv_material'" + ",'material_id_code'" + ",'material_id'," + "'qty_unit'" + ')"><option value="">Select</option><?php
+$projectsData = get_product_with_category();
+if (isset($projectsData) && !empty($projectsData)) {
+    foreach ($projectsData as $data) {
+        ?><option value="<?php echo $data['id']; ?>"><?php echo $data['material_name']; ?></option><?php }
+}
+?></select></td><td><input type="text" name="material_id[]" id="material_id' + i + '" class="form-control"></td><td><select class="form-control select2" id="unit' + i + '" name="unit[]' + i + '" required onchange="getAppendItemCodeByParam(' + i + ",'inv_material'" + ",'material_id_code'" + ",'material_id''" + ",'qty_unit'" + ')"><option value="">Select</option><?php
+$projectsData = getTableDataByTableName('inv_item_unit', '', 'unit_name');
+if (isset($projectsData) && !empty($projectsData)) {
+    foreach ($projectsData as $data) {
+        ?><option value="<?php echo $data['id']; ?>"><?php echo $data['unit_name']; ?></option><?php }
+}
+?></select></td><td><input type="text" name="part_no[]" id="part_no' + i + '" class="form-control"></td><td><input type="text" name="quantity[]" id="quantity' + i + '" onchange="sum(0)" class="form-control"></td><td><input type="text" name="unit_price[]" id="unit_price' + i + '" onchange="sum(0)" class="form-control"></td><td><input type="text" name="totalamount[]" id="sum' + i + '" class="form-control"></td><td><button type="button" name="remove" id="' + i + '" class="btn btn_remove" style="background-color:#f26522;color:#ffffff;">X</button></td></tr>');
             $('#quantity' + i + ', #unit_price' + i).change(function () {
                 sum(i)
             });

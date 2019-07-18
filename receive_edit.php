@@ -126,7 +126,7 @@ if (isset($_GET['edit_id']) && !empty($_GET['edit_id'])) {
                                         foreach ($receiveDetailsData as $key => $editDatas) {
                                             $productSerial++;
                                             ?>
-                                            <tr>
+                                            <tr id="row<?php echo $key; ?>">
                                                 <td>
                                                     <select class="form-control select2" id="material_name<?php echo $key; ?>" name="material_name[]" required onchange="getAppendItemCodeByParam('<?php echo $key; ?>', 'inv_material', 'material_id_code', 'material_id', 'unit_id');">
                                                         <option value="">Select</option>

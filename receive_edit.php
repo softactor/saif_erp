@@ -163,8 +163,8 @@ if (isset($_GET['edit_id']) && !empty($_GET['edit_id'])) {
                                                     </select>
                                                 </td>
                                                 <td><input type="text" name="part_no[]" id="part_no<?php echo $key; ?>" class="form-control" value="<?php echo (isset($editDatas->part_no) && !empty($editDatas->part_no) ? $editDatas->part_no : ''); ?>"></td>
-                                                <td><input type="text" name="quantity[]" id="quantity<?php echo $key; ?>" onchange="sum(0)" class="form-control" value="<?php echo (isset($editDatas->receive_qty) && !empty($editDatas->receive_qty) ? $editDatas->receive_qty : ''); ?>"></td>
-                                                <td><input type="text" name="unit_price[]" id="unit_price<?php echo $key; ?>" onchange="sum(0)" class="form-control" value="<?php echo (isset($editDatas->unit_price) && !empty($editDatas->unit_price) ? $editDatas->unit_price : ''); ?>"></td>
+                                                <td><input type="text" name="quantity[]" id="quantity<?php echo $key; ?>" onchange="sum(<?php echo $key; ?>)" class="form-control" value="<?php echo (isset($editDatas->receive_qty) && !empty($editDatas->receive_qty) ? $editDatas->receive_qty : ''); ?>"></td>
+                                                <td><input type="text" name="unit_price[]" id="unit_price<?php echo $key; ?>" onchange="sum(<?php echo $key; ?>)" class="form-control" value="<?php echo (isset($editDatas->unit_price) && !empty($editDatas->unit_price) ? $editDatas->unit_price : ''); ?>"></td>
                                                 <td><input type="text" name="totalamount[]" id="sum<?php echo $key; ?>" class="form-control" value="<?php echo (isset($editDatas->total_receive) && !empty($editDatas->total_receive) ? $editDatas->total_receive : ''); ?>"></td>
                                             <?php if ($key == 0) { ?>
                                                     <td><button type="button" name="add" id="add" class="btn" style="background-color:#2e3192;color:#ffffff;">+</button></td>

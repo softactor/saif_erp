@@ -8,8 +8,8 @@ if (isset($_GET['edit_id']) && !empty($_GET['edit_id'])) {
 }
 ?>
 <!-- Left Sidebar End -->
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<link href="css/form-entry.css" rel="stylesheet">
+<!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
+<!--<link href="css/form-entry.css" rel="stylesheet">-->
 <!-- Left Sidebar End -->
 <div class="container-fluid">
     <!-- Breadcrumbs-->
@@ -69,7 +69,7 @@ if (isset($_GET['edit_id']) && !empty($_GET['edit_id'])) {
                         <div class="col-xs-3">
                             <div class="form-group">
                                 <label for="id">Requisition No.</label>
-                                <input type="text" name="requisition_no" id="requisition_no" class="form-control" value="<?php echo (isset($receiveData->requisition_no) && !empty($receiveData->requisition_no) ? $receiveData->requisition_no : ''); ?>">
+                                <input type="text" name="requisition_no" id="requisition_no" class="form-control" value="<?php echo (isset($receiveData->requisitionno) && !empty($receiveData->requisitionno) ? $receiveData->requisitionno : ''); ?>">
                             </div>
                         </div>
                         <div class="col-xs-3">
@@ -341,10 +341,6 @@ if (isset($projectsData) && !empty($projectsData)) {
         }
         document.getElementById('allsum').value = newTot.toFixed(2);
     }
-
-
-
-
 </script>
 <script>
     $(function () {

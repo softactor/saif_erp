@@ -2,8 +2,8 @@
 include 'header.php';
 ?>
 <!-- Left Sidebar End -->
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<link href="css/form-entry.css" rel="stylesheet">
+<!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
+<!--<link href="css/form-entry.css" rel="stylesheet">-->
 <!-- Left Sidebar End -->
 <div class="container-fluid">
     <!-- Breadcrumbs-->
@@ -265,10 +265,6 @@ include 'header.php';
         }
         document.getElementById('allsum').value = newTot.toFixed(2);
     }
-
-
-
-
 </script>
 <script>
     $(function () {

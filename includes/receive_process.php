@@ -68,7 +68,7 @@ if (isset($_POST['receive_submit']) && !empty($_POST['receive_submit'])) {
     /*
     *  Insert Data Into inv_receive Table:
     */
-    $query2 = "INSERT INTO `inv_receive` (`mrr_no`,`mrr_date`,`purchase_id`,`receive_acct_id`,`supplier_id`,`postedtogl`,`remarks`,`receive_type`,`receive_ware_hosue_id`,`receive_unit_id`,`receive_total`,`no_of_material`,`challanno`,`requisitionno`) VALUES ('$mrr_no','$mrr_date','$purchase_id','6-14-010','$supplier_id','0','$remarks','Credit','001','1','$receive_total','$no_of_material','$challan_no','$requisition_no')";
+    $query2 = "INSERT INTO `inv_receive` (`mrr_no`,`mrr_date`,`purchase_id`,`receive_acct_id`,`supplier_id`,`postedtogl`,`remarks`,`receive_type`,`receive_ware_hosue_id`,`receive_unit_id`,`receive_total`,`no_of_material`,`challanno`,`requisitionno`,`requisition_date`) VALUES ('$mrr_no','$mrr_date','$purchase_id','6-14-010','$supplier_id','0','$remarks','Credit','001','1','$receive_total','$no_of_material','$challan_no','$requisition_no','$requisition_date')";
     $result2 = $conn->query($query2);    
     /*
     *  Insert Data Into inv_supplierbalance Table:
@@ -184,7 +184,7 @@ if(isset($_POST['receive_update_submit']) && !empty($_POST['receive_update_submi
     /*
         *  Update Data Into inv_receive Table:
     */
-    $query2    = "UPDATE inv_receive SET mrr_no='$mrr_no',mrr_date='$mrr_date',purchase_id='$purchase_id',receive_acct_id='16-001-001',supplier_id='$supplier_id',postedtogl='0',remarks='$remarks',receive_type='Credit',receive_ware_hosue_id='$project_id',receive_unit_id='1',receive_total='$receive_total',no_of_material='$no_of_material',challanno='$challan_no',requisitionno='$requisition_no' WHERE id=$edit_id";
+    $query2    = "UPDATE inv_receive SET mrr_no='$mrr_no',mrr_date='$mrr_date',purchase_id='$purchase_id',receive_acct_id='16-001-001',supplier_id='$supplier_id',postedtogl='0',remarks='$remarks',receive_type='Credit',receive_ware_hosue_id='$project_id',receive_unit_id='1',receive_total='$receive_total',no_of_material='$no_of_material',challanno='$challan_no',requisitionno='$requisition_no',requisition_date='$requisition_date' WHERE id=$edit_id";
     $result2 = $conn->query($query2);
     
     /*

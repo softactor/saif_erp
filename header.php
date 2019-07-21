@@ -24,6 +24,8 @@ include 'includes/search_process.php';
   <link href="css/sb-admin.css" rel="stylesheet">
   <link href="css/jquery-ui.css" rel="stylesheet">
   <link href="css/site_style.css" rel="stylesheet">
+  <link href="css/form-entry.css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 </head>
 <body id="page-top">
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">

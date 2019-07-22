@@ -2,14 +2,14 @@
 include 'header.php';
 ?>
 <!-- Left Sidebar End -->
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<link href="css/form-entry.css" rel="stylesheet">
+<!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
+<!--<link href="css/form-entry.css" rel="stylesheet">-->
 <!-- Left Sidebar End -->
 <div class="container-fluid">
     <!-- Breadcrumbs-->
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
-            <a href="#">Dashboard</a>
+            <a href="dashboard.php">Dashboard</a>
         </li>
         <li class="breadcrumb-item active">Receive Entry</li>
     </ol>
@@ -32,8 +32,8 @@ include 'header.php';
                         <div class="col-xs-3">
                             <div class="form-group">
                                 <label>MRR No</label>
-                                <input type="text" name="mrr_no" id="mrr_no" class="form-control" readonly="readonly" value="<?php echo getDefaultCategoryCode('inv_receive', 'mrr_no', '03d', '001', 'RCV') ?>">
-                                <input type="hidden" name="receive_no" id="receive_no" value="<?php echo getDefaultCategoryCode('inv_receive', 'mrr_no', '03d', '001', 'RCV') ?>">
+                                <input type="text" name="mrr_no" id="mrr_no" class="form-control" readonly="readonly" value="<?php echo getDefaultCategoryCode('inv_receive', 'mrr_no', '03d', '001', 'MRR') ?>">
+                                <input type="hidden" name="receive_no" id="receive_no" value="<?php echo getDefaultCategoryCode('inv_receive', 'mrr_no', '03d', '001', 'MRR') ?>">
                             </div>
                         </div>
                         <div class="col-xs-3">
@@ -74,8 +74,8 @@ include 'header.php';
                         </div>
                         <div class="col-xs-2">
                             <div class="form-group">
-                                <label for="id">Select Supplier Name</label>
-                                <select class="form-control" id="supplier_name" name="supplier_name" required>
+                                <label for="id">Supplier</label>
+                                <select class="form-control" id="supplier_name" name="supplier_name" required onchange="getItemCodeByParam(this.value, 'suppliers', 'code', 'supplier_id');">
                                     <option value="">Select</option>
                                     <?php
                                     $projectsData = getTableDataByTableName('suppliers');
@@ -114,7 +114,7 @@ include 'header.php';
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <select class="form-control select2" id="material_name" name="material_name[]" required>
+                                            <select class="form-control select2" id="material_name" name="material_name[]" required onchange="getItemCodeByParam(this.value, 'inv_material', 'material_id_code', 'material_id0','qty_unit');">
                                                 <option value="">Select</option>
                                                 <?php
                                                 $projectsData = get_product_with_category();
@@ -128,8 +128,22 @@ include 'header.php';
                                                 ?>
                                             </select>
                                         </td>
-                                        <td><input type="text" name="material_id[]" id="material_id" class="form-control"></td>
-                                        <td><input type="text" name="unit[]" id="unit" class="form-control"></td>
+                                        <td><input type="text" name="material_id[]" id="material_id0" class="form-control"></td>
+                                        <td>
+                                            <select class="form-control" id="unit0" name="unit[]" required>
+                                                <option value="">Select</option>
+                                                <?php
+                                                $projectsData = getTableDataByTableName('inv_item_unit', '', 'unit_name');
+                                                if (isset($projectsData) && !empty($projectsData)) {
+                                                    foreach ($projectsData as $data) {
+                                                        ?>
+                                                        <option value="<?php echo $data['id']; ?>"><?php echo $data['unit_name']; ?></option>
+                                                        <?php
+                                                    }
+                                                }
+                                                ?>
+                                            </select>
+                                        </td>
                                         <td><input type="text" name="part_no[]" id="part_no" class="form-control"></td>
                                         <td><input type="text" name="quantity[]" id="quantity0" onchange="sum(0)" class="form-control"></td>
                                         <td><input type="text" name="unit_price[]" id="unit_price0" onchange="sum(0)" class="form-control"></td>
@@ -147,12 +161,11 @@ include 'header.php';
                                 <select class="form-control" id="project_id" name="project_id" required>
                                     <option value="">Select</option>
                                     <?php
-                                    $projectsData = getTableDataByTableName('suppliers');
-                                    ;
+                                    $projectsData = getTableDataByTableName('projects', '', 'project_name');
                                     if (isset($projectsData) && !empty($projectsData)) {
                                         foreach ($projectsData as $data) {
                                             ?>
-                                            <option value="<?php echo $data['id']; ?>"><?php echo $data['name']; ?></option>
+                                            <option value="<?php echo $data['id']; ?>"><?php echo $data['project_name']; ?></option>
                                             <?php
                                         }
                                     }
@@ -176,7 +189,7 @@ include 'header.php';
                         <div class="col-xs-12">
                             <div class="form-group">
                                 <div class="modal-footer">
-                                    <input type="submit" name="receive_submit" id="submit" class="btn btn-block" style="background-color:#f26522;color:#ffffff;" value="Submit" />
+                                    <input type="submit" name="receive_submit" id="submit" class="btn btn-block" style="background-color:#f26522;color:#ffffff;" value="Save" />
                                 </div>    
                             </div>
                         </div>
@@ -194,10 +207,13 @@ include 'header.php';
     $(document).ready(function () {
         $('#add').click(function () {
             i++;
-            $('#dynamic_field').append('<tr id="row' + i + '"><td><select class="form-control select2" id="material_name[]" name="material_name[]' + i + '" required><option value="">Select</option><?php $projectsData = get_product_with_category();
+            $('#dynamic_field').append('<tr id="row' + i + '"><td><select class="form-control select2" id="material_name'+i+'" name="material_name[]' + i + '" required onchange="getAppendItemCodeByParam('+i+",'inv_material',"+"'material_id_code',"+"'material_id',"+"'qty_unit'"+')"><option value="">Select</option><?php $projectsData = get_product_with_category();
                                     if (isset($projectsData) && !empty($projectsData)) {
                                         foreach ($projectsData as $data) { ?><option value="<?php echo $data['id']; ?>"><?php echo $data['material_name']; ?></option><?php }
-                                    } ?></select></td><td><input type="text" name="material_id[]" id="material_id' + i + '" class="form-control"></td><td><input type="text" name="unit[]" id="unit' + i + '" class="form-control"></td><td><input type="text" name="part_no[]" id="part_no' + i + '" class="form-control"></td><td><input type="text" name="quantity[]" id="quantity' + i + '" onchange="sum(0)" class="form-control"></td><td><input type="text" name="unit_price[]" id="unit_price' + i + '" onchange="sum(0)" class="form-control"></td><td><input type="text" name="totalamount[]" id="sum' + i + '" class="form-control"></td><td><button type="button" name="remove" id="' + i + '" class="btn btn_remove" style="background-color:#f26522;color:#ffffff;">X</button></td></tr>');
+                                    } ?></select></td><td><input type="text" name="material_id[]" id="material_id' + i + '" class="form-control"></td><td><select class="form-control select2" id="unit'+i+'" name="unit[]' + i + '" required onchange="getAppendItemCodeByParam('+i+",'inv_material'"+",'material_id_code'"+",'material_id''"+",'qty_unit'"+')"><option value="">Select</option><?php $projectsData = getTableDataByTableName('inv_item_unit', '', 'unit_name');
+                                    if (isset($projectsData) && !empty($projectsData)) {
+                                        foreach ($projectsData as $data) { ?><option value="<?php echo $data['id']; ?>"><?php echo $data['unit_name']; ?></option><?php }
+                                    } ?></select></td><td><input type="text" name="part_no[]" id="part_no' + i + '" class="form-control"></td><td><input type="text" name="quantity[]" id="quantity' + i + '" onchange="sum(0)" class="form-control"></td><td><input type="text" name="unit_price[]" id="unit_price' + i + '" onchange="sum(0)" class="form-control"></td><td><input type="text" name="totalamount[]" id="sum' + i + '" class="form-control"></td><td><button type="button" name="remove" id="' + i + '" class="btn btn_remove" style="background-color:#f26522;color:#ffffff;">X</button></td></tr>');
             $('#quantity' + i + ', #unit_price' + i).change(function () {
                 sum(i)
             });
@@ -248,10 +264,6 @@ include 'header.php';
         }
         document.getElementById('allsum').value = newTot.toFixed(2);
     }
-
-
-
-
 </script>
 <script>
     $(function () {

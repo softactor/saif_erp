@@ -364,3 +364,71 @@ function getMatCodeBySubId(sub_id, selector=false) {
         $('#item_code').val('');
     }
 }
+
+function getItemCodeByParam(id, table, field, selector, qty_unit=''){
+    if (id) {
+        var paramDetails    =   {
+            id      :   id,
+            table   :   table,
+            field   :   field,
+            qty_unit:   qty_unit,
+        };
+        $.ajax({
+            url     : baseUrl + "includes/item_process.php?process_type=getItemCodeByParam",
+            type    : 'POST',
+            dataType: 'json',
+            data    : paramDetails,
+            success: function (response) {
+                $('#'+selector).val(response.data);
+                if(qty_unit){
+                    $('#unit0').val(response.qty_unit);
+                }
+            }
+        });
+    }else{
+        $('#'+selector).val('');
+    }
+}
+function getAppendItemCodeByParam(id, table, field, selector, qty_unit=''){
+    var materialId      =   $('#material_name'+id).val();
+    var fieldSelector   =   selector+id;
+    if (id) {
+        var paramDetails    =   {
+            id      :   materialId,
+            table   :   table,
+            field   :   field,
+            qty_unit:   qty_unit,
+        };
+        $.ajax({
+            url     : baseUrl + "includes/item_process.php?process_type=getItemCodeByParam",
+            type    : 'POST',
+            dataType: 'json',
+            data    : paramDetails,
+            success: function (response) {
+                $('#'+fieldSelector).val(response.data);
+                if(qty_unit){
+                    $('#unit'+id).val(response.qty_unit);
+                }
+            }
+        });
+    }else{
+        $('#'+selector).val('');
+    }
+}
+
+function getSearchTableData(formSelector, tableBodySelector, fieldChecker){
+    var checkMrrNo = $('#'+fieldChecker).val();
+    if (checkMrrNo) {
+        $.ajax({
+            url: baseUrl + "includes/search_process.php?search_data=" + formSelector,
+            type: 'POST',
+            dataType: 'html',
+            data: $("#" + formSelector).serialize(),
+            success: function (response) {
+                $('#' + tableBodySelector).html(response);
+            }
+        });
+    } else {
+        swal("Attention", 'Search item was empty', "error");
+    }
+}

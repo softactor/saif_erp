@@ -69,18 +69,18 @@ if (isset($_GET['process_type']) && $_GET['process_type'] == 'sub_cat') {
     $status     =   'success';
     $message    =   'Current operation was successfully completed';
     $feedback   =   '';
-    $parent_id = mysqli_real_escape_string($conn, $_POST['parent_id']);
-    $sub_code = mysqli_real_escape_string($conn, $_POST['sub_code']);
-    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $parent_id  = mysqli_real_escape_string($conn, $_POST['parent_id']);
+    $sub_code   = mysqli_real_escape_string($conn, $_POST['sub_code']);
+    $name       = mysqli_real_escape_string($conn, $_POST['name']);
     // check duplicate:
     $table = 'inv_materialcategory';
 //    $where = 'category_id=' . "$parent_code" . ' and category_description=' . "$name";
     $where = "category_id='$parent_id' and material_sub_id='$sub_code' and material_sub_description='$name'";
     if(isset($_POST['sub_material_update_id']) && !empty($_POST['sub_material_update_id'])){
-        $notWhere   =   "id!=".$_POST['sub_material_update_id'];
-        $duplicatedata = isDuplicateData($table, $where, $notWhere);
+        $notWhere       =   "id!=".$_POST['sub_material_update_id'];
+        $duplicatedata  = isDuplicateData($table, $where, $notWhere);
     }else{
-        $duplicatedata = isDuplicateData($table, $where);
+        $duplicatedata  = isDuplicateData($table, $where);
     }
     if ($duplicatedata) {
         $status  = 'error';
@@ -456,6 +456,25 @@ if(isset($_GET['process_type']) && $_GET['process_type'] == 'get_category_code')
     }
     $feedback =  [
         'code' =>   $defaultCode
+    ];
+    echo json_encode($feedback);
+}
+
+if(isset($_GET['process_type']) && $_GET['process_type'] == 'getItemCodeByParam'){
+    include '../connection/connect.php';
+    include '../helper/utilities.php';
+    $qty_unit   =   '';
+    $table      =   $_POST['table']." where id=".$_POST['id'];
+    $field      =   $_POST['field'];
+    $code       = getItemCodeByParam($table, $field);
+    if(isset($_POST['qty_unit']) && !empty($_POST['qty_unit'])){
+        $qty_unit   = getItemCodeByParam($table, 'qty_unit');
+    }
+    $feedback   =   [
+        'status'    =>  'success',
+        'message'   =>  'Found Code',
+        'data'      =>  $code,
+        'qty_unit'  =>  $qty_unit
     ];
     echo json_encode($feedback);
 }

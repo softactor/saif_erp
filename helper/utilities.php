@@ -1,6 +1,6 @@
 <?php
 
-function getTableDataByTableName($table, $order = 'asc', $column='name') {
+function getTableDataByTableName($table, $order = 'asc', $column='name', $dataType = '') {
     global $conn;
     $dataContainer  =   [];
     $sql = "SELECT * FROM $table order by $column $order";
@@ -8,8 +8,14 @@ function getTableDataByTableName($table, $order = 'asc', $column='name') {
 
     if ($result->num_rows > 0) {
         // output data of each row
-        while ($row = $result->fetch_assoc()) {
-            $dataContainer[]    =   $row;
+        if (isset($dataType) && $dataType == 'obj') {
+            while ($row = $result->fetch_object()) {
+                $dataContainer[] = $row;
+            }
+        } else {
+            while ($row = $result->fetch_assoc()) {
+                $dataContainer[] = $row;
+            }
         }
     }
     return $dataContainer;
@@ -49,6 +55,16 @@ function getNameByIdAndTable($table){
     }
     return $name;
 }
+function getItemCodeByParam($table, $field){
+    global $conn;
+    $sql = "SELECT * FROM $table";
+    $result = $conn->query($sql);
+    $name   =   '';
+    if ($result->num_rows > 0) {
+        $name   =   $result->fetch_object()->{$field};
+    }
+    return $name;
+}
 
 function getDataRowIdAndTable($table){
     global $conn;
@@ -73,16 +89,14 @@ function getDataRowByTableAndId($table, $id){
 }
 function getDefaultCategoryCode($table, $fieldName, $modifier, $defaultCode, $prefix){
     global $conn;
-    $sql    = "SELECT * FROM $table order by id desc";
+    $sql    = "SELECT count($fieldName) as total_row FROM $table";
     $result = $conn->query($sql);
     $name   =   '';
-    if ($result->num_rows > 0) {
-        $lastRows   = $result->fetch_object();
-        $number     = intval($lastRows->{$fieldName}) + 1;
-        $defaultCode = $prefix.sprintf('%'.$modifier, $number);
-        return $defaultCode;
-    }
-    return $prefix.$defaultCode;
+    $lastRows   = $result->fetch_object();
+    $number     = intval($lastRows->total_row) + 1;
+    $defaultCode = $prefix.sprintf('%'.$modifier, $number);
+    return $defaultCode;
+    
 }
 
 function get_product_with_category() {

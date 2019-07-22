@@ -1,8 +1,10 @@
 <?php session_start(); 
 include 'connection/connect.php';
+include 'helper/utilities.php';
 include 'includes/item_process.php';
 include 'includes/receive_process.php';
-include 'helper/utilities.php';
+include 'includes/issue_process.php';
+include 'includes/search_process.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +25,8 @@ include 'helper/utilities.php';
   <link href="css/sb-admin.css" rel="stylesheet">
   <link href="css/jquery-ui.css" rel="stylesheet">
   <link href="css/site_style.css" rel="stylesheet">
+  <link href="css/form-entry.css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 </head>
 <body id="page-top">
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">

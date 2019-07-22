@@ -1,6 +1,4 @@
-<?php include('header.php');
-$id=$_GET['id'];
- ?>
+<?php include('header.php'); ?>
             <!-- Left Sidebar End -->
 			
 			<!-- DataTables -->
@@ -26,114 +24,72 @@ $id=$_GET['id'];
                         <div class="row">
 							<div class="col-xs-12">
 								<div class="page-title-box">
-                                    <h4 class="page-title">MRR</h4>
+                                    <h4 class="page-title">Gate Pass List</h4>
 
                                     <div class="clearfix"></div>
                                 </div>
 							</div>
 						</div>
                         <!-- end row -->
-						<div class="row">
-							<div class="col-lg-1"></div>
-							<div class="col-lg-10">
-								
-							</div>
-							<div class="col-lg-1"></div>
-						</div>
 
-                        <div class="row" id="printableArea" style="display:block;">
-								<?php
-								$sql	=	"select * from `gate_pass` where `challan_no`='$id'";
-								$result = mysqli_query($link, $sql);
-								$row=mysqli_fetch_array($result);
-								?>
-                            <div class="col-lg-12">
-								<table width='100%'>				
-									<tr>
-										<td style="text-align:center"><div class="headbody">
-											<h1 align="center"><img src="images/logo.png" width="162" height=""></h1>
-											<h2 align="center">E-Enginerring Limited</h2>
-											<p align="center">Khawaja Tower(2nd Floor).95,Bir uttam AK Khandakar Road,Mohakhali C/A</p>
-											<h3 align="center">MRR</h3>
-										</div></td>
-									</tr>
-								</table>
-								<table width='100%'>				
-									<tr>
-										<td>MRRNo: <b><?php echo$row['mrr_no']; ?></b></td>
-										<td align="center"></td>
-										<td style="float:right;">Date : <?php 
-											$cDate = strtotime($row['date']);
-											$dDate = date("jS \of F Y",$cDate);
-											echo $dDate;?></td>
-									</tr>
-								</table>
-								</br>
-								<table id="" class="table table-bordered">
-									<thead>
-									<tr>
-										<th style="text-align:center;">Description</th>
-										<th style="text-align:center;">Quantity</th>
-										<th style="text-align:center;">Remarks</th>
-									</tr>
-									</thead>
-									<tbody>
-									<?php
-									$sqlt	=	"select * from `gate_pass` where `challan_no`='$id'";
-									$resultt = mysqli_query($link, $sql);
-									while($rowt=mysqli_fetch_array($resultt))
+                        <div class="row">
+                           <div class="col-lg-12">
+                                <div class="container">
+									<div style="text-align:center;"><button class="btn btn-info" onclick="window.location.href = 'gate_pass.php'" class=''> Add New Challan <i class="fa fa-eye text-success"></i></button></div>
+									<table id="datatable" class="table table-striped table-bordered">
+										<thead>
+                                        <tr>
+											<th>Challan No</th>
+											<th>Client Name</th>
+											<th>Item Name</th>
+											<th>Quantity</th>
+											<th>Action</th>
+                                        </tr>
+                                        </thead>
+										<tbody>
+											<tr id="" bgcolor="#f2f2f2" class="edit_tr">
+											<?php
+											$sql	=	"select * from gate_pass group by challan_no";
+											$result = mysqli_query($link, $sql);
+											while($row=mysqli_fetch_array($result))
 											{
-									?>
-										<tr style="text-align:center;">
-											<td><div style="" class=""><?php echo $rowt['description'] ?></div></td>
-											<td><div style="" class=""><?php echo $rowt['quantity'] ?></div></td>
-											<td><div style="" class=""><?php echo $rowt['remarks'] ?></div></td>
+											?>
+												<td><span class="text"><?php echo $row['challan_no'] ?></span></td>
+												<td><span class="text"><?php echo $row['client_name'] ?></span></td>
+												<td>
+													<span class="text">
+														<?php $id=$row['product_name'];
+															$sqlpr	=	"select * from ams_products where id=$id;";
+															$resultpr = mysqli_query($link, $sqlpr);
+															$rowpr=mysqli_fetch_array($resultpr);
+															echo $rowpr['assets_description']
+														?>
+													</span>
+												</td>
+												<td><span class="text"><?php echo $row['quantity'] ?></span></td>
+												<td class='text-center'> 
+												<button onclick="editData('<?php echo $row['category'] ?>','<?php echo $row['product_code'] ?>','<?php echo $row['product_name'] ?>','<?php echo $row['dep_rate'] ?>')" class=''><i class="fa fa-edit text-success"></i></button>
+												
+												<button onclick="removeConfirm('<?php echo $row['product_code'] ?>')" class=''><i class="fa fa-trash text-danger"></i></button>
+												
+												<button onclick="window.location.href = 'gatepassview.php?id=<?php echo $row['challan_no'] ?>'" class=''><i class="fa fa-eye text-success"></i></button>
+												</td>
 											</tr>
-									<?php } ?>
-									<tr style="text-align:center;">
-										<td><div style="" class="">Total</div></td>
-										<td><div style="" class="">
-										<?php  
-											    $sql2 = "SELECT sum(quantity) FROM  `gate_pass` where `challan_no`='$id'";
-												$result2 = mysqli_query($link, $sql2);
-												for($i=0; $row2 = mysqli_fetch_array($result2); $i++){
-												$fgfg2=$row2['sum(quantity)'];
-												echo $fgfg2 ;
-												}
-										
+
+										<?php
+										}
 										?>
-										</div></td>
-										<td></td>
-									</tr>
-									</tbody>
-								</table>
-								<table class="table">
-									<tr>
-										<td style="text-align:center;"><p style=""></br></br>__________________</p>
-											<p style="">Received By</p></td>
-										<td style="text-align:center;"><p style=""></br></br>__________________</p>
-											<p style="">Authorized Signature</p></td>
-										<td style="text-align:center;"><p style=""></br></br>__________________</p>
-											<p style="">for Saif Powertec Ltd.</p></td>
-									</tr>
-								</table>
+										</tbody>
+									</table>
+								</div>
 							</div>
 						</div>
-						<button class="btn btn-default" onclick="printDiv('printableArea')"><i class="fa fa-print" aria-hidden="true" style="    font-size: 17px;"> Print</i></button>
-							
-							<script>
-							function printDiv(divName) {
-								 var printContents = document.getElementById(divName).innerHTML;
-								 var originalContents = document.body.innerHTML;
 
-								 document.body.innerHTML = printContents;
+									
 
-								 window.print();
 
-								 document.body.innerHTML = originalContents;
-							}
-							</script>
-							<button class="btn btn-default" onclick="window.location.href = 'gate_pass_list.php'"><i class="fa fa-hand-o-right" aria-hidden="true" style="  font-size: 17px;"> Back To Gate Pass List</i></button>
+
+
                     </div> <!-- container -->
                     </div> <!-- container -->
 					
@@ -163,8 +119,7 @@ $id=$_GET['id'];
         </script>
 
 
-		
-        <!-- jQuery  -->
+		<!-- jQuery  -->
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/detect.js"></script>

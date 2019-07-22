@@ -20,11 +20,11 @@
             <div class="col-md-3">
                 <form id="sidebar">
                     <div class="form-group">
-                        <label for="id">Warehouse ID</label>
+                        <label for="nm"><b style="color:red;">WAREHOUSE ID</b></label>
                         <input type="text" id="id" name="id" class="form-control" placeholder="Identity" value="WID-"/>
                     </div>
                     <div class="form-group">
-                        <label for="nm">Warhouse Name</label>
+                        <label for="nm"><b style="color:red;">WAREHOUSE NAME</b></label>
                         <input type="text" id="nm" name="nm" class="form-control" placeholder="Full Name"/>
                     </div>
                     <button type="button" id="save" class="btn btn-primary" onclick="saveData()">Save</button>

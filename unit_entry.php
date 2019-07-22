@@ -20,11 +20,11 @@
             <div class="col-md-3">
                 <form id="sidebar">
                     <div class="form-group">
-                        <label for="id">Company ID</label>
-                        <input type="text" id="id" name="id" class="form-control" placeholder="Identity" value="CM-"/>
+                        <label for="nm"><b style="color:red;">Unit ID</b></label>
+                        <input type="text" id="id" name="id" class="form-control" placeholder="Identity" value="UID-"/>
                     </div>
                     <div class="form-group">
-                        <label for="nm">Company Name</label>
+                        <label for="nm"><b style="color:red;">Unit Name</b></label>
                         <input type="text" id="nm" name="nm" class="form-control" placeholder="Full Name"/>
                     </div>
                     <button type="button" id="save" class="btn btn-primary" onclick="saveData()">Save</button>
@@ -35,8 +35,8 @@
                 <table id="dataTable" class="table table-bordered table-striped table-hover">
                     <thead>
                         <tr>
-                            <th width="40">Warehouse ID</th>
-                            <th>Warehouse Name</th>
+                            <th width="40">Unit ID</th>
+                            <th>Unit Name</th>
                             <th width="100">Action</th>
                         </tr>
                     </thead>
@@ -52,6 +52,6 @@
     </div>
 
 </div>
-<script src="script_com.js"></script>
 <!-- /.container-fluid -->
 <?php include 'footer.php' ?>
+<script src="script_com.js"></script>

@@ -22,9 +22,9 @@
 	
 	
 		<li class="nav-item">
-        <a class="nav-link" href="Project_entry.php">
+        <a class="nav-link" href="unit_entry.php">
             <i class="fas fa-fw fa-chart-area"></i>
-            <span>Project Information</span></a>
+            <span>Unit Information</span></a>
     </li>
 	
 	
@@ -34,6 +34,13 @@
         <a class="nav-link" href="supplier_entry.php">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Supplier Information</span></a>
+    </li>
+	
+	
+		<li class="nav-item">
+        <a class="nav-link" href="lc_entry.php">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>LC Information</span></a>
     </li>
 	
 	
@@ -90,6 +97,12 @@
     </li>
 	
 	
+	
+	<li class="nav-item">
+        <a class="nav-link" href="returntovendor_entry.php">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>RETURN TO VENDOR</span></a>
+    </li>
 	
 	
 	<li class="nav-item">

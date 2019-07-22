@@ -1,15 +1,12 @@
 <?php include 'header.php' ?>
 <!-- Left Sidebar End -->
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <link href="css/form-entry.css" rel="stylesheet">
-<!-- Left Sidebar End -->
 <div class="container-fluid">
     <!-- Breadcrumbs-->
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
             <a href="#">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">Overview</li>
+        <li class="breadcrumb-item active">Issue Entry</li>
     </ol>
     <!-- DataTables Example -->
     <div class="card mb-3">
@@ -18,126 +15,135 @@
             Issue Entry Form</div>
         <div class="card-body">
             <!--here your code will go-->
-			<div class="form-group">
-                <form action="add_issue.php" method="post" name="add_name" id="add_name">
+            <div class="form-group">
+                <form action="" method="post" name="add_issue" id="add_issue">
                     <div class="row" id="div1" style="">
-						<div class="col-xs-2">
-							<div class="form-group">
-								<label>Issue Date</label>
-								<input type="text" autocomplete="off" name="issue_date" id="issue_date" class="form-control datepicker" value="<?php echo date('Y-m-d'); ?>">
-							</div>
-						</div>
-						<div class="col-xs-3">
-							<div class="form-group">
-								<label>Issue No</label>
-								<input type="text" name="issue_id" id="issue_id" class="form-control" readonly="readonly" value="<?php echo getDefaultCategoryCode('inv_issue', 'issue_id', '03d', '001', 'IS') ?>">
-                                <input type="hidden" name="receive_no" id="receive_no" value="<?php echo getDefaultCategoryCode('inv_issue', 'issue_id', '03d', '001', 'IS') ?>">
-							</div>
-						</div>
-						<div class="col-xs-3">
-							<div class="form-group">
-								<label>Receiver Name</label>
-								<input type="text" name="purchase_id" id="purchase_id" class="form-control">
-							</div>
-						</div>
-						
-						<div class="col-xs-2">
-							<div class="form-group">
-								<label for="id">Indent No</label>
-								<input type="text" name="challan_no" id="challan_no" class="form-control">
-							</div>
-						</div>
-						
-						
-						
-						
-						
-					</div>
-					<div class="row" id="div1"  style="">
-						<div class="table-responsive">
-							<table class="table table-bordered" id="dynamic_field">
-							<thead>
-								<th>Material Name</th>
-								<th>Material ID</th>
-								<th>Unit</th>
-								<th>Part No</th>
-								<th>Quantity</th>
-								<th>Unit Price</th>
-								<th>Total Amount</th>
-								<th></th>
-							</thead>
-							<tbody>
-								<tr>
-									<td>
-										<select class="form-control select2" id="material_name" name="material_name[]" required>
-											<option value="">Select</option>
-											<?php
-											$projectsData = get_product_with_category();
-											if (isset($projectsData) && !empty($projectsData)) {
-												foreach ($projectsData as $data) {
-													?>
-													<option value="<?php echo $data['id']; ?>"><?php echo $data['material_name']; ?></option>
-													<?php
-												}
-											}
-											?>
-										</select>
-									</td>
-									<td><input type="text" name="material_id[]" id="material_id" class="form-control"></td>
-									<td><input type="text" name="unit[]" id="unit" class="form-control"></td>
-									<td><input type="text" name="part_no[]" id="part_no" class="form-control"></td>
-									<td><input type="text" name="quantity[]" id="quantity0" onchange="sum(0)" class="form-control"></td>
-									<td><input type="text" name="unit_price[]" id="unit_price0" onchange="sum(0)" class="form-control"></td>
-									<td><input type="text" name="totalamount[]" id="sum0" class="form-control"></td>
-									<td><button type="button" name="add" id="add" class="btn" style="background-color:#2e3192;color:#ffffff;">+</button></td>
-								</tr>
-							</tbody>
-							</table>
-						</div>
+                        <div class="col-xs-2">
+                            <div class="form-group">
+                                <label>Issue Date</label>
+                                <input type="text" autocomplete="off" name="issue_date" id="issue_date" class="form-control datepicker" value="<?php echo date('Y-m-d'); ?>">
+                            </div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="form-group">
+                                <label>Issue No</label>
+                                <input type="text" name="issue_id" id="issue_id" class="form-control" readonly="readonly" value="<?php echo getDefaultCategoryCode('inv_issue', 'issue_id', '03d', '001', 'IS') ?>">
+                                <input type="hidden" name="issue_no" id="issue_no" value="<?php echo getDefaultCategoryCode('inv_issue', 'issue_id', '03d', '001', 'IS') ?>">
+                            </div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="form-group">
+                                <label>Receiver Name</label>
+                                <input type="text" name="receiver_name" id="receiver_name" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-xs-2">
+                            <div class="form-group">
+                                <label for="id">Indent No</label>
+                                <input type="text" name="indent_no" id="indent_no" class="form-control">
+                            </div>
+                        </div>
                     </div>
-					<div class="row" style="">
-						<div class="col-xs-3">
-							<div class="form-group">
-								<label>Project/location/warewise</label>
-								<select class="form-control" id="project_id" name="project_id" required>
-									<option value="">Select</option>
-									<?php
-									$projectsData = getTableDataByTableName('suppliers');
-									;
-									if (isset($projectsData) && !empty($projectsData)) {
-										foreach ($projectsData as $data) {
-											?>
-											<option value="<?php echo $data['id']; ?>"><?php echo $data['name']; ?></option>
-											<?php
-										}
-									}
-									?>
-								</select>
-							</div>
-						</div>
-						
-						<div class="col-xs-3">
-							<div class="form-group">
-								<label>Sub Total Amount</label>
-								<input type="text" class="form-control" maxlength="30" name="sub_total_amount" id="allsum" readonly />
-							</div>
-						</div>
-						<div class="col-xs-6">
-							<div class="form-group">
-								<label>Remarks</label>
-								<textarea id="remarks" name="remarks" class="form-control"></textarea>
-							</div>
-						</div>
-						<div class="col-xs-12">
-							<div class="form-group">
-								<div class="modal-footer">
-									<input type="submit" name="submit" id="submit" class="btn btn-block" style="background-color:#f26522;color:#ffffff;" value="Submit" />
-								</div>    
-							</div>
-						</div>
-					</div>
-					
-						 
+                    <div class="row" id="div1"  style="">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dynamic_field">
+                                <thead>
+                                <th>Material Name</th>
+                                <th>Material ID</th>
+                                <th>Unit</th>
+                                <th>Part No</th>
+                                <th>Quantity</th>
+                                <th>Unit Price</th>
+                                <th>Total Amount</th>
+                                <th></th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <select class="form-control select2" id="material_name" name="material_name[]" required onchange="getItemCodeByParam(this.value, 'inv_material', 'material_id_code', 'material_id0','qty_unit');">
+                                                <option value="">Select</option>
+                                                <?php
+                                                $projectsData = get_product_with_category();
+                                                if (isset($projectsData) && !empty($projectsData)) {
+                                                    foreach ($projectsData as $data) {
+                                                        ?>
+                                                        <option value="<?php echo $data['id']; ?>"><?php echo $data['material_name']; ?></option>
+                                                        <?php
+                                                    }
+                                                }
+                                                ?>
+                                            </select>
+                                        </td>
+                                        <td><input type="text" name="material_id[]" id="material_id0" class="form-control"></td>
+                                        <td>
+                                            <select class="form-control" id="unit0" name="unit[]" required>
+                                                <option value="">Select</option>
+                                                <?php
+                                                $projectsData = getTableDataByTableName('inv_item_unit', '', 'unit_name');
+                                                if (isset($projectsData) && !empty($projectsData)) {
+                                                    foreach ($projectsData as $data) {
+                                                        ?>
+                                                        <option value="<?php echo $data['id']; ?>"><?php echo $data['unit_name']; ?></option>
+                                                        <?php
+                                                    }
+                                                }
+                                                ?>
+                                            </select>
+                                        </td>
+                                        <td><input type="text" name="part_no[]" id="part_no" class="form-control"></td>
+                                        <td><input type="text" name="quantity[]" id="quantity0" onchange="sum(0)" class="form-control"></td>
+                                        <td><input type="text" name="unit_price[]" id="unit_price0" onchange="sum(0)" class="form-control"></td>
+                                        <td><input type="text" name="totalamount[]" id="sum0" class="form-control"></td>
+                                        <td><button type="button" name="add" id="add" class="btn" style="background-color:#2e3192;color:#ffffff;">+</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row" style="">
+                        <div class="col-xs-3">
+                            <div class="form-group">
+                                <label>Project/location/warewise</label>
+                                <select class="form-control" id="project_id" name="project_id" required>
+                                    <option value="">Select</option>
+                                    <?php
+                                    $projectsData = getTableDataByTableName('suppliers');
+                                    ;
+                                    if (isset($projectsData) && !empty($projectsData)) {
+                                        foreach ($projectsData as $data) {
+                                            ?>
+                                            <option value="<?php echo $data['id']; ?>"><?php echo $data['name']; ?></option>
+                                            <?php
+                                        }
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-3">
+                            <div class="form-group">
+                                <label>Sub Total Amount</label>
+                                <input type="text" class="form-control" maxlength="30" name="sub_total_amount" id="allsum" readonly />
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label>Remarks</label>
+                                <textarea id="remarks" name="remarks" class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <div class="modal-footer">
+                                    <input type="submit" name="issue_submit" id="issue_submit" class="btn btn-block" style="background-color:#f26522;color:#ffffff;" value="Save" />
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+
+
                 </form>
             </div>
             <!--here your code will go-->
@@ -151,7 +157,13 @@ var i=0;
 $(document).ready(function(){
     $('#add').click(function(){
         i++;
-        $('#dynamic_field').append('<tr id="row'+i+'"><td><select class="form-control select2" id="material_name[]" name="material_name'+i+'" required><option value="">Select</option><?php $projectsData = get_product_with_category();if (isset($projectsData) && !empty($projectsData)) {foreach ($projectsData as $data) {?><option value="<?php echo $data['id']; ?>"><?php echo $data['material_name']; ?></option><?php } } ?></select></td><td><input type="text" name="material_id[]" id="material_id'+i+'" class="form-control"></td><td><input type="text" name="unit[]" id="unit'+i+'" class="form-control"></td><td><input type="text" name="part_no[]" id="part_no'+i+'" class="form-control"></td><td><input type="text" name="quantity[]" id="quantity'+i+'" onchange="sum(0)" class="form-control"></td><td><input type="text" name="unit_price[]" id="unit_price'+i+'" onchange="sum(0)" class="form-control"></td><td><input type="text" name="totalamount[]" id="sum'+i+'" class="form-control"></td><td><button type="button" name="remove" id="'+i+'" class="btn btn_remove" style="background-color:#f26522;color:#ffffff;">X</button></td></tr>');
+        $('#dynamic_field').append('<tr id="row'+i+'"><td><select class="form-control select2" id="material_name'+i+'" name="material_name[]' + i + '" required onchange="getAppendItemCodeByParam('+i+",'inv_material',"+"'material_id_code',"+"'material_id',"+"'qty_unit'"+')"><option value="">Select</option><?php $projectsData = get_product_with_category();
+                                    if (isset($projectsData) && !empty($projectsData)) {
+                                        foreach ($projectsData as $data) { ?><option value="<?php echo $data['id']; ?>"><?php echo $data['material_name']; ?></option><?php }
+                                    } ?></select></td><td><input type="text" name="material_id[]" id="material_id' + i + '" class="form-control"></td><td><select class="form-control select2" id="unit'+i+'" name="unit[]' + i + '" required onchange="getAppendItemCodeByParam('+i+",'inv_material'"+",'material_id_code'"+",'material_id''"+",'qty_unit'"+')"><option value="">Select</option><?php $projectsData = getTableDataByTableName('inv_item_unit', '', 'unit_name');
+                                    if (isset($projectsData) && !empty($projectsData)) {
+                                        foreach ($projectsData as $data) { ?><option value="<?php echo $data['id']; ?>"><?php echo $data['unit_name']; ?></option><?php }
+                                    } ?></select></td><td><input type="text" name="part_no[]" id="part_no'+i+'" class="form-control"></td><td><input type="text" name="quantity[]" id="quantity'+i+'" onchange="sum(0)" class="form-control"></td><td><input type="text" name="unit_price[]" id="unit_price'+i+'" onchange="sum(0)" class="form-control"></td><td><input type="text" name="totalamount[]" id="sum'+i+'" class="form-control"></td><td><button type="button" name="remove" id="'+i+'" class="btn btn_remove" style="background-color:#f26522;color:#ffffff;">X</button></td></tr>');
         $('#quantity'+i+', #unit_price'+i).change(function() {
             sum(i)
         });
@@ -206,36 +218,36 @@ function sum_total() {
 
 </script>
 <script>
-				$(function() {
-				$("#issue_date").datepicker({
-						inline: true,
-						dateFormat:"yy-mm-dd",
-						yearRange:"-50:+10",
-						changeYear: true,
-						changeMonth: true
-				});
-			});
-			</script>
-			<script>
-				$(function() {
-				$("#challan_date").datepicker({
-						inline: true,
-						dateFormat:"yy-mm-dd",
-						yearRange:"-50:+10",
-						changeYear: true,
-						changeMonth: true
-				});
-			});
-			</script>
-			<script>
-				$(function() {
-				$("#requisition_date").datepicker({
-						inline: true,
-						dateFormat:"yy-mm-dd",
-						yearRange:"-50:+10",
-						changeYear: true,
-						changeMonth: true
-				});
-			});
-			</script>
+    $(function() {
+        $("#issue_date").datepicker({
+            inline: true,
+            dateFormat:"yy-mm-dd",
+            yearRange:"-50:+10",
+            changeYear: true,
+            changeMonth: true
+        });
+    });
+</script>
+<script>
+    $(function() {
+        $("#challan_date").datepicker({
+            inline: true,
+            dateFormat:"yy-mm-dd",
+            yearRange:"-50:+10",
+            changeYear: true,
+            changeMonth: true
+        });
+    });
+</script>
+<script>
+    $(function() {
+        $("#requisition_date").datepicker({
+                        inline: true,
+                        dateFormat:"yy-mm-dd",
+                        yearRange:"-50:+10",
+                        changeYear: true,
+                        changeMonth: true
+        });
+    });
+</script>
 <?php include 'footer.php' ?>

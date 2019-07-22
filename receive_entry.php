@@ -11,7 +11,7 @@ include 'header.php';
         <li class="breadcrumb-item">
             <a href="dashboard.php">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">Entry</li>
+        <li class="breadcrumb-item active">Receive Entry</li>
     </ol>
     <!-- DataTables Example -->
     <div class="card mb-3">
@@ -130,7 +130,6 @@ include 'header.php';
                                         </td>
                                         <td><input type="text" name="material_id[]" id="material_id0" class="form-control"></td>
                                         <td>
-                                            <!--<input type="text" name="unit[]" id="unit0" class="form-control">-->
                                             <select class="form-control" id="unit0" name="unit[]" required>
                                                 <option value="">Select</option>
                                                 <?php

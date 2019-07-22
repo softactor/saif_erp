@@ -416,8 +416,8 @@ function getAppendItemCodeByParam(id, table, field, selector, qty_unit=''){
     }
 }
 
-function getSearchTableData(formSelector, tableBodySelector){
-    var checkMrrNo = $('#mrr_no_search').val();
+function getSearchTableData(formSelector, tableBodySelector, fieldChecker){
+    var checkMrrNo = $('#'+fieldChecker).val();
     if (checkMrrNo) {
         $.ajax({
             url: baseUrl + "includes/search_process.php?search_data=" + formSelector,
@@ -429,6 +429,6 @@ function getSearchTableData(formSelector, tableBodySelector){
             }
         });
     } else {
-        swal("Attention", 'Please select MRR', "error");
+        swal("Attention", 'Search item was empty', "error");
     }
 }

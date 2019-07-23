@@ -1,4 +1,8 @@
 <?php session_start(); 
+if(!isset($_SESSION['logged']['status'])){
+    header("location: index.php");
+    exit();
+}
 include 'connection/connect.php';
 include 'helper/utilities.php';
 include 'includes/item_process.php';
@@ -36,7 +40,7 @@ include 'includes/search_process.php';
     </button>
 
     <!-- Navbar Search -->
-    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+<!--    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
         <div class="input-group-append">
@@ -45,7 +49,8 @@ include 'includes/search_process.php';
           </button>
         </div>
       </div>
-    </form>
+    </form>-->
+<div class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" style="color: white;"><?php echo $_SESSION['logged']['user_name']; ?></div>
 
     <!-- Navbar -->
     <ul class="navbar-nav ml-auto ml-md-0">
@@ -54,10 +59,9 @@ include 'includes/search_process.php';
           <i class="fas fa-user-circle fa-fw"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-          <a class="dropdown-item" href="#">Settings</a>
-          <a class="dropdown-item" href="#">Activity Log</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+          <a class="dropdown-item" href="includes/logout.php">Logout</a>
+          <!--<a class="dropdown-item" href="#">Settings</a>-->
+          <!--<a class="dropdown-item" href="#">Activity Log</a>-->
         </div>
       </li>
     </ul>

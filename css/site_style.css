@@ -61,3 +61,12 @@ table.data-list-table{
 table.data-list-table tr th{
     text-align: center;
 }
+span.sub_menu_text_design{
+    display: inline-block !important;
+    color: black;
+    font-size: 14px !important;
+    margin: 0 4%;
+}
+.sub_menu_text_nav_link{
+    padding: 2% 5% !important;
+}

@@ -27,40 +27,36 @@ include 'includes/login_process.php';
                 <div class="card-body">
                     <form id="login_form" name="login_form" method="post">
                         <div class="form-group">
-                            <div class="form-label-group">
-                                <input type="email" id="email" name="email" class="form-control" placeholder="Email address" autocomplete="off">
-                                <label for="inputEmail">Email address</label>
+                            <label for="inputEmail">Email address</label>
+                            <input type="text" id="email" name="email" class="form-control" placeholder="Email address" autocomplete="off">
+                            <?php if (isset($_SESSION['error_message']['email_empty']) && !empty($_SESSION['error_message']['email_empty'])) { ?>
+                                <div class="alert alert-warning">
+                                    <strong>Warning!</strong> <?php echo $_SESSION['error_message']['email_empty']; ?>
+                                </div>
                                 <?php
-                                    if(isset($_SESSION['error_message']['email_empty']) && !empty($_SESSION['error_message']['email_empty'])){ ?>
-                                        <div class="alert alert-warning">
-                                            <strong>Warning!</strong> <?php echo $_SESSION['error_message']['email_empty']; ?>
-                                        </div>
-                                        <?php unset($_SESSION['error_message']['email_empty']);
-                                    }
-                                ?>
+                                unset($_SESSION['error_message']['email_empty']);
+                            }
+                            ?>
+                            <?php if (isset($_SESSION['error_message']['email_valid']) && !empty($_SESSION['error_message']['email_valid'])) { ?>
+                                <div class="alert alert-warning">
+                                    <strong>Warning!</strong> <?php echo $_SESSION['error_message']['email_valid']; ?>
+                                </div>
                                 <?php
-                                    if(isset($_SESSION['error_message']['email_valid']) && !empty($_SESSION['error_message']['email_valid'])){ ?>
-                                        <div class="alert alert-warning">
-                                            <strong>Warning!</strong> <?php echo $_SESSION['error_message']['email_valid']; ?>
-                                        </div>
-                                        <?php unset($_SESSION['error_message']['email_valid']);
-                                    }
-                                ?>
-                            </div>
+                                unset($_SESSION['error_message']['email_valid']);
+                            }
+                            ?>
                         </div>
                         <div class="form-group">
-                            <div class="form-label-group">
-                                <input type="password" id="password" name="password" class="form-control" placeholder="Password" autocomplete="off">
-                                <label for="inputPassword">Password</label>
+                            <label for="inputPassword">Password</label>
+                            <input type="password" id="password" name="password" class="form-control" placeholder="Password" autocomplete="off">
+                            <?php if (isset($_SESSION['error_message']['password_empty']) && !empty($_SESSION['error_message']['password_empty'])) { ?>
+                                <div class="alert alert-warning">
+                                    <strong>Warning!</strong> <?php echo $_SESSION['error_message']['password_empty']; ?>
+                                </div>
                                 <?php
-                                    if(isset($_SESSION['error_message']['password_empty']) && !empty($_SESSION['error_message']['password_empty'])){ ?>
-                                        <div class="alert alert-warning">
-                                            <strong>Warning!</strong> <?php echo $_SESSION['error_message']['password_empty']; ?>
-                                        </div>
-                                        <?php unset($_SESSION['error_message']['password_empty']);
-                                    }
-                                ?>
-                            </div>
+                                unset($_SESSION['error_message']['password_empty']);
+                            }
+                            ?>
                         </div>
                         <input type="submit" name="login_submit" value="Login" class="btn btn-primary btn-block">
                     </form>
@@ -68,9 +64,7 @@ include 'includes/login_process.php';
             </div>
         </div>
         <!-- Bootstrap core JavaScript-->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <!-- Core plugin JavaScript-->
-        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
     </body>
 </html>

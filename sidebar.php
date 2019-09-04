@@ -8,7 +8,7 @@
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-info" aria-hidden="true" style="color: red;"></i>
-            <span>Information</span>
+            <span>Master Setup</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <a class="nav-link sub_menu_text_nav_link" href="material.php">
@@ -61,7 +61,17 @@
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-shopping-bag" aria-hidden="true" style="color: red;"></i>
-            <span>Purchase informat</span>
+            <span>Material Requisition</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item" href="Purchase_entry.php"><i class="fa fa-plus" aria-hidden="true" style="color: red;"></i><span class="sub_menu_text_design">Purchase Entry</span></a>
+            <a class="dropdown-item" href="Purchase_list.php"><i class="fa fa-list" aria-hidden="true" style="color: red;"></i><span class="sub_menu_text_design">Purchase  List</span></a>
+        </div>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-shopping-bag" aria-hidden="true" style="color: red;"></i>
+            <span>Material Purchase</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <a class="dropdown-item" href="Purchase_entry.php"><i class="fa fa-plus" aria-hidden="true" style="color: red;"></i><span class="sub_menu_text_design">Purchase Entry</span></a>
@@ -80,7 +90,7 @@
     </li>
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fa fa-exclamation-triangle" aria-hidden="true" style="color: red;"></i>
+            <i class="fa fa-server" aria-hidden="true" style="color: red;"></i>
             <span>Material issue</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
@@ -98,14 +108,19 @@
             <a class="dropdown-item" href="issue_list.php"><i class="fa fa-list" aria-hidden="true" style="color: red;"></i><span class="sub_menu_text_design">W.Transfer List</span></a>
         </div>
     </li>
-    <li class="nav-item">
+<!--    <li class="nav-item">
         <a class="nav-link" href="returntovendor_entry.php">
             <i class="fa fa-history" aria-hidden="true" style="color: red;"></i>
-            <span>RETURN TO VENDOR</span></a>
-    </li>
+            <span>Return To Vendor</span></a>
+    </li>-->
     <li class="nav-item">
         <a class="nav-link" href="openingstock_entry.php">
             <i class="fa fa-database" aria-hidden="true" style="color: red;"></i>
             <span>Opening Stock Entry</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="openingstock_entry.php">
+            <i class="fa fa-list" aria-hidden="true" style="color: red;"></i>
+            <span>Reports</span></a>
     </li>
 </ul>
